@@ -98,21 +98,21 @@
             <div class="col-xs-3 col-md-2">
                 <input type="checkbox" id="msg_id_<{$message.msg_id}>" name='msg_id[]' value="<{$message.msg_id}>">
                 &nbsp;
-                <{if $message.read_msg == 1}>
-                    <span class="glyphicon glyphicon-ok-sign btn btn-xs btn-success"></span>
-                <{else}>
-                    <span class="glyphicon glyphicon-envelope btn btn-xs btn-warning" title="<{$smarty.const._PM_NOTREAD}>"></span>
-                <{/if}>
-                <{if $message.msg_image != ""}>
-                    <img src="<{$xoops_url}>/images/subject/<{$message.msg_image}>" alt="">
-                <{/if}>
+            <{if $message.read_msg == 1}>
+                <span class="glyphicon glyphicon-ok-sign btn btn-xs btn-success"></span>
+            <{else}>
+                <span class="glyphicon glyphicon-envelope btn btn-xs btn-warning" title="<{$smarty.const._PM_NOTREAD}>"></span>
+            <{/if}>
+            <{if $message.msg_image != ""}>
+                <img src="<{$xoops_url}>/images/subject/<{$message.msg_image}>" alt="">
+            <{/if}>
             </div>
             <div class="col-xs-2 col-md-2">
-                <{if $message.postername != ""}>
-                    <a href="<{$xoops_url}>/userinfo.php?uid=<{$message.posteruid}>" title=""><{$message.postername}></a>
-                <{else}>
-                    <{$anonymous}>
-                <{/if}>
+            <{if $message.postername != ""}>
+                <a href="<{$xoops_url}>/userinfo.php?uid=<{$message.posteruid}>" title=""><{$message.postername}></a>
+            <{else}>
+                <{$anonymous}>
+            <{/if}>
             </div>
 
             <div class="col-xs-4 col-md-5">

@@ -48,7 +48,7 @@
         <{/foreach}>
     </ul>
 <{else}>
-    <h3><{$smarty.const._OBITUARIES_ERROR3}></h3>
+    <h3><{$smarty.const._AM_OBITUARIES_ERROR3}></h3>
 <{/if}>
 
 <{if isset($pagenav)}>
