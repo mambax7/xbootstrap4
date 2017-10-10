@@ -6,7 +6,7 @@
         <li data-slide-to="1" data-target="#myCarousel" class=""></li>
     </ol>
     <div class="carousel-inner">
-        <div class="item active"><img alt="XOOPS" src="<{$xoops_imageurl}>images/slider1.jpg">
+        <div class="carousel-item active"><img alt="XOOPS" src="<{$xoops_imageurl}>images/slider1.jpg">
 
             <div class="carousel-caption hidden-xs">
                 <h1>Lorem ipsum dolor sit amet</h1>
@@ -17,7 +17,7 @@
                 <p><a href="javascript:;" class="btn btn-large btn-primary"><{$smarty.const.THEME_READMORE}></a></p>
             </div>
         </div>
-        <div class="item"><img alt="XOOPS" src="<{$xoops_imageurl}>images/slider2.jpg">
+        <div class="carousel-item"><img alt="XOOPS" src="<{$xoops_imageurl}>images/slider2.jpg">
 
             <div class="carousel-caption hidden-xs">
                 <h1>Lorem ipsum dolor sit amet</h1>
@@ -29,7 +29,13 @@
             </div>
         </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a>
-    <a data-slide="next" href="#myCarousel" class="right carousel-control"><span class="icon-next"></span></a>
+    <a class="carousel-control-prev carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next carousel-control" href="#myCarousel" role="button" data-slide="next" >
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div><!-- .carousel -->
 <{/if}>
