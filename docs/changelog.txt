@@ -1,3 +1,6 @@
+4.00 Beta 1 NOT RELEASED
+- updated to Bootstrap 4.0 Beta 1 (mamba)
+
 1.05 Beta 1 NOT RELEASED
 -------------------
 - Update imagesLoaded to 4.1.1 (mamba)
