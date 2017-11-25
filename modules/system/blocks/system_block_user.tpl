@@ -1,5 +1,5 @@
 <div class="usermenu">
-    <ul class="nav nav-pills nav-stacked">
+    <ul class="nav flex-column">
         <{if $xoops_isadmin}>
             <li><a href="<{xoAppUrl admin.php}>" title="<{$block.lang_adminmenu}>"><span class="fa fa-wrench"></span><{$block.lang_adminmenu}></a></li>
             <li><a href="<{xoAppUrl user.php}>" title="<{$block.lang_youraccount}>"><span class="fa fa-user"></span><{$block.lang_youraccount}></a></li>
