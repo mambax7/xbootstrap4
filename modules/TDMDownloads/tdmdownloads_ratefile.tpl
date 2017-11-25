@@ -12,7 +12,7 @@
     </div>
 
     <{if $message_erreur != ''}>
-        <div class="alert alert-error"><{$message_erreur}></div>
+        <div class="alert alert-error alert-warning"><{$message_erreur}></div>
     <{/if}>
     <div class="form-group"><{$themeForm}></div>
 </div>

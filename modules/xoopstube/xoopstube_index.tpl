@@ -29,8 +29,7 @@
         <div class="row">
             <{foreach item=category from=$categories}>
                 <div class="col-sm-4 col-md-4 category-titles">
-                    <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?cid=<{$category.id}>" title="<{$category.title}>"
-                       class="btn btn-primary btn-block">
+                    <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?cid=<{$category.id}>" title="<{$category.title}>" class="btn btn-primary btn-block">
                         <{$category.title}> <span class="badge"><{$category.totalvideos}></span>
                     </a>
                 </div>

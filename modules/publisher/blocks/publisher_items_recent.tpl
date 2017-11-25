@@ -1,3 +1,6 @@
+<{foreach item=item from=$block.items}>
+
+<{/foreach}>
 <table class="table table-striped table-condensed">
     <thead>
     <tr>
@@ -8,14 +11,12 @@
     </tr>
     </thead>
     <tbody>
-    <{foreach item=item from=$block.items}>
-        <tr>
-            <td><{$item.itemlink}></td>
-            <td align="left"><{$item.categorylink}></td>
-            <td align="center"><{$item.poster}></td>
-            <td align="right"><{$item.date}></td>
-        </tr>
-    <{/foreach}>
+    <tr>
+        <td><{$item.itemlink}></td>
+        <td align="left"><{$item.categorylink}></td>
+        <td align="center"><{$item.poster}></td>
+        <td align="right"><{$item.date}></td>
+    </tr>
     </tbody>
 
 </table>

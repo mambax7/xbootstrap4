@@ -8,7 +8,7 @@
 <ul class="list-group">
     <!-- start question loop -->
     <{foreach item=question from=$questions}>
-        <li class="list-group-item"><a href="#q<{$question.id}>"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;<{$question.title}></a>
+        <li class="list-group-item"><a href="#q<{$question.id}>"><span class="fa fa-hand-right"></span>&nbsp;&nbsp;<{$question.title}></a>
         </li>
     <{/foreach}>
     <!-- end question loop -->

@@ -2,10 +2,10 @@
 <html lang="<{$xoops_langcode}>">
 <head>
     <meta charset="<{$xoops_charset}>">
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, nofollow"/>
     <title><{$xoops_sitename|escape:'html':'UTF-8'}></title>
     <{section name=item loop=$headItems}>
-    <{$headItems[item]}>
+        <{$headItems[item]}>
     <{/section}>
     <link rel="stylesheet" type="text/css" href="<{$themeUrl}>css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<{$themeUrl}>css/xoops.css">

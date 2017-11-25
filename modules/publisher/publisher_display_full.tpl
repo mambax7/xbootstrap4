@@ -6,7 +6,7 @@
 <{if $indexpage || $category.subcats || ($category && $display_category_summary)}>
 
     <{if $display_category_summary && $category}>
-        <div class="well well-sm">
+        <div class="well-sm card">
             <{$lang_category_summary}>
         </div>
     <{/if}>
@@ -17,7 +17,7 @@
 <{/if}>
 
 <{if $items}>
-    <h4 class="pub_last_articles_full"><span class="glyphicon glyphicon-chevron-right"></span>&nbsp;<{$lang_items_title}></h4>
+    <h4 class="pub_last_articles_full"><span class="fa fa-chevron-right"></span>&nbsp;<{$lang_items_title}></h4>
     <!-- Start item loop -->
     <{foreach item=item from=$items}>
         <div class="article_full">
@@ -28,7 +28,7 @@
             <{if $item.image_path}>
                 <div class="article_full_img_div">
                     <a href="<{$item.itemurl}>" title="<{$item.title}>">
-                        <img src="<{$item.image_path}>" alt="<{$item.title}>"/>
+                        <img src="<{$item.image_path}>" alt="<{$item.title}>">
                     </a>
                 </div>
             <{/if}>
@@ -40,15 +40,15 @@
                 <div style="margin-top:10px;">
                     <{$item.summary}>
                 </div>
-                <div class="pull-left" style="margin-top: 15px;">
+                <div class="" style="margin-top: 15px;">
                     <{if $op != 'preview'}>
                         <span style="float: right; text-align: right;"><{$item.adminlink}></span>
                     <{else}>
                         <span style="float: right;">&nbsp;</span>
                     <{/if}>
                 </div>
-                <div class="pull-right" style="margin-top: 15px;">
-                    <a href="<{$item.itemurl}>" class="btn btn-primary btn-xs"> <{$smarty.const._MD_PUBLISHER_VIEW_MORE}></a>
+                <div class="" style="margin-top: 15px;">
+                    <a href="<{$item.itemurl}>" class="btn btn-primary"> <{$smarty.const._MD_PUBLISHER_VIEW_MORE}></a>
                 </div>
                 <div class="clearfix"></div>
             </div>

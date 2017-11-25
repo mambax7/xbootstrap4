@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--?xml version="1.0" encoding="UTF-8"?-->
 <rss version="2.0">
     <channel>
         <title><{$channel_title}></title>
-        <link><{$channel_link}></link>
+        <link><{$channel_link}>
         <description><{$channel_desc}></description>
-        <lastBuildDate><{$channel_lastbuild}></lastBuildDate>
+        <lastbuilddate><{$channel_lastbuild}></lastbuilddate>
         <docs>http://backend.userland.com/rss/</docs>
         <generator><{$channel_generator}></generator>
         <category><{$channel_category}></category>
-        <managingEditor><{$channel_editor}></managingEditor>
-        <webMaster><{$channel_webmaster}></webMaster>
+        <managingeditor><{$channel_editor}></managingeditor>
+        <webmaster><{$channel_webmaster}></webmaster>
         <language><{$channel_language}></language>
         <{if $image_url != ""}>
-            <image>
-                <title><{$channel_title}></title>
-                <url><{$image_url}></url>
-                <link><{$channel_link}></link>
-                <width><{$image_width}></width>
-                <height><{$image_height}></height>
-            </image>
+            <img>
+            <title><{$channel_title}></title>
+            <url><{$image_url}></url>
+            <link>
+            <{$channel_link}>
+            <width><{$image_width}></width>
+            <height><{$image_height}></height>
         <{/if}>
         <{foreach item=item from=$items}>
             <item>
                 <title><{$item.title}></title>
-                <link><{$item.link}></link>
+                <link><{$item.link}>
                 <description><{$item.description}></description>
-                <pubDate><{$item.pubdate}></pubDate>
+                <pubdate><{$item.pubdate}></pubdate>
                 <guid><{$item.guid}></guid>
             </item>
         <{/foreach}>

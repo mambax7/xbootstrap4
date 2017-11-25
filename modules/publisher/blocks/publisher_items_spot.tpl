@@ -1,7 +1,7 @@
 <{if $block.category && $block.category.image_path != ''}>
     <div align="center">
         <a href="<{$block.category.categoryurl}>" title="<{$block.category.name}>">
-            <img src="<{$block.category.image_path}>" width="185" height="80" alt="<{$block.category.name}>"/>
+            <img src="<{$block.category.image_path}>" width="185" height="80" alt="<{$block.category.name}>">
         </a>
     </div>
 <{/if}>
@@ -19,21 +19,21 @@
                 <div class="article_wf_title">
                     <h3><{$item.titlelink}></h3>
                     <span>
-                        <span class="glyphicon glyphicon-tag"></span>&nbsp;<{$item.category}>
+                        <span class="fa fa-tag"></span>&nbsp;<{$item.category}>
                     </span>
                     <span>
-                        <span class="glyphicon glyphicon-user"></span>&nbsp;<{$item.who}>
+                        <span class="fa fa-user"></span>&nbsp;<{$item.who}>
                     </span>
                     <span>
-                        <span class="glyphicon glyphicon-calendar"></span>&nbsp;<{$item.when}>
+                        <span class="fa fa-calendar"></span>&nbsp;<{$item.when}>
                     </span>
                     <span>
-                        <span class="glyphicon glyphicon-comment"></span>&nbsp;<{$item.comments}>
+                        <span class="fa fa-comment"></span>&nbsp;<{$item.comments}>
                     </span>
                 </div>
                 <{if $item.image_path}>
                     <div class="spot_article_wf_img">
-                        <img src="<{$item.image_path}>" alt="<{$item.title}>"/>
+                        <img src="<{$item.image_path}>" alt="<{$item.title}>">
                     </div>
                 <{/if}>
                 <div class="article_wf_summary">

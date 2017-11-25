@@ -49,8 +49,7 @@
         <{/if}>
 
         <{if $child.cat_isalbum}>
-            <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-<{$display_type}>.php?id=<{$child.cat_id}>"
-               class="extgallery-album-name">
+            <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-<{$display_type}>.php?id=<{$child.cat_id}>" class="extgallery-album-name">
                 <strong><{$child.cat_name}></strong>
             </a>
             <{$child.cat_desc}>

@@ -34,7 +34,7 @@
                 <h4 class="modal-title" id="myModalLabel"><{$story.news_title}></h4>
             </div>
             <div class="modal-body">
-                <img src="<{$story.picture}>" alt="<{$story.news_title|strip_tags}>" class="img-responsive">
+                <img src="<{$story.picture}>" alt="<{$story.news_title|strip_tags}>" class="img-fluid">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

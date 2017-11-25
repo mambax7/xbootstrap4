@@ -4,8 +4,7 @@
     <div class="tdm-category row">
         <{foreach item=category from=$categories}>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 tdm-category-list">
-                <a class="btn btn-primary btn-md btn-block" title="<{$category.title}>"
-                   href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>">
+                <a class="btn btn-primary btn-md btn-block" title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>">
                     <{$category.title}>
                 </a>
 
@@ -18,7 +17,7 @@
                     <{if $category.description_main != ""}>
                         <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#tdmDesc-<{$category.id}>">+</button>
                     <{else}>
-                        <button class="btn btn-xs disabled" data-toggle="modal">+</button>
+                        <button class="btn btn-xs disabled btn-default" data-toggle="modal">+</button>
                     <{/if}>
                 </div>
 
@@ -30,11 +29,10 @@
                                 <{$category.description_main}>
                             </div>
                             <div class="modal-footer">
-                                <a title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>"
-                                   class="pull-left btn btn-success">
+                                <a title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>" class="pull-left btn btn-success">
                                     There are <strong><{$category.totaldownloads}></strong> files in this category!
                                 </a>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">×</button>
                             </div>
                         </div>
                     </div>
@@ -61,12 +59,11 @@
             <div class="col-md-12"><h3><{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLNAME}>:</h3></div>
             <{if $bl_date != ""}>
                 <div class="col-sm-4 col-md-4">
-                    <h3 class="tdm-title"><span class="glyphicon glyphicon-calendar"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLDATE}></h3>
+                    <h3 class="tdm-title"><span class="fa fa-calendar"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLDATE}></h3>
                     <ul class="list-unstyled">
                         <{foreach item=bl_date from=$bl_date}>
                             <li>
-                                <a title="<{$bl_date.title}>"
-                                   href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_date.cid}>&amp;lid=<{$bl_date.id}>"><{$bl_date.title}></a>
+                                <a title="<{$bl_date.title}>" href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_date.cid}>&lid=<{$bl_date.id}>"><{$bl_date.title}></a>
                                 (<{$bl_date.date}>)
                             </li>
                         <{/foreach}>
@@ -76,11 +73,11 @@
 
             <{if $bl_pop != ""}>
                 <div class="col-sm-4 col-md-4">
-                    <h3 class="tdm-title"><span class="glyphicon glyphicon-star"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLPOP}></h3>
+                    <h3 class="tdm-title"><span class="fa fa-star"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLPOP}></h3>
                     <ul class="list-unstyled">
                         <{foreach item=bl_pop from=$bl_pop}>
                             <li>
-                                <a title="<{$bl_pop.title}>" href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_pop.cid}>&amp;lid=<{$bl_pop.id}>"><{$bl_pop.title}></a>
+                                <a title="<{$bl_pop.title}>" href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_pop.cid}>&lid=<{$bl_pop.id}>"><{$bl_pop.title}></a>
                                 (<{$bl_pop.hits}>)
                             </li>
                         <{/foreach}>
@@ -90,12 +87,11 @@
 
             <{if $bl_rating != ""}>
                 <div class="col-sm-4 col-md-4">
-                    <h3 class="tdm-title"><span class="glyphicon glyphicon-thumbs-up"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLRATING}></h3>
+                    <h3 class="tdm-title"><span class="fa fa-thumbs-up"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLRATING}></h3>
                     <ul class="list-unstyled">
                         <{foreach item=bl_rating from=$bl_rating}>
                             <li>
-                                <a title="<{$bl_rating.title}>"
-                                   href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_rating.cid}>&amp;lid=<{$bl_rating.id}>"><{$bl_rating.title}></a>
+                                <a title="<{$bl_rating.title}>" href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_rating.cid}>&lid=<{$bl_rating.id}>"><{$bl_rating.title}></a>
                                 (<{$bl_rating.rating}>)
                             </li>
                         <{/foreach}>

@@ -12,7 +12,7 @@
 
                 <button class="btn btn-primary" type="submit">
 
-                    <span class="glyphicon glyphicon-search"></span>
+                    <span class="fa fa-search"></span>
 
                 </button>
 

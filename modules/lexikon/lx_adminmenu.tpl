@@ -1,4 +1,4 @@
-<style type='text/css'>
+<style type="text/css">
     #buttontop {
         float: left;
         width: 100%;
@@ -85,6 +85,7 @@
 
 <div id="buttontop">
     <table style="width: 100%; padding: 0;" cellspacing="0">
+        <tbody>
         <tr>
             <td style="font-size: 10px; text-align: left; color: #2F5376; padding: 0 6px; line-height: 18px;">
                 <{foreach from=$headermenu key=itemnum item=menuitem}>
@@ -98,6 +99,7 @@
                 <{$breadcrumb}>
             </td>
         </tr>
+        </tbody>
     </table>
 </div>
 <div id="buttonbar">
@@ -106,6 +108,7 @@
             <{if $itemnum==$current}>
                 <li id="current">
                     <{else}>
+                </li>
                 <li>
             <{/if}>
             <a href="../<{$menuitem.link}>"><span><{$menuitem.title}></span></a>

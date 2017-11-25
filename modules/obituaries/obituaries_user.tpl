@@ -34,19 +34,19 @@
         <br>
         <br>
         <br>
-        <b><span class="glyphicon glyphicon-user"></span>&nbsp;<{$obituaries_user.obituaries_fullname}></b>
+        <b><span class="fa fa-user"></span>&nbsp;<{$obituaries_user.obituaries_fullname}></b>
         </br>
 
-        <b><span class="glyphicon glyphicon-calendar"></span>&nbsp;<{$smarty.const._AM_OBITUARIES_DATE}></b> :
+        <b><span class="fa fa-calendar"></span>&nbsp;<{$smarty.const._AM_OBITUARIES_DATE}></b> :
         <{$obituaries_user.obituaries_formated_date}>
 
         <br>
 
-        <b><span class="glyphicon glyphicon-check"></span>&nbsp;<{$smarty.const._AM_OBITUARIES_FIRSTNAME}></b> : <{$obituaries_user.obituaries_firstname}>
+        <b><span class="fa fa-check"></span>&nbsp;<{$smarty.const._AM_OBITUARIES_FIRSTNAME}></b> : <{$obituaries_user.obituaries_firstname}>
 
         <br>
 
-        <b><span class="glyphicon glyphicon-info-sign"></span>&nbsp;<{$smarty.const._AM_OBITUARIES_LASTNAME}></b> :
+        <b><span class="fa fa-info-sign"></span>&nbsp;<{$smarty.const._AM_OBITUARIES_LASTNAME}></b> :
         <{$obituaries_user.obituaries_lastname}>
 
         <br><br>

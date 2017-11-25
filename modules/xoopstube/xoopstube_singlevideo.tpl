@@ -33,33 +33,30 @@
             <ul class="list-unstyled xoopstube-list">
                 <{if $video.showrating}>
                     <{if $video.allow_rating}>
-                        <li><i class="glyphicon glyphicon-thumbs-up"></i>
-                            <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/ratevideo.php?cid=<{$video.cid}>&amp;lid=<{$video.id}>"
-                               title="<{$smarty.const._MD_XOOPSTUBE_RATETHISFILE}>"><{$smarty.const._MD_XOOPSTUBE_RATETHISFILE}></a></li>
+                        <li><i class="fa fa-thumbs-up"></i>
+                            <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/ratevideo.php?cid=<{$video.cid}>&lid=<{$video.id}>" title="<{$smarty.const._MD_XOOPSTUBE_RATETHISFILE}>"><{$smarty.const._MD_XOOPSTUBE_RATETHISFILE}></a></li>
                     <{/if}>
                 <{/if}>
 
-                <li><i class="glyphicon glyphicon-warning-sign"></i>
-                    <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/brokenvideo.php?lid=<{$video.id}>"
-                       title="<{$smarty.const._MD_XOOPSTUBE_REPORTBROKEN}>">
+                <li><i class="fa fa-warning-sign"></i>
+                    <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/brokenvideo.php?lid=<{$video.id}>" title="<{$smarty.const._MD_XOOPSTUBE_REPORTBROKEN}>">
                         <{$smarty.const._MD_XOOPSTUBE_REPORTBROKEN}>
                     </a>
                 </li>
 
                 <{if $video.useradminvideo}>
-                    <li><i class="glyphicon glyphicon-edit"></i><{$video.usermodify}></li>
+                    <li><i class="fa fa-edit"></i><{$video.usermodify}></li>
                 <{/if}>
 
-                <li><i class="glyphicon glyphicon-share-alt"></i>
+                <li><i class="fa fa-share-alt"></i>
                     <a href="mailto:?subject=<{$video.mail_subject}>&body=<{$video.mail_body}>" title="<{$smarty.const._MD_XOOPSTUBE_TELLAFRIEND}>">
                         <{$smarty.const._MD_XOOPSTUBE_TELLAFRIEND}>
                     </a>
                 </li>
 
                 <{if $video.comment_rules > 0}>
-                    <li><i class="glyphicon glyphicon-comment"></i>
-                        <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video.cid}>&amp;lid=<{$video.id}>"
-                           title="<{$smarty.const._COMMENTS}>">
+                    <li><i class="fa fa-comment"></i>
+                        <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video.cid}>&lid=<{$video.id}>" title="<{$smarty.const._COMMENTS}>">
                             <{$smarty.const._COMMENTS}> (<{$video.comments}>)
                         </a>
                     </li>
@@ -86,9 +83,8 @@
                 <h3 class=".xoops-default-title"><{$other_videos}></h3>
                 <ul class="list-unstyled xoopstube-list">
                     <{foreach item=video_user from=$video_uid}>
-                        <li><i class="glyphicon glyphicon-film"></i>
-                            <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video_user.cid}>&amp;lid=<{$video_user.lid}>"
-                               title="<{$video_user.title}>"><{$video_user.title}></a>
+                        <li><i class="fa fa-film"></i>
+                            <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video_user.cid}>&lid=<{$video_user.lid}>" title="<{$video_user.title}>"><{$video_user.title}></a>
                             <span class="pull-right">(<{$video_user.published}>)</span>
                         </li>
                     <{/foreach}>
@@ -100,7 +96,7 @@
 
         <div class="col-md-12">
             <{if $video.showsbookmarx > 0}>
-                <div class='shareaholic-canvas' data-app='share_buttons' data-app-id=''></div>
+                <div class="shareaholic-canvas" data-app="share_buttons" data-app-id=""></div>
             <{/if}>
         </div>
     </div><!-- .xoopstube-data -->

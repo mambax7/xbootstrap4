@@ -34,40 +34,40 @@
                 <div class="col-sm-3 col-md-3">
                     <{$smarty.const._MD_XOOPSTUBE_TITLE}>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=titleA">
-                        <span class="glyphicon glyphicon glyphicon-collapse-up"></span>
+                        <span class="glyphicon fa fa-collapse-up"></span>
                     </a>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=titleD">
-                        <span class="glyphicon glyphicon glyphicon-collapse-down"></span>
+                        <span class="glyphicon fa fa-collapse-down"></span>
                     </a>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
                     <{$smarty.const._MD_XOOPSTUBE_DATE}>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=dateA">
-                        <span class="glyphicon glyphicon glyphicon-collapse-up"></span>
+                        <span class="glyphicon fa fa-collapse-up"></span>
                     </a>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=dateD">
-                        <span class="glyphicon glyphicon glyphicon-collapse-down"></span>
+                        <span class="glyphicon fa fa-collapse-down"></span>
                     </a>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
                     <{$smarty.const._MD_XOOPSTUBE_RATING}>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=ratingA">
-                        <span class="glyphicon glyphicon glyphicon-collapse-up"></span>
+                        <span class="glyphicon fa fa-collapse-up"></span>
                     </a>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=ratingD">
-                        <span class="glyphicon glyphicon glyphicon-collapse-down"></span>
+                        <span class="glyphicon fa fa-collapse-down"></span>
                     </a>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
                     <{$smarty.const._MD_XOOPSTUBE_POPULARITY}>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=hitsA">
-                        <span class="glyphicon glyphicon glyphicon-collapse-up"></span>
+                        <span class="glyphicon fa fa-collapse-up"></span>
                     </a>
                     <a href="viewcat.php?cid=<{$category_id}>&orderby=hitsD">
-                        <span class="glyphicon glyphicon glyphicon-collapse-down"></span>
+                        <span class="glyphicon fa fa-collapse-down"></span>
                     </a>
                 </div>
 

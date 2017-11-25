@@ -8,7 +8,7 @@
 
         <{if $show_threadnav == true}>
             <a href="<{$comment_url}>" title="<{$lang_top}>"><{$lang_top}></a>
-            <a href="<{$comment_url}>&amp;com_id=<{$comments[i].pid}>&amp;com_rootid=<{$comments[i].rootid}>#newscomment<{$comments[i].pid}>"><{$lang_parent}></a>
+            <a href="<{$comment_url}>&com_id=<{$comments[i].pid}>&com_rootid=<{$comments[i].rootid}>#newscomment<{$comments[i].pid}>"><{$lang_parent}></a>
         <{/if}>
 
         <{if $comments[i].show_replies == true}>
@@ -28,7 +28,7 @@
             <{foreach item=reply from=$comments[i].replies}>
                 <div class="row">
                     <div class="col-md-4">
-                        <{$reply.prefix}> <a href="<{$comment_url}>&amp;com_id=<{$reply.id}>&amp;com_rootid=<{$reply.root_id}>" title=""><{$reply.title}></a>
+                        <{$reply.prefix}> <a href="<{$comment_url}>&com_id=<{$reply.id}>&com_rootid=<{$reply.root_id}>" title=""><{$reply.title}></a>
                     </div>
 
                     <div class="col-md-4">
@@ -47,7 +47,7 @@
     <{if $commentform}>
         <div class="aligncenter">
             <button class="btn-comment btn btn-primary btn-md" data-toggle="modal" data-target="#comments-form">
-                <span class="glyphicon glyphicon-comment"></span> Add Comment
+                <span class="fa fa-comment"></span> Add Comment
             </button>
         </div>
         <!-- Modal -->
