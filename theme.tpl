@@ -22,8 +22,6 @@
     <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/xoops.css">
     <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/reset.css">
 
-    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/font-awesome.min.css">
-
     <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>">
 
     <link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/scrollup.css"/>
@@ -39,6 +37,9 @@
 
     <script src="<{xoImgUrl}>js/bootstrap.min.js"></script>
     <script src="<{xoImgUrl}>js/masonry.pkgd.min.js"></script>
+
+    <script defer src="<{xoImgUrl}>js/fontawesome-all.min.js"></script>
+    <script defer src="<{xoImgUrl}>js/fa-v4-shims.min.js"></script>
 
     <script src="<{xoImgUrl}>js/headhesive.min.js"></script>
     <{*<script src="<{xoImgUrl}>js/headhesive.js"></script>*}>

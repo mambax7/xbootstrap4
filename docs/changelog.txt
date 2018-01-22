@@ -1,3 +1,8 @@
+4.00 Beta 3 NOT RELEASED
+- Bootstrap 4.0 Stable (mamba)
+- Font Awesome 5.0.4 (mamba)
+
+
 4.00 Beta 2 NOT RELEASED
 - updated to Bootstrap 4.0 Beta 2 (mamba)
 - replaced glyphicons with Font Awesome (mamba) 
