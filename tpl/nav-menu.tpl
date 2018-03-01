@@ -8,9 +8,7 @@
 
                 <div class="navbar-header">
                     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggler" type="button">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+						<span class="navbar-toggler-icon"></span>
                     </button>
                     <a href="<{$xoops_url}>" class="navbar-brand xlogo" title="<{$xoops_sitename}>">
                         <img src="<{$xoops_imageurl}>images/logo.png" alt="<{$xoops_sitename}>">
