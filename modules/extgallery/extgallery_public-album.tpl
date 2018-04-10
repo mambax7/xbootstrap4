@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <ul class="breadcrumb">
                 <li><a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a></li>
-                <{foreachq item=node from=$catPath name=breadcrumb}>
+                <{foreach item=node from=$catPath name=breadcrumb}>
                 <li><a title="<{$node.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-categories.php?id=<{$node.cat_id}>"><{$node.cat_name}></a></li>
                 <{/foreach}>
                 <li><{$cat.cat_name}></li>
@@ -102,7 +102,7 @@
                         <div class="photoRating"><img src="<{xoAppUrl modules/extgallery/}>assets/images/rating_<{$photos[photo].photo_rating}>.gif" alt="<{$lang.rate_score}> : <{$photos[photo].photo_rating}>" title="<{$lang.rate_score}>"></div>
                     <{/if}>
 
-                    <{foreachq item=pluginLink from=$photos[photo].link}>
+                    <{foreach item=pluginLink from=$photos[photo].link}>
                     <a href="<{$pluginLink.link}><{$photos[photo].photo_id}>" title="<{$pluginLink.name}>"><{$pluginLink.name}></a>
                 <{/foreach}>
 
