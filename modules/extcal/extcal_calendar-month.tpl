@@ -8,7 +8,7 @@
 <div class="extcalform mb10 text-center">
     <form action="<{$navigSelectBox.action}>" method="<{$navigSelectBox.method}>">
         <ul class="list-inline">
-            <{foreachq item=element from=$navigSelectBox.elements}>
+            <{foreach item=element from=$navigSelectBox.elements}>
             <li><{$element.body}></li>
             <{/foreach}>
         </ul>
@@ -19,13 +19,13 @@
 
 <div class="table-responsive">
 
-    <{foreachq item=weekdayName from=$weekdayNames}>
+    <{foreach item=weekdayName from=$weekdayNames}>
 
     <{/foreach}>
 
-    <{foreachq item=row from=$tableRows}>
+    <{foreach item=row from=$tableRows}>
 
-    <{foreachq item=cell from=$row.week}>
+    <{foreach item=cell from=$row.week}>
 
     <{/foreach}>
 
@@ -63,7 +63,7 @@
         </tr>
         <tr>
             <th colspan="8">
-                <{foreachq item=cat from=$cats}>
+                <{foreach item=cat from=$cats}>
                 <div style="float:left; margin-left:5px;">
                     <div style="float:left; background-color:#<{$cat.cat_color}>; border:1px solid white; margin-right:5px;">
                         &nbsp;

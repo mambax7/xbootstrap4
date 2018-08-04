@@ -6,7 +6,7 @@
         <li data-slide-to="1" data-target="#myCarousel" class=""></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item active"><img alt="XOOPS" src="<{$xoops_imageurl}>images/slider1.jpg">
+        <div class="carousel-item active"><img class="d-block w-100" alt="XOOPS" src="<{$xoops_imageurl}>images/slider1.jpg">
 
             <div class="carousel-caption hidden-xs">
                 <h1>Lorem ipsum dolor sit amet</h1>
@@ -17,7 +17,7 @@
                 <p><a href="javascript:;" class="btn btn-large btn-primary"><{$smarty.const.THEME_READMORE}></a></p>
             </div>
         </div>
-        <div class="carousel-item"><img alt="XOOPS" src="<{$xoops_imageurl}>images/slider2.jpg">
+        <div class="carousel-item"><img class="d-block w-100" alt="XOOPS" src="<{$xoops_imageurl}>images/slider2.jpg">
 
             <div class="carousel-caption hidden-xs">
                 <h1>Lorem ipsum dolor sit amet</h1>
