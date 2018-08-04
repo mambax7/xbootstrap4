@@ -1,7 +1,7 @@
-xBootstrap is a powerful theme for XOOPS (https://xoops.org/)!
+xBootstrap4 is a powerful theme for XOOPS (https://xoops.org/)!
 
 Built with:
-- Bootstrap 3:      http://getbootstrap.com/
+- Bootstrap 4:      http://getbootstrap.com/
 - Masonry:          http://masonry.desandro.com/
 - Selectivizr:      http://selectivizr.com/
 
@@ -18,7 +18,7 @@ Linkedin:           http://br.linkedin.com/in/angelorocha
 Github:             https://github.com/angelorocha
 
 --------------------------------------------------------------------------
-This is a template for XOOPS developed with Bootstrap 3.
+This is a template for XOOPS developed with Bootstrap 4.
 You can use for personal or commercial purposes.
 
 Viva XOOPS!
