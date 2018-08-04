@@ -16,4 +16,3 @@ define('_MD_MYTHEME_NAME_INFO', 'Введите имя');
 define('_MD_MYTHEME_MAIL_INFO', 'Введите e-mail');
 define('_MD_MYTHEME_SUBJECT_INFO', 'Укажите тему');
 define('_MD_MYTHEME_MESSAGE_INFO', 'Введите сообщение');
- 

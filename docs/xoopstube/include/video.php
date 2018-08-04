@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * Module: XoopsTube
  * @param $returnsource
  * @return
@@ -78,7 +78,7 @@ function xtube_returnsource($returnsource)
 function xtube_videothumb($vidid, $title, $source, $picurl, $screenshot, $width = '', $height = '')
 {
     global $xoopsModuleConfig;
-    if ($width == '' || $height == '') {
+    if ('' == $width || '' == $height) {
         $width  = $xoopsModuleConfig['shotwidth'];
         $height = $xoopsModuleConfig['shotheight'];
     }
@@ -327,7 +327,7 @@ function xtube_showvideo($vidid, $source, $screenshot, $picurl)
 
         // XoopsTube
         case 200:
-            $showvideo = '<embed src="' . XOOPS_URL . '/modules/' . $xoopsModule->getvar('dirname') . '/include/mediaplayer.swf" width="425" height="350" allowScriptAccess="always" allowFullScreen="true" flashvars="width=425&height=350&file=' . XOOPS_URL . '/' . $xoopsModuleConfig['videodir'] . '/' . $vidid . '&image=' . XOOPS_URL . '/' . $xoopsModuleConfig['videoimgdir'] . '/' . $screenshot . '&autostart=' . $autoplay3 . '"></embed>';
+            $showvideo = '<embed src="' . XOOPS_URL . '/modules/' . $xoopsModule->getVar('dirname') . '/include/mediaplayer.swf" width="425" height="350" allowScriptAccess="always" allowFullScreen="true" flashvars="width=425&height=350&file=' . XOOPS_URL . '/' . $xoopsModuleConfig['videodir'] . '/' . $vidid . '&image=' . XOOPS_URL . '/' . $xoopsModuleConfig['videoimgdir'] . '/' . $screenshot . '&autostart=' . $autoplay3 . '"></embed>';
             break;
     }
 
