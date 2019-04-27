@@ -80,4 +80,4 @@
     </div>
 <{/if}>
 
-<{include file='db:system_notification_select.tpl'}>
+<{includeq file='db:system_notification_select.tpl'}>

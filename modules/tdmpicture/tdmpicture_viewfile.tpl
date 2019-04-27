@@ -206,11 +206,11 @@
         <!-- start comments loop -->
         <div style="margin: 3px; padding: 3px;">
             <{if $comment_mode == "flat"}>
-                <{include file="db:system_comments_flat.tpl"}>
+                <{includeq file="db:system_comments_flat.tpl"}>
             <{elseif $comment_mode == "thread"}>
-                <{include file="db:system_comments_thread.tpl"}>
+                <{includeq file="db:system_comments_thread.tpl"}>
             <{elseif $comment_mode == "nest"}>
-                <{include file="db:system_comments_nest.tpl"}>
+                <{includeq file="db:system_comments_nest.tpl"}>
             <{/if}>
         </div>
     <{/if}>

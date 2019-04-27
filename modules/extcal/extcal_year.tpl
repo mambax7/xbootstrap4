@@ -17,7 +17,7 @@
     </form>
 </div>
 
-<{include file="db:extcal_navbarwysibb.tpl"}>
+<{includeq file="db:extcal_navbarwysibb.tpl"}>
 
 <div class="table-responsive">
 
@@ -58,4 +58,4 @@
 </div>
 
 <div style="text-align:right;"><a href="<{$xoops_url}>/modules/extcal/rss.php?cat=<{$selectedCat}>"><img src="images/icons/rss.gif" alt="RSS Feed"></a></div>
-<{include file='db:system_notification_select.tpl'}>
+<{includeq file='db:system_notification_select.tpl'}>

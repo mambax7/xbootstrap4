@@ -6,5 +6,5 @@
 [en]
 Copy the contents of the archive to a folder with your theme.
 Connect in your theme template: Specify the path to the template!
-<{Includeq file = " !Your theme! /contact_floating.tpl"}>
+<{includeq file = " !Your theme! /contact_floating.tpl"}>
 To use ReCaptcha, uncomment the lines: 7, 29, 61 and insert the Captcha key in the seventh line.

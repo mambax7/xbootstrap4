@@ -1,4 +1,4 @@
-<{include file='db:publisher_header.tpl'}>
+<{includeq file='db:publisher_header.tpl'}>
 
 <!-- if we are on the index page OR inside a category that has subcats OR (inside a category with no subcats
     AND $display_category_summary is set to TRUE), let's display the summary table ! //-->
@@ -12,7 +12,7 @@
     <{/if}>
 
 
-    <{include file='db:publisher_categories_table.tpl'}>
+    <{includeq file='db:publisher_categories_table.tpl'}>
     <!-- End of if !$category || $category.subcats || ($category && $display_category_summary) //-->
 <{/if}>
 
@@ -53,7 +53,7 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-        <!--<{include file="db:publisher_singleitem.tpl" item=$item}>-->
+        <!--<{includeq file="db:publisher_singleitem.tpl" item=$item}>-->
     <{/foreach}>
     <!-- End item loop -->
 
@@ -61,4 +61,4 @@
 
 <{/if}>
 
-<{include file='db:publisher_footer.tpl'}>
+<{includeq file='db:publisher_footer.tpl'}>

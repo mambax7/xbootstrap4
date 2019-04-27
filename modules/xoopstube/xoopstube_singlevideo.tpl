@@ -70,7 +70,7 @@
                 <{/if}>
 
                 <{if $tagbar}>
-                    <li><{include file="db:tag_bar.tpl"}></li>
+                    <li><{includeq file="db:tag_bar.tpl"}></li>
                 <{/if}>
 
                 <{if $xoops_isadmin}>
@@ -105,11 +105,11 @@
 <{$commentsnav}> <{$lang_notice}>
 
 <{if $comment_mode == "flat"}>
-    <{include file="db:system_comments_flat.tpl"}>
+    <{includeq file="db:system_comments_flat.tpl"}>
 <{elseif $comment_mode == "thread"}>
-    <{include file="db:system_comments_thread.tpl"}>
+    <{includeq file="db:system_comments_thread.tpl"}>
 <{elseif $comment_mode == "nest"}>
-    <{include file="db:system_comments_nest.tpl"}>
+    <{includeq file="db:system_comments_nest.tpl"}>
 <{/if}>
 
-<{include file="db:system_notification_select.tpl"}>
+<{includeq file="db:system_notification_select.tpl"}>

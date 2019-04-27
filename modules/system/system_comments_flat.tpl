@@ -4,7 +4,7 @@
         <div class="col-xs-10 col-md-10"><strong><{$lang_thread}></strong></div>
     </div>
     <{foreach item=comment from=$comments}>
-        <{include file="db:system_comment.tpl" comment=$comment}>
+        <{includeq file="db:system_comment.tpl" comment=$comment}>
     <{/foreach}>
 
     <{if $commentform}>

@@ -21,7 +21,7 @@
         });
     });
 </script>
-<{include file='db:publisher_header.tpl'}>
+<{includeq file='db:publisher_header.tpl'}>
 <div class="pub_article_t_top clearfix">
     <header>
         <h2>
@@ -207,7 +207,7 @@
 <!-- END Other articles in the category -->
 
 <{if $tagbar}>
-    <p><{include file="db:tag_bar.tpl"}></p>
+    <p><{includeq file="db:tag_bar.tpl"}></p>
 <{/if}>
 
-<{include file='db:publisher_footer.tpl'}>
+<{includeq file='db:publisher_footer.tpl'}>

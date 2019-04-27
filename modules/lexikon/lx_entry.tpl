@@ -127,11 +127,11 @@
 <div class="row">
     <div class="col-md-12">
         <{if $bookmarkme == 2}>
-            <{include file="db:lx_bookmark.tpl"}>
+            <{includeq file="db:lx_bookmark.tpl"}>
         <{/if}>
         <{if $tagbar}>
             <div class="letters">
-                <{include file="db:lx_tag_bar.tpl"}>
+                <{includeq file="db:lx_tag_bar.tpl"}>
             </div>
         <{/if}>
     </div>
@@ -147,11 +147,11 @@
         <div style="margin: 3px; padding: 3px;">
             <!-- start comments loop -->
             <{if $comment_mode == "flat"}>
-                <{include file="db:system_comments_flat.tpl"}>
+                <{includeq file="db:system_comments_flat.tpl"}>
             <{elseif $comment_mode == "thread"}>
-                <{include file="db:system_comments_thread.tpl"}>
+                <{includeq file="db:system_comments_thread.tpl"}>
             <{elseif $comment_mode == "nest"}>
-                <{include file="db:system_comments_nest.tpl"}>
+                <{includeq file="db:system_comments_nest.tpl"}>
             <{/if}>
             <!-- end comments loop -->
             <!-- end comments -->
@@ -159,4 +159,4 @@
     </div>
 </div>
 
-<{include file='db:system_notification_select.tpl'}>
+<{includeq file='db:system_notification_select.tpl'}>

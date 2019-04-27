@@ -9,7 +9,7 @@
 
 <{if $block.display_type=='block'}>
     <{foreach item=item from=$block.items}>
-        <{include file="db:publisher_singleitem_block.tpl" item=$item}>
+        <{includeq file="db:publisher_singleitem_block.tpl" item=$item}>
     <{/foreach}>
 
 <{else}>

@@ -4,7 +4,7 @@
             <div class="col-xs-2 col-md-2"><strong><{$lang_poster}></strong></div>
             <div class="col-xs-10 col-md-10"><strong><{$lang_thread}></strong></div>
         </div>
-        <{include file="db:system_comment.tpl" comment=$comments[i]}>
+        <{includeq file="db:system_comment.tpl" comment=$comments[i]}>
 
         <{if $show_threadnav == true}>
             <a href="<{$comment_url}>" title="<{$lang_top}>"><{$lang_top}></a>

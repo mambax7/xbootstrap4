@@ -1,4 +1,4 @@
-<{include file="db:news_item.tpl" story=$story}>
+<{includeq file="db:news_item.tpl" story=$story}>
 
 <{if $attached_files_count>0}>
     <{$lang_attached_files}>
@@ -51,7 +51,7 @@
 </div>
 
 <{if $tags}>
-    <{include file="db:tag_bar.tpl"}>
+    <{includeq file="db:tag_bar.tpl"}>
 <{/if}>
 
 <{if $showsummary == true && $summary_count>0}>
@@ -75,11 +75,11 @@
 <{$lang_notice}>
 
 <{if $comment_mode == "flat"}>
-    <{include file="db:system_comments_flat.tpl"}>
+    <{includeq file="db:system_comments_flat.tpl"}>
 <{elseif $comment_mode == "thread"}>
-    <{include file="db:system_comments_thread.tpl"}>
+    <{includeq file="db:system_comments_thread.tpl"}>
 <{elseif $comment_mode == "nest"}>
-    <{include file="db:system_comments_nest.tpl"}>
+    <{includeq file="db:system_comments_nest.tpl"}>
 <{/if}>
 
-<{include file='db:system_notification_select.tpl'}>
+<{includeq file='db:system_notification_select.tpl'}>

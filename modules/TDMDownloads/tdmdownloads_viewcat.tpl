@@ -127,10 +127,10 @@
 
         <{if $file != ""}>
             <h3 class="tdm-title"><{$smarty.const._MD_TDMDOWNLOADS_CAT_LIST}>:</h3>
-            <{section name=i loop=$file}><{include file="db:tdmdownloads_download.tpl" down=$file[i]}><{/section}>
+            <{section name=i loop=$file}><{includeq file="db:tdmdownloads_download.tpl" down=$file[i]}><{/section}>
             <{if $pagenav != ''}><{$pagenav}><{/if}>
         <{/if}>
     </ul>
 </div><!-- .tdmdownloads -->
 
-<{include file="db:system_notification_select.tpl"}>
+<{includeq file="db:system_notification_select.tpl"}>

@@ -1,4 +1,4 @@
-<{include file='db:publisher_header.tpl'}>
+<{includeq file='db:publisher_header.tpl'}>
 
 <{if $indexpage || $category.subcats || ($category && $display_category_summary)}>
 
@@ -8,7 +8,7 @@
         </div>
     <{/if}>
 
-    <{include file='db:publisher_categories_table.tpl'}>
+    <{includeq file='db:publisher_categories_table.tpl'}>
     <!-- End of if !$category || $category.subcats || ($category && $display_category_summary) //-->
 <{/if}>
 <h4 class="pub_last_articles_wf">
@@ -62,4 +62,4 @@
 <{/if}>
 <!-- end of if $items -->
 
-<{include file='db:publisher_footer.tpl'}>
+<{includeq file='db:publisher_footer.tpl'}>

@@ -82,7 +82,7 @@
     <{/if}>
 
     <{section name=i loop=$video}>
-        <{include file="db:xoopstube_videoload.tpl" video=$video[i]}>
+        <{includeq file="db:xoopstube_videoload.tpl" video=$video[i]}>
     <{/section}>
 
     <{if $page_nav == true}>
@@ -93,9 +93,9 @@
         <{$smarty.const._MD_XOOPSTUBE_MODERATOR_OPTIONS}>
 
         <{section name=a loop=$mod_arr}>
-            <{include file="db:xoopstube_videoload.tpl" video=$mod_arr[a]}>
+            <{includeq file="db:xoopstube_videoload.tpl" video=$mod_arr[a]}>
         <{/section}>
     <{/if}>
 
-    <{include file="db:system_notification_select.tpl"}>
+    <{includeq file="db:system_notification_select.tpl"}>
 </div><!-- .xoopstube -->

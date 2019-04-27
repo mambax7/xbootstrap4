@@ -1,5 +1,5 @@
 <div class="tdmdownloads">
-    <{if count($categories) gt 0}>
+    <{if $categories|is_array && count($categories) > 0}>
 
     <div class="tdm-category row">
         <{foreach item=category from=$categories}>
@@ -116,7 +116,7 @@
                     <h1><{$smarty.const._MD_TDMDOWNLOADS_INDEX_LATESTLIST}>:</h1>
                 </div>
                 <{section name=i loop=$file}>
-                    <{include file="db:tdmdownloads_download.tpl" down=$file[i]}>
+                    <{includeq file="db:tdmdownloads_download.tpl" down=$file[i]}>
                 <{/section}>
             <{/if}>
         </div>
@@ -124,4 +124,4 @@
 
 </div><!-- .tdmdownloads -->
 
-<{include file="db:system_notification_select.tpl"}>
+<{includeq file="db:system_notification_select.tpl"}>

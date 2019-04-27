@@ -282,4 +282,4 @@
     $("input[name*='term']").css({"width": "90%", "margin-bottom": "5px", "background-position": "1px 8px"});
     $('.btnDefault').addClass("btn btn-success btn-sm");
 </script>
-<{include file='db:system_notification_select.tpl'}>
+<{includeq file='db:system_notification_select.tpl'}>
