@@ -158,12 +158,12 @@
         <div class="col-sm-4 col-md-4">
             <{if $rating_enable && $forum_post && $forum_reply}>
                 <select class="form-control" name="rate" id="rate" onchange="if(this.options[this.selectedIndex].value.length >0 ) { window.document.location=this.options[this.selectedIndex].value;}">
-                    <option value=""><{$smarty.const._MD_RATE}></option>
-                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=5"><{$smarty.const._MD_RATE5}></option>
-                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=4"><{$smarty.const._MD_RATE4}></option>
-                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=3"><{$smarty.const._MD_RATE3}></option>
-                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=2"><{$smarty.const._MD_RATE2}></option>
-                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=1"><{$smarty.const._MD_RATE1}></option>
+                    <option value=""><{$smarty.const._MD_NEWBB_RATE}></option>
+                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=5"><{$smarty.const._MD_NEWBB_RATE5}></option>
+                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=4"><{$smarty.const._MD_NEWBB_RATE4}></option>
+                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=3"><{$smarty.const._MD_NEWBB_RATE3}></option>
+                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=2"><{$smarty.const._MD_NEWBB_RATE2}></option>
+                    <option value="<{$xoops_url}>/modules/<{$xoops_dirname}>/ratethread.php?topic_id=<{$topic_id}>&forum=<{$forum_id}>&rate=1"><{$smarty.const._MD_NEWBB_RATE1}></option>
                 </select>
             <{/if}>
         </div>

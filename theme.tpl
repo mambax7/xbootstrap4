@@ -41,6 +41,8 @@
 <script defer="" src="<{xoImgUrl}>js/fontawesome-all.min.js"></script>
 <script defer="" src="<{xoImgUrl}>js/fa-v4-shims.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
 <script src="<{xoImgUrl}>js/headhesive.min.js"></script>
 <{*<script src="<{xoImgUrl}>js/headhesive.js"></script>*}>
 <script src="<{xoImgUrl}>js/jquery.scrollUp.min.js"></script>
