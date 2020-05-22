@@ -148,6 +148,6 @@
             <{/foreach}>
             <{/if}>
         <{/if}>
-        <a class="btn btn-success btn-xs" href="#threadtop" title="<{$smarty.const._MD_TOP}>"><span class="fa fa-circle-arrow-up"></span></a>
+        <a class="btn btn-primary btn-xs" href="#threadtop" title="<{$smarty.const._MD_TOP}>"><span class="fa fa-circle-arrow-up"></span></a>
     </div>
 </div>

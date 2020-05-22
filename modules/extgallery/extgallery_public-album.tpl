@@ -18,7 +18,7 @@
             <ul class="list-unstyled">
                 <li>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_date&orderby=DESC" title="<{$smarty.const._MD_EXTGALLERY_SORTDATEDESC}>">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
                     <span><{$smarty.const._MD_EXTGALLERY_SORTDATE}></span>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_date&orderby=ASC" title="<{$smarty.const._MD_EXTGALLERY_SORTDATEASC}>">
@@ -28,7 +28,7 @@
 
                 <li>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_title&orderby=ASC" title="<{$smarty.const._MD_EXTGALLERY_SORTNAMEASC}>">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
                     <span><{$smarty.const._MD_EXTGALLERY_SORTNAME}></span>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_title&orderby=DESC" title="<{$smarty.const._MD_EXTGALLERY_SORTNAMEDESC}>">
@@ -38,7 +38,7 @@
 
                 <li>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_hits&orderby=DESC" title="<{$smarty.const._MD_EXTGALLERY_SORTHITSDESC}>">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
                     <span><{$smarty.const._MD_EXTGALLERY_SORTHITS}></span>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_hits&orderby=ASC" title="<{$smarty.const._MD_EXTGALLERY_SORTHITSASC}>">
@@ -48,7 +48,7 @@
 
                 <li>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_rating&orderby=DESC" title="<{$smarty.const._MD_EXTGALLERY_SORTNOTEDESC}>">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
                     <span><{$smarty.const._MD_EXTGALLERY_SORTNOTE}></span>
                     <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&start=<{$extgalleryStart}>&sortby=photo_rating&orderby=ASC" title="<{$smarty.const._MD_EXTGALLERY_SORTNOTEASC}>">
@@ -70,7 +70,7 @@
                 <{if $photos[photo].photo_id}>
                     <ul class="adminlinks list-unstyled">
                         <{if $xoops_isadmin}>
-                            <li><a title="edit" href="<{xoAppUrl modules/extgallery/}>public-modify.php?op=edit&id=<{$photos[photo].photo_id}>"><span class="fa fa-edit"></span></a></li>
+                            <li><a title="edit" href="<{xoAppUrl modules/extgallery/}>public-modify.php?op=edit&id=<{$photos[photo].photo_id}>"><span class="fa fa-pencil-square-o"></span></a></li>
                             <li><a title="delete" href="<{xoAppUrl modules/extgallery/}>public-modify.php?op=delete&id=<{$photos[photo].photo_id}>"><span class="fa fa-trash"></span></a></li>
                         <{/if}>
 
@@ -129,4 +129,4 @@
     </div>
 <{/if}>
 
-<{includeq file='db:system_notification_select.tpl'}>
+<{include file='db:system_notification_select.tpl'}>

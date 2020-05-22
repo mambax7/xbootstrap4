@@ -1,5 +1,5 @@
 <ol class="breadcrumb">
-    <li><a href="index.php"><{$smarty.const._XO_LA_XOOPSFAQ}></a></li>
+    <li class="nav-item"><a class="nav-link" href="index.php"><{$smarty.const._XO_LA_XOOPSFAQ}></a></li>
 </ol>
 
 <div class="alert alert-info"><{$smarty.const._XO_LA_TOC}></div>

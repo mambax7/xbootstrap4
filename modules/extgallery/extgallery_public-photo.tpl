@@ -17,7 +17,7 @@
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <{if $xoops_isadmin}>
                     <div class="pull-left">
-                        <a title="edit" class="btn btn-success btn-xs" href="<{xoAppUrl modules/extgallery/}>public-modify.php?op=edit&id=<{$photo.photo_id}>"><span class="fa fa-edit"></span></a>
+                        <a title="edit" class="btn btn-primary btn-xs" href="<{xoAppUrl modules/extgallery/}>public-modify.php?op=edit&id=<{$photo.photo_id}>"><span class="fa fa-pencil-square-o"></span></a>
                         <a title="delete" class="btn btn-danger btn-xs" href="<{xoAppUrl modules/extgallery/}>public-modify.php?op=delete&id=<{$photo.photo_id}>"><span class="fa fa-trash"></span></a>
                     </div>
                 <{/if}>
@@ -77,7 +77,7 @@
         <!-- Start XOOPS Tag -->
         <{if $tags}>
             <div class="col-md-12">
-                <{includeq file="db:tag_bar.tpl"}>
+                <{include file="db:tag_bar.tpl"}>
             </div>
         <{/if}>
 
@@ -166,11 +166,11 @@
 <{$lang_notice}>
 
 <{if $comment_mode == "flat"}>
-    <{includeq file="db:system_comments_flat.tpl"}>
+    <{include file="db:system_comments_flat.tpl"}>
 <{elseif $comment_mode == "thread"}>
-    <{includeq file="db:system_comments_thread.tpl"}>
+    <{include file="db:system_comments_thread.tpl"}>
 <{elseif $comment_mode == "nest"}>
-    <{includeq file="db:system_comments_nest.tpl"}>
+    <{include file="db:system_comments_nest.tpl"}>
 <{/if}>
 
-<{includeq file='db:system_notification_select.tpl'}>
+<{include file='db:system_notification_select.tpl'}>

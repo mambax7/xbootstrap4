@@ -100,7 +100,7 @@
                 </div>
             <{/if}>
             <{foreach item=files from=$files}>
-                <{includeq file="db:tdmpicture_tpfile.tpl"}>
+                <{include file="db:tdmpicture_tpfile.tpl"}>
             <{/foreach}>
         </div>
         <!-- fichier playlist  -->
@@ -120,11 +120,11 @@
                 <!-- start comments loop -->
                 <div style="margin: 3px; padding: 3px;">
                     <{if $comment_mode == "flat"}>
-                        <{includeq file="db:system_comments_flat.tpl"}>
+                        <{include file="db:system_comments_flat.tpl"}>
                     <{elseif $comment_mode == "thread"}>
-                        <{includeq file="db:system_comments_thread.tpl"}>
+                        <{include file="db:system_comments_thread.tpl"}>
                     <{elseif $comment_mode == "nest"}>
-                        <{includeq file="db:system_comments_nest.tpl"}>
+                        <{include file="db:system_comments_nest.tpl"}>
                     <{/if}>
                 </div>
             </div>

@@ -37,7 +37,7 @@
     </a>
 
     <{if $down.perm_download != ""}>
-        <a title="<{$smarty.const._MD_TDMDOWNLOADS_INDEX_DLNOW}>" href="visit.php?cid=<{$down.cid}>&lid=<{$down.id}>" class="btn btn-success btn-xs tdm-download-btn col-md-2 pull-right">
+        <a title="<{$smarty.const._MD_TDMDOWNLOADS_INDEX_DLNOW}>" href="visit.php?cid=<{$down.cid}>&lid=<{$down.id}>" class="btn btn-primary btn-xs tdm-download-btn col-md-2 pull-right">
             <span class="fa fa-cloud-download"></span>
         </a>
     <{/if}>

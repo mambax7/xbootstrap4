@@ -4,7 +4,7 @@
             <div class="col-xs-2 col-md-2"><strong><{$lang_poster}></strong></div>
             <div class="col-xs-10 col-md-10"><strong><{$lang_thread}></strong></div>
         </div>
-        <{includeq file="db:system_comment.tpl" comment=$comments[i]}>
+        <{include file="db:system_comment.tpl" comment=$comments[i]}>
         <!-- start comment replies -->
         <{foreach item=reply from=$comments[i].replies}>
             <{assign var="indent" value="`$reply.prefix/25`"}>
@@ -16,7 +16,7 @@
             <{assign var="replyspace" value="`$fullcolwidth-$indent`"}>
             <div class="row">
                 <div class="col-md-offset-<{$indent}> col-md-<{$replyspace}> col-xs-offset-<{$indent}> col-xs-<{$replyspace}>">
-                    <{includeq file="db:system_comment.tpl" comment=$reply}>
+                    <{include file="db:system_comment.tpl" comment=$reply}>
                 </div>
             </div>
         <{/foreach}>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">&times;</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

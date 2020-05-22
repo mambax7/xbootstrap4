@@ -41,8 +41,8 @@
     <div class="row">
         <div class="col-xs-12 col-md-12 alignright">
             <{if $xoops_iscommentadmin == true}>
-                <a href="<{$editcomment_link}>&com_id=<{$comment.id}>" title="<{$lang_edit}>" class="btn btn-success btn-xs">
-                    <span class="fa fa-edit"></span>
+                <a href="<{$editcomment_link}>&com_id=<{$comment.id}>" title="<{$lang_edit}>" class="btn btn-primary btn-xs">
+                    <span class="fa fa-pencil-square-o"></span>
                 </a>
                 <a href="<{$replycomment_link}>&com_id=<{$comment.id}>" title="<{$lang_reply}>" class="btn btn-info btn-xs">
                     <span class="fa fa-comment"></span>
@@ -51,8 +51,8 @@
                     <span class="fa fa-trash"></span>
                 </a>
             <{elseif $xoops_isuser == true && $xoops_userid == $comment.poster.id}>
-                <a href="<{$editcomment_link}>&com_id=<{$comment.id}>" title="<{$lang_edit}>" class="btn btn-success btn-xs">
-                    <span class="fa fa-edit"></span>
+                <a href="<{$editcomment_link}>&com_id=<{$comment.id}>" title="<{$lang_edit}>" class="btn btn-primary btn-xs">
+                    <span class="fa fa-pencil-square-o"></span>
                 </a>
                 <a href="<{$replycomment_link}>&com_id=<{$comment.id}>" title="<{$lang_reply}>" class="btn btn-info btn-xs">
                     <span class="fa fa-comment"></span>

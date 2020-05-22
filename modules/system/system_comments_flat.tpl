@@ -4,7 +4,7 @@
         <div class="col-xs-10 col-md-10"><strong><{$lang_thread}></strong></div>
     </div>
     <{foreach item=comment from=$comments}>
-        <{includeq file="db:system_comment.tpl" comment=$comment}>
+        <{include file="db:system_comment.tpl" comment=$comment}>
     <{/foreach}>
 
     <{if $commentform}>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">&times;</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

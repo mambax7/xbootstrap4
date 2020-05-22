@@ -23,7 +23,7 @@
         <{if $mode gt 1}>
         <!-- irmtfan mistype forum_posts_admin => form_posts_admin  -->
         <form name="form_posts_admin" action="action.post.php" method="POST" onsubmit="if(window.document.form_posts_admin.op.value &lt; 1){return false;}">
-            <{$smarty.const._ALL}>: 
+            <{$smarty.const._ALL}>:
                 <input type="checkbox" name="post_check" id="post_check" value="1" onclick="xoopsCheckAll('form_posts_admin', 'post_check');"/>
             <select name="op">
                 <option value="0"><{$smarty.const._SELECT}></option>
@@ -99,7 +99,7 @@
 <br>
 
 <{foreach item=post from=$posts}>
-<{includeq file="db:newbb_thread.tpl" topic_post=$post}>
+<{include file="db:newbb_thread.tpl" topic_post=$post}>
 <!-- irmtfan hardcode removed style="padding: 5px;float: right; text-align:right;" -->
 <div class="pagenav">
     <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?topic_id=<{$post.topic_id}>"><strong><{$smarty.const._MD_NEWBB_VIEWTOPIC}></strong></a>
@@ -155,7 +155,7 @@
 <br>
 <{if $online}>
     <br>
-    <{includeq file="db:newbb_online.tpl"}>
+    <{include file="db:newbb_online.tpl"}>
 <{/if}>
-<{includeq file='db:newbb_notification_select.tpl'}>
+<{include file='db:newbb_notification_select.tpl'}>
 <!-- end module contents -->

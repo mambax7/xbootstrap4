@@ -56,7 +56,7 @@
         <br class="clear">
         <{$tree_display}>
         <hr>
-        <{includeq file="db:tdmpicture_tpfile.tpl"}>
+        <{include file="db:tdmpicture_tpfile.tpl"}>
 
 
         <!-- Display navigation  -->

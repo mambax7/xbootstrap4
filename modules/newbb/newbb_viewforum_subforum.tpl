@@ -1,5 +1,5 @@
 <a title="<{$smarty.const._MD_NEWBB_SUBFORUMS}>" data-toggle="collapse" href="#xoops-subforum" class="btn btn-primary pull-right">
-    <span class="glyphicon glyphicon-plus-sign"></span> <{$smarty.const._MD_NEWBB_SUBFORUMS}>
+    <span class="fa fa-plus-sign"></span> <{$smarty.const._MD_NEWBB_SUBFORUMS}>
 </a>
 <div class="newbb-subforum mb10 clearfix">
     <div class="collapse" id="xoops-subforum">
@@ -28,7 +28,7 @@
             <{if $sforum.forum_desc != ""}>
                 <li>
                     <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#subforum-<{$sforum.forum_id}>">
-                        <span class="glyphicon glyphicon-info-sign"></span>
+                        <span class="fa fa-info-sign"></span>
                     </button>
                 </li>
             <{/if}>
@@ -62,7 +62,7 @@
                 <p><{$sforum.forum_desc}></p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><{$smarty.const.THEME_CLOSE}></button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><{$smarty.const.THEME_CLOSE}></button>
                 <button type="button" class="btn btn-primary"><{$smarty.const.THEME_GOTOTHEFORUM}></button>
               </div>
             </div><!-- /.modal-content -->

@@ -1,13 +1,13 @@
 <ol class="breadcrumb">
-    <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_NEWBB_FORUMHOME}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_NEWBB_FORUMHOME}></a></li>
     <{if $parent_forum}>
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$parent_forum}>"><{$parent_name}></a></li>
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$parent_forum}>"><{$parent_name}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
     <{elseif $forum_name}>
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
     <{/if}>
     <{if $current}>
-        <li><a href="<{$current.link}>"><{$current.title}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$current.link}>"><{$current.title}></a></li>
     <{/if}>
 </ol>
 <div class="row">
@@ -65,7 +65,7 @@
             <br>
         <{/if}>
         <div class="clear"></div>
-    
+
         <div>
             <div>
                 <{if $menumode eq 0}>
@@ -102,7 +102,7 @@
                                         &nbsp;<{$smarty.const._MD_NEWBB_UNREPLIED}></a>
                                     <a class="item" href="<{$unread_link}>"><{$smarty.const._MD_NEWBB_VIEW}>
                                         &nbsp;<{$smarty.const._MD_NEWBB_UNREAD}></a>
-    
+
                                 </td>
                             </tr>
                         </table>
@@ -133,7 +133,7 @@
                                                             &nbsp;<{$smarty.const._MD_NEWBB_UNREPLIED}></a></div>
                                                     <div class="item"><a href="<{$unread_link}>"><{$smarty.const._MD_NEWBB_VIEW}>
                                                             &nbsp;<{$smarty.const._MD_NEWBB_UNREAD}></a></div>
-    
+
                                                 </td>
                                             </tr>
                                         </table>
@@ -156,7 +156,7 @@
     <{if $mode gt 1}>
     </form>
     <{/if}>
-    
+
         </div> <!-- end column -->
     </div><!-- end row -->
 <table class="table table-responsive" width="100%" align="center">
@@ -292,6 +292,6 @@
 <div class="clear"></div>
 <br>
 
-<{if $online}><{includeq file="db:newbb_online.tpl"}><{/if}>
-<{includeq file='db:newbb_notification_select.tpl'}>
+<{if $online}><{include file="db:newbb_online.tpl"}><{/if}>
+<{include file='db:newbb_notification_select.tpl'}>
 <!-- end module contents -->

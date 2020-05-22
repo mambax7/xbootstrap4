@@ -1,6 +1,6 @@
 <{if isset($obituaries_user)}>
     <ol class="breadcrumb">
-        <li><a href="index.php"><{$breadcrumb}></a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php"><{$breadcrumb}></a></li>
         <{if $xoops_isadmin}>
             <li>[ <a href="<{$xoops_url}>/modules/obituaries/admin/main.php?op=edit&id=<{$obituaries_user.obituaries_id}>"><{$smarty.const._EDIT}></a> ]</li>
         <{/if}>
@@ -90,15 +90,15 @@
 
     <{if $comment_mode == "flat"}>
 
-        <{includeq file="db:system_comments_flat.tpl"}>
+        <{include file="db:system_comments_flat.tpl"}>
 
     <{elseif $comment_mode == "thread"}>
 
-        <{includeq file="db:system_comments_thread.tpl"}>
+        <{include file="db:system_comments_thread.tpl"}>
 
     <{elseif $comment_mode == "nest"}>
 
-        <{includeq file="db:system_comments_nest.tpl"}>
+        <{include file="db:system_comments_nest.tpl"}>
 
     <{/if}>
 

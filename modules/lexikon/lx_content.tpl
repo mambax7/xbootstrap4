@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
-    <li><a href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
-    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/index.php"><{$lang_modulename}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/index.php"><{$lang_modulename}></a></li>
     <li><{$smarty.const._MD_LEXIKON_SYNDICATION}></li>
 </ol>
 
@@ -32,7 +32,7 @@
         <{$yform.extra}=""> >
         <label><{$yform.elements.txt.caption}></label>
         <{$yform.elements.txt.body}>
-        <input type="button" value="select" style="margin-top: 5px" class="btn btn-success btn-sm form-control" onclick="this.form.txt.focus();this.form.txt.select(); document.execCommand('Copy')">
+        <input type="button" value="select" style="margin-top: 5px" class="btn btn-primary btn-sm form-control" onclick="this.form.txt.focus();this.form.txt.select(); document.execCommand('Copy')">
         </form>
 
         <div align="center">

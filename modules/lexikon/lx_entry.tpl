@@ -27,9 +27,9 @@
 <{/if}>
 
 <ol class="breadcrumb">
-    <li><a href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
-    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/index.php"><{$lang_modulename}></a></li>
-    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$thisterm.init}>"><{$thisterm.init}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/index.php"><{$lang_modulename}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$thisterm.init}>"><{$thisterm.init}></a></li>
     <li><{$thisterm.term}></li>
 </ol>
 
@@ -39,23 +39,23 @@
         <h3><{$smarty.const._MD_LEXIKON_BROWSELETTER}></h3>
 
         <ul class="pagination pagination-sm">
-            <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
+            <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
             <{foreach item=letterlinks from=$alpha.initial}>
                 <{if $letterlinks.total > 0}>
-                    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
+                    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
                             <{$letterlinks.linktext}>
                         </a></li>
                 <{else}>
-                    <li><a href="#"><{$letterlinks.linktext}></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><{$letterlinks.linktext}></a></li>
                 <{/if}>
             <{/foreach}>
 
             <{if $totalother > 0}>
-                <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$smarty.const._MD_LEXIKON_OTHER}>" title="[ <{$totalother}> ]">
+                <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$smarty.const._MD_LEXIKON_OTHER}>" title="[ <{$totalother}> ]">
                         <{$smarty.const._MD_LEXIKON_OTHER}>
                     </a></li>
             <{else}>
-                <li><a href="#"><{$smarty.const._MD_LEXIKON_OTHER}></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><{$smarty.const._MD_LEXIKON_OTHER}></a></li>
             <{/if}>
         </ul>
     </div>
@@ -127,11 +127,11 @@
 <div class="row">
     <div class="col-md-12">
         <{if $bookmarkme == 2}>
-            <{includeq file="db:lx_bookmark.tpl"}>
+            <{include file="db:lx_bookmark.tpl"}>
         <{/if}>
         <{if $tagbar}>
             <div class="letters">
-                <{includeq file="db:lx_tag_bar.tpl"}>
+                <{include file="db:lx_tag_bar.tpl"}>
             </div>
         <{/if}>
     </div>
@@ -147,11 +147,11 @@
         <div style="margin: 3px; padding: 3px;">
             <!-- start comments loop -->
             <{if $comment_mode == "flat"}>
-                <{includeq file="db:system_comments_flat.tpl"}>
+                <{include file="db:system_comments_flat.tpl"}>
             <{elseif $comment_mode == "thread"}>
-                <{includeq file="db:system_comments_thread.tpl"}>
+                <{include file="db:system_comments_thread.tpl"}>
             <{elseif $comment_mode == "nest"}>
-                <{includeq file="db:system_comments_nest.tpl"}>
+                <{include file="db:system_comments_nest.tpl"}>
             <{/if}>
             <!-- end comments loop -->
             <!-- end comments -->
@@ -159,4 +159,4 @@
     </div>
 </div>
 
-<{includeq file='db:system_notification_select.tpl'}>
+<{include file='db:system_notification_select.tpl'}>

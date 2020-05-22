@@ -73,7 +73,7 @@
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" name="submit" class="btn btn-primary"><{$smarty.const._SUBMIT}></button>
-            <button type="reset" name="cancel" class="btn btn-primary"><{$smarty.const._CANCEL}></button>
+            <button type="reset" name="cancel" class="btn btn-warning"><{$smarty.const._CANCEL}></button>
         </div>
     </div>
 

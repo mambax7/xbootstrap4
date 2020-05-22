@@ -40,3 +40,13 @@ define('THEME_PASS', 'Your Password');
 
 //Block User
 define('THEME_USER_WELCOME', 'Welcome');
+
+//Account tab
+define('THEME_ACCOUNT', 'Account');
+define('THEME_ACCOUNT_EDIT', 'Edit Account');
+define('THEME_ACCOUNT_LOGIN', 'Login');
+define('THEME_ACCOUNT_LOGOUT', 'Logout');
+define('THEME_ACCOUNT_MESSAGES', 'Messages');
+define('THEME_ACCOUNT_NOTIFICATIONS', 'Notifications');
+define('THEME_ACCOUNT_REGISTER', 'Sign Up');
+define('THEME_ACCOUNT_TOOLBAR', 'Toolbar');

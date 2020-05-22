@@ -86,38 +86,38 @@
                 <div class="col-xs-3 col-sm-3 col-md-3">
                     <{$smarty.const._MD_TDMDOWNLOADS_CAT_TITLE}>
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_TITLEATOZ}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=title&order=ASC">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
 
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_TITLEZTOA}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=title&order=DESC">
-                        <span class="glyphicon fa fa-collapse-down"></span>
+                        <span class="fa fa-collapse-down"></span>
                     </a>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3">
                     <{$smarty.const._MD_TDMDOWNLOADS_CAT_DATE}>
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_DATEOLD}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=date&order=ASC">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_DATENEW}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=date&order=DESC">
-                        <span class="glyphicon fa fa-collapse-down"></span>
+                        <span class="fa fa-collapse-down"></span>
                     </a>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3">
                     <{$smarty.const._MD_TDMDOWNLOADS_CAT_RATING}>
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_RATINGLTOH}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=rating&order=ASC">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_RATINGHTOL}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=rating&order=DESC">
-                        <span class="glyphicon fa fa-collapse-down"></span>
+                        <span class="fa fa-collapse-down"></span>
                     </a>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3">
                     <{$smarty.const._MD_TDMDOWNLOADS_CAT_POPULARITY}>
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_POPULARITYLTOM}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=hits&order=ASC">
-                        <span class="glyphicon fa fa-collapse-up"></span>
+                        <span class="fa fa-collapse-up"></span>
                     </a>
                     <a title="<{$smarty.const._MD_TDMDOWNLOADS_CAT_POPULARITYMTOL}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category_id}>&sort=hits&order=DESC">
-                        <span class="glyphicon fa fa-collapse-down"></span>
+                        <span class="fa fa-collapse-down"></span>
                     </a>
                 </div>
                 <div class="clearfix"></div>
@@ -127,10 +127,10 @@
 
         <{if $file != ""}>
             <h3 class="tdm-title"><{$smarty.const._MD_TDMDOWNLOADS_CAT_LIST}>:</h3>
-            <{section name=i loop=$file}><{includeq file="db:tdmdownloads_download.tpl" down=$file[i]}><{/section}>
+            <{section name=i loop=$file}><{include file="db:tdmdownloads_download.tpl" down=$file[i]}><{/section}>
             <{if $pagenav != ''}><{$pagenav}><{/if}>
         <{/if}>
     </ul>
 </div><!-- .tdmdownloads -->
 
-<{includeq file="db:system_notification_select.tpl"}>
+<{include file="db:system_notification_select.tpl"}>

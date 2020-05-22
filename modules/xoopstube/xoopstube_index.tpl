@@ -56,11 +56,11 @@
             <{$pagenav}>
         <{/if}>
         <{section name=i loop=$video}>
-            <{includeq file="db:xoopstube_videoload.tpl" video=$video[i]}>
+            <{include file="db:xoopstube_videoload.tpl" video=$video[i]}>
         <{/section}>
         <{if $pagenav}>
             <{$pagenav}>
         <{/if}>
     <{/if}>
-    <{includeq file="db:system_notification_select.tpl"}>
+    <{include file="db:system_notification_select.tpl"}>
 </div><!-- .xoopstube -->

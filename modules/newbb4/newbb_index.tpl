@@ -28,7 +28,7 @@
                     </div>
                 <{/if}>
 
-                <div class="<{if $viewer_level gt 1}>col-md-6<{else}>col-md-12<{/if}> text-right"><{includeq file="db:newbb_index_menu.tpl"}></div>
+                <div class="<{if $viewer_level gt 1}>col-md-6<{else}>col-md-12<{/if}> text-right"><{include file="db:newbb_index_menu.tpl"}></div>
 
                 <{if $viewer_level gt 1}>
                     <div class="col-md-12">
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.cat_id}>"
-                                       title="<{$smarty.const.THEME_GOTOTHEFORUM}>" class="btn btn-default">
+                                       title="<{$smarty.const.THEME_GOTOTHEFORUM}>" class="btn btn-secondary">
                                         <{$smarty.const.THEME_GOTOTHEFORUM}>
                                     </a>
                                 </div>
@@ -182,7 +182,7 @@
                                                     </div>
                                                 <{/if}>
                                                 <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.cat_id}>"
-                                                   class="btn btn-default"
+                                                   class="btn btn-secondary"
                                                    title="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.cat_id}>">
                                                     <{$smarty.const.THEME_GOTOTHEFORUM}>
                                                 </a>
@@ -218,7 +218,7 @@
                                     <{$forum.forum_lastpost_icon}>
                                 </a>
                             <{else}>
-                                <{$smarty.const._AM_NEWBB_NOTOPIC}>
+                                <{$smarty.const._MD_NEWBB_NOTOPIC}>
                             <{/if}>
 
                             <{if $forum.subforum}>
@@ -319,7 +319,7 @@
     <{/if}>
 
     <{if $online}>
-        <{includeq file="db:newbb_online.tpl"}>
+        <{include file="db:newbb_online.tpl"}>
     <{/if}>
 
     <a title="NewBB" href="http://www.simple-xoops.de" class="btn btn-xs btn-success">NewBB Version <{$version/100}></a>
@@ -331,6 +331,6 @@
         </div>
     <{/if}>
 
-    <{includeq file='db:newbb_notification_select.tpl'}>
+    <{include file='db:newbb_notification_select.tpl'}>
 
 </div><!-- .xoops-newbb -->

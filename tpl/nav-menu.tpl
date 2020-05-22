@@ -8,17 +8,45 @@
 
                 <div class="navbar-header">
                     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggler" type="button">
-						<span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                     <a href="<{$xoops_url}>" class="navbar-brand xlogo" title="<{$xoops_sitename}>">
                         <img src="<{$xoops_imageurl}>images/logo.png" alt="<{$xoops_sitename}>">
                     </a>
                 </div>
 
+                
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item active"><a href="<{$xoops_url}>" class="nav-link"><{$smarty.const.THEME_HOME}></a></li>
+                        
+                        
+                    <{xoInboxCount assign='unread_count'}>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="xbootstrap-account-menu"><{$smarty.const.THEME_ACCOUNT}> <span class="caret"></span></a>
+                        <div class="dropdown-menu" aria-labelledby="xbootstrap-account-menu">
+                            <{if $xoops_isuser|default:false}>
+                            <a class="dropdown-item" href="<{$xoops_url}>/user.php"><{$smarty.const.THEME_ACCOUNT_EDIT}></a>
+                            <a class="dropdown-item" href="<{$xoops_url}>/viewpmsg.php"><{$smarty.const.THEME_ACCOUNT_MESSAGES}> <span class="badge badge-primary badge-pill"><{xoInboxCount}></span></a>
+                            <a class="dropdown-item" href="<{$xoops_url}>/notifications.php"><{$smarty.const.THEME_ACCOUNT_NOTIFICATIONS}></a>
+                            <a class="dropdown-item" href="<{$xoops_url}>/user.php?op=logout"><{$smarty.const.THEME_ACCOUNT_LOGOUT}></a>
+                            <{if $xoops_isadmin|default:false}>
+                            <a class="dropdown-item" href="javascript:xswatchToolbarToggle();"><{$smarty.const.THEME_ACCOUNT_TOOLBAR}> <span id="xswatch-toolbar-ind"></span></a>
+                            <{/if}>
+                            <{else}>
+                            <a class="dropdown-item" href="<{$xoops_url}>/user.php"><{$smarty.const.THEME_ACCOUNT_LOGIN}></a>
+                            <a class="dropdown-item" href="<{$xoops_url}>/register.php"><{$smarty.const.THEME_ACCOUNT_REGISTER}></a>
+                            <{/if}>
+                        </div>
+                    </li>
+                        
+                        
+                        
+                        
                         <li class="nav-item"><a href="javascript:;" class="nav-link"><{$smarty.const.THEME_MODULE1}></a></li>
+
+
+
 
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle" href="javascript:;"><{$smarty.const.THEME_MODULE2}><b class="caret"></b></a>
@@ -41,6 +69,9 @@
 
                         <li class="nav-item"><a href="<{$xoops_url}>/modules/newbb" class="nav-link"><{$smarty.const.THEME_MODULE3}></a></li>
                         <li class="nav-item"><a href="<{$xoops_url}>/modules/contact" class="nav-link"><{$smarty.const.THEME_MODULE4}></a></li>
+
+                        <li class="nav-item"><{$xoops_menu_1531793538}></li>
+
                     </ul>
 
 

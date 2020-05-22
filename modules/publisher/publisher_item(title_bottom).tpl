@@ -21,7 +21,7 @@
     });
 </script>
 </head>
-<body><{includeq file='db:publisher_header.tpl'}>
+<body><{include file='db:publisher_header.tpl'}>
 <div class="pub_article_t_bottom clearfix">
     <{if $item.image_path || $item.images}>
         <figure>
@@ -198,7 +198,7 @@
 <!-- END Other articles in the category -->
 
 <{if $tagbar}>
-    <p><{includeq file="db:tag_bar.tpl"}></p>
+    <p><{include file="db:tag_bar.tpl"}></p>
 <{/if}>
 
-<{includeq file='db:publisher_footer.tpl'}>
+<{include file='db:publisher_footer.tpl'}>

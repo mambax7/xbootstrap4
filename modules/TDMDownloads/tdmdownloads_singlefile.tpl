@@ -94,7 +94,7 @@
     <{/if}>
 
     <{if $tags}>
-        <{includeq file="db:tag_bar.tpl"}>
+        <{include file="db:tag_bar.tpl"}>
     <{/if}>
 
     <{if $show_social}>
@@ -107,11 +107,11 @@
 <{$lang_notice}>
 
 <{if $comment_mode == "flat"}>
-    <{includeq file="db:system_comments_flat.tpl"}>
+    <{include file="db:system_comments_flat.tpl"}>
 <{elseif $comment_mode == "thread"}>
-    <{includeq file="db:system_comments_thread.tpl"}>
+    <{include file="db:system_comments_thread.tpl"}>
 <{elseif $comment_mode == "nest"}>
-    <{includeq file="db:system_comments_nest.tpl"}>
+    <{include file="db:system_comments_nest.tpl"}>
 <{/if}>
 
-<{includeq file="db:system_notification_select.tpl"}>
+<{include file="db:system_notification_select.tpl"}>

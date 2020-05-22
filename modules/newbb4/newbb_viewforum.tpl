@@ -1,15 +1,15 @@
 <div class="newbb">
     <ol class="breadcrumb">
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$forum_index_title}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$forum_index_title}></a></li>
 
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMHOME}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMHOME}></a></li>
 
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.id}>"><{$category.title}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.id}>"><{$category.title}></a></li>
 
         <!-- If is subforum-->
         <{if $parentforum}>
             <{foreach item=forum from=$parentforum}>
-            <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum.forum_id}>"><{$forum.forum_name}></a></li>
+            <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum.forum_id}>"><{$forum.forum_name}></a></li>
         <{/foreach}>
         <{/if}>
 
@@ -18,12 +18,12 @@
     <div class="row">
         <div class="col-xs-12">
             <{if $viewer_level gt 1}>
-                <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/newtopic.php?forum=<{$forum_id}>" title="<{$smarty.const.THEME_FORUM_NEWTOPIC}>" class="btn btn-success"><{$smarty.const.THEME_FORUM_NEWTOPIC}></a>
+                <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/newtopic.php?forum=<{$forum_id}>" title="<{$smarty.const.THEME_FORUM_NEWTOPIC}>" class="btn btn-primary"><{$smarty.const.THEME_FORUM_NEWTOPIC}></a>
             <{else}>
                 <{if $xoops_isuser}>
-                    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/newtopic.php?forum=<{$forum_id}>" title="<{$smarty.const.THEME_FORUM_NEWTOPIC}>" class="btn btn-success"><{$smarty.const.THEME_FORUM_NEWTOPIC}></a>
+                    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/newtopic.php?forum=<{$forum_id}>" title="<{$smarty.const.THEME_FORUM_NEWTOPIC}>" class="btn btn-primary"><{$smarty.const.THEME_FORUM_NEWTOPIC}></a>
                 <{else}>
-                    <a href="<{$xoops_url}>/user.php" title="<{$smarty.const.THEME_FORUM_REGISTER}>" class="btn btn-success"><{$smarty.const.THEME_FORUM_REGISTER}></a>
+                    <a href="<{$xoops_url}>/user.php" title="<{$smarty.const.THEME_FORUM_REGISTER}>" class="btn btn-primary"><{$smarty.const.THEME_FORUM_REGISTER}></a>
                 <{/if}>
             <{/if}>
 
@@ -42,7 +42,7 @@
             </a>
 
             <{if $subforum}>
-                <{includeq file="db:newbb_viewforum_subforum.tpl"}>
+                <{include file="db:newbb_viewforum_subforum.tpl"}>
             <{/if}>
         </div>
     </div>
@@ -109,7 +109,7 @@
                             <{/if}>
                     </div>
                     <div class="col-md-4 col-xs-12 pull-right">
-                        <{includeq file="db:newbb_viewforum_menu.tpl"}>
+                        <{include file="db:newbb_viewforum_menu.tpl"}>
                     </div>
                 </div>
                 <{if $mode gt 1}>
@@ -243,7 +243,7 @@
     </div>
 
     <{if $online}>
-        <{includeq file="db:newbb_online.tpl"}>
+        <{include file="db:newbb_online.tpl"}>
     <{/if}>
 
     <a title="NewBB" href="http://www.simple-xoops.de" class="btn btn-xs btn-success">NewBB Version <{$version/100}></a>
@@ -252,5 +252,5 @@
             <{$rss_button}>
         </a>
     <{/if}>
-    <{includeq file='db:newbb_notification_select.tpl'}>
+    <{include file='db:newbb_notification_select.tpl'}>
 </div><!-- .newbb -->
