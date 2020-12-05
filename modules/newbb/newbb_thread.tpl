@@ -22,7 +22,7 @@
             <{/if}>
 
                 <{if $infobox.show}>
-                    <a data-toggle="collapse" href="#<{$topic_post.post_id}>" title="<{$smarty.const.THEME_INFO}>" class="btn btn-primary btn-sm mb10"><span class="glyphicon glyphicon-info-sign"></span></a>
+                    <a data-toggle="collapse" href="#<{$topic_post.post_id}>" title="<{$smarty.const.THEME_INFO}>" class="btn btn-primary btn-sm mb10"><span class="fa fa-info-sign"></span></a>
                     <div id="<{$topic_post.post_id}>" class="collapse">
                         <ul class="list-unstyled text-left">
                             <li><{$smarty.const._MD_NEWBB_JOINED}>: <{$topic_post.poster.regdate}></li>
@@ -148,6 +148,6 @@
                 <{/foreach}>
         <{/if}>
     <{/if}>
-    <a class="btn btn-success btn-xs" href="#threadtop" title="<{$smarty.const._MD_NEWBB_TOP}>"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+    <a class="btn btn-primary btn-xs" href="#threadtop" title="<{$smarty.const._MD_NEWBB_TOP}>"><span class="fa fa-circle-arrow-up"></span></a>
     </div>
 </div>

@@ -1,9 +1,9 @@
 <ol class="breadcrumb">
-    <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$forumindex}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$forumindex}></a></li>
     <li class="active"><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/search.php"><{$smarty.const._SR_SEARCH}></a></li>
 </ol>
 <{if $search_info}>
-    <{includeq file="db:newbb_searchresults.tpl" results=$results}>
+    <{include file="db:newbb_searchresults.tpl" results=$results}>
 <{/if}>
 
 <form name="Search" action="<{$xoops_url}>/modules/<{$xoops_dirname}>/search.php" method="get">
@@ -83,7 +83,7 @@
             <!-- irmtfan hardcode removed align="right" -->
             <td class="head" id="align_right">&nbsp;</td>
             <!-- irmtfan remove name="submit" -->
-            <td class="even"><input class="btn btn-default" type="submit" value="<{$smarty.const._MD_SEARCH}>"/></td>
+            <td class="even"><input class="btn btn-secondary" type="submit" value="<{$smarty.const._MD_SEARCH}>"/></td>
         </tr>
     </table>
 </form>

@@ -1,4 +1,4 @@
-<{includeq file="db:news_item.tpl" story=$story}>
+<{include file="db:news_item.tpl" story=$story}>
 
 <{if $attached_files_count>0}>
     <{$lang_attached_files}>
@@ -42,7 +42,7 @@
 
     <{if $xoops_isadmin}>
         <a href="<{$xoops_url}>/modules/news/submit.php?op=edit&storyid=<{$story.id}>" title="Edit">
-            <span class="fa fa-edit"></span>
+            <span class="fa fa-pencil-square-o"></span>
         </a>
         <a href="<{$xoops_url}>/modules/news/admin/index.php?op=delete&storyid=<{$story.id}>" title="Delete">
             <span class="fa fa-trash"></span>
@@ -51,7 +51,7 @@
 </div>
 
 <{if $tags}>
-    <{includeq file="db:tag_bar.tpl"}>
+    <{include file="db:tag_bar.tpl"}>
 <{/if}>
 
 <{if $showsummary == true && $summary_count>0}>
@@ -75,11 +75,11 @@
 <{$lang_notice}>
 
 <{if $comment_mode == "flat"}>
-    <{includeq file="db:system_comments_flat.tpl"}>
+    <{include file="db:system_comments_flat.tpl"}>
 <{elseif $comment_mode == "thread"}>
-    <{includeq file="db:system_comments_thread.tpl"}>
+    <{include file="db:system_comments_thread.tpl"}>
 <{elseif $comment_mode == "nest"}>
-    <{includeq file="db:system_comments_nest.tpl"}>
+    <{include file="db:system_comments_nest.tpl"}>
 <{/if}>
 
-<{includeq file='db:system_notification_select.tpl'}>
+<{include file='db:system_notification_select.tpl'}>

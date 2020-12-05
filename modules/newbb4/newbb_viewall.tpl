@@ -1,13 +1,13 @@
 <ol class="breadcrumb">
-    <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMHOME}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMHOME}></a></li>
     <{if $parent_forum}>
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$parent_forum}>"><{$parent_name}></a></li>
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$parent_forum}>"><{$parent_name}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
     <{elseif $forum_name}>
-        <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
     <{/if}>
     <{if $current}>
-        <li><a href="<{$current.link}>"><{$current.title}></a></li>
+        <li class="nav-item"><a class="nav-link" href="<{$current.link}>"><{$current.title}></a></li>
     <{/if}>
 </ol>
 <div class="row">
@@ -293,6 +293,6 @@
 <div class="clear"></div>
 <br>
 
-<{if $online}><{includeq file="db:newbb_online.tpl"}><{/if}>
-<{includeq file='db:newbb_notification_select.tpl'}>
+<{if $online}><{include file="db:newbb_online.tpl"}><{/if}>
+<{include file='db:newbb_notification_select.tpl'}>
 <!-- end module contents -->

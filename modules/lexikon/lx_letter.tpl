@@ -1,8 +1,8 @@
 <{* New Header block *}>
 <ol class="breadcrumb">
-    <li><a href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
-    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/index.php"><{$lang_modulename}></a></li>
-    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php"><{$pageinitial}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/index.php"><{$lang_modulename}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php"><{$pageinitial}></a></li>
 </ol>
 
 
@@ -13,23 +13,23 @@
         <h3><{$smarty.const._MD_LEXIKON_BROWSELETTER}></h3>
 
         <ul class="pagination pagination-sm">
-            <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
+            <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
             <{foreach item=letterlinks from=$alpha.initial}>
                 <{if $letterlinks.total > 0}>
-                    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
+                    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
                             <{$letterlinks.linktext}>
                         </a></li>
                 <{else}>
-                    <li><a href="#"><{$letterlinks.linktext}></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><{$letterlinks.linktext}></a></li>
                 <{/if}>
             <{/foreach}>
 
             <{if $totalother > 0}>
-                <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$smarty.const._MD_LEXIKON_OTHER}>" title="[ <{$totalother}> ]">
+                <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$smarty.const._MD_LEXIKON_OTHER}>" title="[ <{$totalother}> ]">
                         <{$smarty.const._MD_LEXIKON_OTHER}>
                     </a></li>
             <{else}>
-                <li><a href="#"><{$smarty.const._MD_LEXIKON_OTHER}></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><{$smarty.const._MD_LEXIKON_OTHER}></a></li>
             <{/if}>
         </ul>
     </div>

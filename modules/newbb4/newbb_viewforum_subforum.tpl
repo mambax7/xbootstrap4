@@ -63,7 +63,7 @@
                         <p><{$sforum.forum_desc}></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><{$smarty.const.THEME_CLOSE}></button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><{$smarty.const.THEME_CLOSE}></button>
                         <button type="button" class="btn btn-primary"><{$smarty.const.THEME_GOTOTHEFORUM}></button>
                     </div>
                 </div><!-- /.modal-content -->

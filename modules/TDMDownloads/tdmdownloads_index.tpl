@@ -15,7 +15,7 @@
                 <!-- Category Description -->
                 <div class="aligncenter">
                     <{if $category.description_main != ""}>
-                        <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#tdmDesc-<{$category.id}>">+</button>
+                        <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#tdmDesc-<{$category.id}>">+</button>
                     <{else}>
                         <button class="btn btn-xs disabled btn-default" data-toggle="modal">+</button>
                     <{/if}>
@@ -29,10 +29,10 @@
                                 <{$category.description_main}>
                             </div>
                             <div class="modal-footer">
-                                <a title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>" class="pull-left btn btn-success">
+                                <a title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>" class="pull-left btn btn-primary">
                                     There are <strong><{$category.totaldownloads}></strong> files in this category!
                                 </a>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">×</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">×</button>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                     <h1><{$smarty.const._MD_TDMDOWNLOADS_INDEX_LATESTLIST}>:</h1>
                 </div>
                 <{section name=i loop=$file}>
-                    <{includeq file="db:tdmdownloads_download.tpl" down=$file[i]}>
+                    <{include file="db:tdmdownloads_download.tpl" down=$file[i]}>
                 <{/section}>
             <{/if}>
         </div>
@@ -124,4 +124,4 @@
 
 </div><!-- .tdmdownloads -->
 
-<{includeq file="db:system_notification_select.tpl"}>
+<{include file="db:system_notification_select.tpl"}>

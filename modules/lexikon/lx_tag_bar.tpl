@@ -1,1 +1,1 @@
-<{includeq file="db:tag_bar.tpl"}>
+<{include file="db:tag_bar.tpl"}>

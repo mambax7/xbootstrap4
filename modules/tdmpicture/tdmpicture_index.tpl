@@ -57,7 +57,7 @@
 
     <hr>
 
-    <{includeq file="db:tdmpicture_tpfile.tpl"}>
+    <{include file="db:tdmpicture_tpfile.tpl"}>
 
     <!-- Display navigation  -->
     <div align="center"><{$nav_page}></div>

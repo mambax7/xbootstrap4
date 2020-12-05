@@ -4,7 +4,7 @@
             <div class="col-xs-2 col-md-2"><strong><{$lang_poster}></strong></div>
             <div class="col-xs-10 col-md-10"><strong><{$lang_thread}></strong></div>
         </div>
-        <{includeq file="db:system_comment.tpl" comment=$comments[i]}>
+        <{include file="db:system_comment.tpl" comment=$comments[i]}>
 
         <{if $show_threadnav == true}>
             <a href="<{$comment_url}>" title="<{$lang_top}>"><{$lang_top}></a>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">&times;</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

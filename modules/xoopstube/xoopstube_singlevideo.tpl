@@ -45,7 +45,7 @@
                 </li>
 
                 <{if $video.useradminvideo}>
-                    <li><i class="fa fa-edit"></i><{$video.usermodify}></li>
+                    <li><i class="fa fa-pencil-square-o"></i><{$video.usermodify}></li>
                 <{/if}>
 
                 <li><i class="fa fa-share-alt"></i>
@@ -70,7 +70,7 @@
                 <{/if}>
 
                 <{if $tagbar}>
-                    <li><{includeq file="db:tag_bar.tpl"}></li>
+                    <li><{include file="db:tag_bar.tpl"}></li>
                 <{/if}>
 
                 <{if $xoops_isadmin}>
@@ -105,11 +105,11 @@
 <{$commentsnav}> <{$lang_notice}>
 
 <{if $comment_mode == "flat"}>
-    <{includeq file="db:system_comments_flat.tpl"}>
+    <{include file="db:system_comments_flat.tpl"}>
 <{elseif $comment_mode == "thread"}>
-    <{includeq file="db:system_comments_thread.tpl"}>
+    <{include file="db:system_comments_thread.tpl"}>
 <{elseif $comment_mode == "nest"}>
-    <{includeq file="db:system_comments_nest.tpl"}>
+    <{include file="db:system_comments_nest.tpl"}>
 <{/if}>
 
-<{includeq file="db:system_notification_select.tpl"}>
+<{include file="db:system_notification_select.tpl"}>

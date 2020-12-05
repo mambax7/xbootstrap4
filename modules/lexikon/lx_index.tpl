@@ -1,6 +1,6 @@
 <{* New Header block *}>
 <ol class="breadcrumb">
-    <li><a href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
+    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>"><{$smarty.const._MD_LEXIKON_HOME}></a></li>
     <li><{$lang_modulename}></li>
 </ol>
 
@@ -32,7 +32,7 @@
         <{$smarty.const._MD_LEXIKON_DEFS}><{$publishedwords}><br>
         <{if $multicats == 1}><{$smarty.const._MD_LEXIKON_CATS}><{$totalcats}><br><{/if}>
         <div style="padding-top: 10px">
-            <input class="btn btn-success btn-sm form-control" type="button" value="<{$smarty.const._MD_LEXIKON_SUBMITENTRY}>" onclick="location.href = 'submit.php'">
+            <input class="btn btn-primary btn-sm form-control" type="button" value="<{$smarty.const._MD_LEXIKON_SUBMITENTRY}>" onclick="location.href = 'submit.php'">
             <input class="btn btn-info btn-sm form-control" type="button" value="<{$smarty.const._MD_LEXIKON_REQUESTDEF}>" onclick="location.href = 'request.php' ">
         </div>
     </div>
@@ -46,23 +46,23 @@
         <h3><{$smarty.const._MD_LEXIKON_BROWSELETTER}></h3>
 
         <ul class="pagination pagination-sm">
-            <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
+            <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
             <{foreach item=letterlinks from=$alpha.initial}>
                 <{if $letterlinks.total > 0}>
-                    <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
+                    <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
                             <{$letterlinks.linktext}>
                         </a></li>
                 <{else}>
-                    <li><a href="#"><{$letterlinks.linktext}></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><{$letterlinks.linktext}></a></li>
                 <{/if}>
             <{/foreach}>
 
             <{if $totalother > 0}>
-                <li><a href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$smarty.const._MD_LEXIKON_OTHER}>" title="[ <{$totalother}> ]">
+                <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$smarty.const._MD_LEXIKON_OTHER}>" title="[ <{$totalother}> ]">
                         <{$smarty.const._MD_LEXIKON_OTHER}>
                     </a></li>
             <{else}>
-                <li><a href="#"><{$smarty.const._MD_LEXIKON_OTHER}></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><{$smarty.const._MD_LEXIKON_OTHER}></a></li>
             <{/if}>
         </ul>
     </div>
@@ -158,7 +158,7 @@
             </tbody>
         </table>
         <div style="text-align: right">
-            <a class="btn btn-success btn-sm" role="button" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/category.php" title="[ <{$publishedwords}> ]">
+            <a class="btn btn-primary btn-sm" role="button" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/category.php" title="[ <{$publishedwords}> ]">
                 <{$smarty.const._MD_LEXIKON_ALLCATS}>&nbsp;[<{$publishedwords}>]
             </a>
         </div>
@@ -280,6 +280,6 @@
     $("select[name*='categoryID']").css({"width": "90%", "margin-bottom": "5px"});
     $("input[name*='term']").addClass("form-control");
     $("input[name*='term']").css({"width": "90%", "margin-bottom": "5px", "background-position": "1px 8px"});
-    $('.btnDefault').addClass("btn btn-success btn-sm");
+    $('.btnDefault').addClass("btn btn-primary btn-sm");
 </script>
-<{includeq file='db:system_notification_select.tpl'}>
+<{include file='db:system_notification_select.tpl'}>

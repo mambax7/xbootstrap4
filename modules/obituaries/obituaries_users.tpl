@@ -13,7 +13,7 @@
 
 <{if $obituaries_users|is_array && count($obituaries_users) > 0}>
     <ol class="breadcrumb">
-        <li><a href="index.php"><{$breadcrumb}></a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php"><{$breadcrumb}></a></li>
     </ol>
     <p align="center">
         <a href="<{$xoops_url}>/modules/obituaries/index.php"><img src="<{$xoops_url}>/modules/obituaries/images/logo.png" alt="" class="img-thumbnail"/></a>

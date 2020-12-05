@@ -1,7 +1,7 @@
 <ol class="breadcrumb">
-    <li><a href="index.php"><{$smarty.const._XO_LA_XOOPSFAQ}></a></li>
-    <li><a href="index.php"><{$smarty.const._XO_LA_MAIN}></a></li>
-    <li><a href="#"><{$category_name}></a></li>
+    <li class="nav-item"><a class="nav-link" href="index.php"><{$smarty.const._XO_LA_XOOPSFAQ}></a></li>
+    <li class="nav-item"><a class="nav-link" href="index.php"><{$smarty.const._XO_LA_MAIN}></a></li>
+    <li class="nav-item"><a class="nav-link" href="#"><{$category_name}></a></li>
 </ol>
 
 
@@ -40,11 +40,11 @@
 <div style="margin:3px; padding: 3px;">
     <!-- start comments loop -->
     <{if $comment_mode == "flat"}>
-        <{includeq file="db:system_comments_flat.tpl"}>
+        <{include file="db:system_comments_flat.tpl"}>
     <{elseif $comment_mode == "thread"}>
-        <{includeq file="db:system_comments_thread.tpl"}>
+        <{include file="db:system_comments_thread.tpl"}>
     <{elseif $comment_mode == "nest"}>
-        <{includeq file="db:system_comments_nest.tpl"}>
+        <{include file="db:system_comments_nest.tpl"}>
     <{/if}>
     <!-- end comments loop -->
 </div>
