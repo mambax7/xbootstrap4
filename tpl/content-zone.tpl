@@ -14,4 +14,4 @@
                     <{include file="$theme_name/tpl/centerLeft.tpl"}>
                     <{include file="$theme_name/tpl/centerRight.tpl"}>
                 </div>
-            </div></div></div></div>
+            </div>
