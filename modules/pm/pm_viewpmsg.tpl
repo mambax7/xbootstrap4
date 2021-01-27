@@ -59,7 +59,7 @@
     </div>
 <{/if}>
 
-<{if $pagenav}>
+<{if $pagenav|default:false}>
     <{$pagenav}>
 <{/if}>
 
@@ -142,6 +142,6 @@
 <{/foreach}>
 </form>
 
-<{if $pagenav}>
+<{if $pagenav|default:false}>
     <{$pagenav}>
 <{/if}>

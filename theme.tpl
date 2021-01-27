@@ -67,23 +67,25 @@
 <body id="<{$xoops_dirname}>">
 
 <{include file="$theme_name/tpl/nav-menu.tpl"}>
-
 <{include file="$theme_name/tpl/slider.tpl"}>
+
 <div class="container maincontainer">
     <a id="stickyMenuHere"></a>
     <{if $xoops_page == "index"}>
         <div class="aligncenter home-message row">
             <div class="<{if $xoops_banner != " "}>col-md-6<{else}>col-md-12<{/if}>">
                 <h2><{$smarty.const.THEME_ABOUTUS}></h2>
-
                 <p class="lead"><{$xoops_meta_description}></p>
-
                 <p><a href="javascript:;" class="btn btn-md btn-success"><{$smarty.const.THEME_LEARNINGMORE}></a></p>
             </div>
 
             <{if $xoops_banner != ""}>
                 <div class="col-md-6">
-                <div class="xoops-banner"><{$xoops_banner}></div></div><{/if}>
+                    <div class="xoops-banner">
+                        <{$xoops_banner}>
+                    </div>
+                </div>
+            <{/if}>
 
         </div>
         <!-- .home-message -->
@@ -91,9 +93,7 @@
 
     <div class="row">
         <{include file="$theme_name/tpl/leftBlock.tpl"}>
-
         <{include file="$theme_name/tpl/content-zone.tpl"}>
-
         <{include file="$theme_name/tpl/rightBlock.tpl"}>
     </div>
 
@@ -104,9 +104,7 @@
         <div class="container">
             <div class="row">
                 <{include file="$theme_name/tpl/leftBottom.tpl"}>
-
                 <{include file="$theme_name/tpl/centerBottom.tpl"}>
-
                 <{include file="$theme_name/tpl/rightBottom.tpl"}>
             </div>
         </div>
@@ -119,9 +117,7 @@
         <div class="container">
             <div class="row">
                 <{include file="$theme_name/tpl/leftFooter.tpl"}>
-
                 <{include file="$theme_name/tpl/centerFooter.tpl"}>
-
                 <{include file="$theme_name/tpl/rightFooter.tpl"}>
             </div>
         </div>

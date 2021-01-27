@@ -72,7 +72,7 @@
     </div>
 
 </div>
-<{if $pagenav}>
+<{if $pagenav|default:false}>
     <div class="pub_pagenav text-right">
         <{$pagenav}>
     </div>

@@ -241,7 +241,7 @@
 </table>
 <!-- end forum main table -->
 
-<{if $pagenav}>
+<{if $pagenav|default:false}>
     <!-- irmtfan hardcode removed style="padding: 5px;float: right; text-align:right;" -->
     <div class="pagenav"><{$pagenav|replace:'form':'div'|replace:'id="xo-pagenav"':''}>
         <!-- irmtfan to solve nested forms and id="xo-pagenav" issue --></div>

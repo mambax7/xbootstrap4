@@ -14,7 +14,7 @@
 
     <{$category_path}>
 
-    <{if $subcategories}>
+    <{if $subcategories|default:''}>
         <{$smarty.const._MD_XOOPSTUBE_SUBCATLISTING}>
         <{foreach item=subcat from=$subcategories}>
             <a href="viewcat.php?cid=<{$subcat.id}>" title="<{$subcat.alttext}>"><img src="<{$subcat.image}>" alt="<{$subcat.alttext}>"></a>
@@ -28,7 +28,7 @@
 
 
     <div class="order-by">
-        <{if $show_videos == true}>
+        <{if $show_videos|default:false == true}>
             <h3 class="xoops-default-title"><{$smarty.const._MD_XOOPSTUBE_SORTBY}></h3>
             <div class="row">
                 <div class="col-sm-3 col-md-3">
@@ -77,11 +77,11 @@
         <{/if}>
     </div><!-- .order-by -->
 
-    <{if $page_nav == true}>
+    <{if $page_nav|default:false == true}>
         <{$pagenav}>
     <{/if}>
 
-    <{section name=i loop=$video}>
+    <{section name=i loop=$video|default:null}>
         <{include file="db:xoopstube_videoload.tpl" video=$video[i]}>
     <{/section}>
 
@@ -89,7 +89,7 @@
         <{$pagenav}>
     <{/if}>
 
-    <{if $moderate == true}>
+    <{if $moderate|default:false == true}>
         <{$smarty.const._MD_XOOPSTUBE_MODERATOR_OPTIONS}>
 
         <{section name=a loop=$mod_arr}>

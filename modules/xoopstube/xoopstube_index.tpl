@@ -50,15 +50,15 @@
         <{$catarray.indexfooter}>
     </div><!-- .xoopstube-footer -->
 
-    <{if $showlatest}>
+    <{if $showlatest|default:false}>
         <{$smarty.const._MD_XOOPSTUBE_LATESTLIST}>
-        <{if $pagenav}>
+        <{if $pagenav|default:false}>
             <{$pagenav}>
         <{/if}>
         <{section name=i loop=$video}>
             <{include file="db:xoopstube_videoload.tpl" video=$video[i]}>
         <{/section}>
-        <{if $pagenav}>
+        <{if $pagenav|default:false}>
             <{$pagenav}>
         <{/if}>
     <{/if}>

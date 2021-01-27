@@ -47,7 +47,7 @@
                     </span>
             </div>
             <div class="" style="margin-top: 15px;">
-                <a href="<{$item.itemurl}>" class="btn btn-primary"> <{$smarty.const._MD_PUBLISHER_VIEW_MORE}></a>
+                <a href="<{$item.itemurl}>" class="btn btn-primary btn-sm"> <{$smarty.const._MD_PUBLISHER_VIEW_MORE}></a>
             </div>
             <div class="clearfix"></div>
         </div>

@@ -1,3 +1,12 @@
+4.60 RC 1 2021-01-26
+-------------------
+- updated to Bootstrap 4.6 (mamba)
+
+4.53 RC 1 2020-12-04
+-------------------
+- updated to Bootstrap 4.5.3 (mamba)
+- add XoopsFormRendererBootstrap4.php (DejaDingo)
+
 4.50 RC 1 2020-05-22
 -------------------
 - updated to Bootstrap 4.5 (mamba)

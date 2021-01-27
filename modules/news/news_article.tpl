@@ -8,7 +8,7 @@
 <{/if}>
 
 <div class="row xoops-news-navigation">
-    <{if $pagenav}><{$smarty.const._NW_PAGE}><{$pagenav}><{/if}>
+    <{if $pagenav|default:false}><{$smarty.const._NW_PAGE}><{$pagenav}><{/if}>
     <{if $nav_links}>
         <div class="col-md-6 alignleft">
             <{if $previous_story_id != -1}>
