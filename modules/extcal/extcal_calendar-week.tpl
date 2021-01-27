@@ -1,58 +1,61 @@
 <script>
     jQuery(document).ready(function ($) {
         $('.extcalform > form select').addClass('form-control');
-        $('.extcalform > form input[type="submit"]').addClass('btn btn-primary');
+        $('.extcalform > form button[type="submit"]').removeClass();
+        $('.extcalform > form button[type="submit"]').addClass('btn btn-sm btn-secondary');
     });
 </script>
 
-<div class="extcalform mb10 text-center">
+<div class="extcalform mb-3">
     <form action="<{$navigSelectBox.action}>" method="<{$navigSelectBox.method}>">
-        <ul class="list-inline">
+        <div class="form-row">
             <{foreach item=element from=$navigSelectBox.elements}>
-            <li><{$element.body}></li>
+            <div class="col"><{$element.body}></div>
             <{/foreach}>
-        </ul>
+        </div>
     </form>
 </div>
 
 <{include file="db:extcal_navbar.tpl"}>
 
 <div class="table-responsive">
-
-    <{foreach item=weekdayName from=$weekdayNames}>
-
-    <{/foreach}>
-
-    <{foreach item=day from=$week}>
-
-    <{/foreach}>
     <table class="table table-bordered table-hover">
-        <tbody>
         <tr style="text-align:center;">
-            <td colspan="2" class="even"><a href="<{$xoops_url}>/modules/extcal/calendar-week.php?<{$navig.prev.uri}>">
-                    << <{$navig.prev.name}></a></td>
+            <td colspan="2" class="even"><a
+                        href="<{$xoops_url}>/modules/extcal/calendar-week.php?<{$navig.prev.uri}>">
+                    &lt;&lt; <{$navig.prev.name}></a></td>
             <td colspan="3" class="even"><span style="font-weight:bold;"><{$navig.this.name}></span>
             </td>
-            <td colspan="2" class="even"><a href="<{$xoops_url}>/modules/extcal/calendar-week.php?<{$navig.next.uri}>"><{$navig.next.name}>
-                    >></a></td>
+            <td colspan="2" class="even"><a
+                        href="<{$xoops_url}>/modules/extcal/calendar-week.php?<{$navig.next.uri}>"><{$navig.next.name}>
+                    &gt;&gt;</a></td>
         </tr>
         <tr style="text-align:center;" class="head">
-            <td><{$weekdayName}></td>
+            <{foreach item=weekdayName from=$weekdayNames}>
+                <td><{$weekdayName}></td>
+            <{/foreach}>
         </tr>
         <tr>
-            <td class="<{if $day.isEmpty}>even<{else}>odd<{/if}>" style="width:14%; height:80px; vertical-align:top;<{if $day.isSelected}> background-color:#B6CDE4;<{/if}>">
-                <{if $day.isEmpty}>&nbsp;<{else}><a href="<{$xoops_url}>/modules/extcal/day.php?year=<{$day.year}>&month=<{$day.month}>&day=<{$day.dayNumber}>"><{$day.dayNumber}></a><{/if}><br>
-                <{foreach item=event from=$day.events}>
-                    <{if $event}>
-                        <div style="font-size:0.8em; margin-top:5px;"><img src="images/icons/event-<{$event.status}>.gif"> <a href="<{$xoops_url}>/modules/extcal/event.php?event=<{$event.event_id}>" class="extcalTips"
-                                                                                                                              title="<{$event.event_title}> :: <b><{$lang.start}></b> <{$event.formated_event_start}><br /><b><{$lang.end}></b> <{$event.formated_event_end}>"><{$event.event_title}></a>
-                        </div>
-                        <div style="background-color:#<{$event.cat.cat_color}>; height:2px; font-size:2px;">
-                            &nbsp;
-                        </div>
-                    <{/if}>
-                <{/foreach}>
-            </td>
+            <{foreach item=day from=$week}>
+                <td class="<{if $day.isEmpty}>even<{else}>odd<{/if}>"
+                    style="width:14%; height:80px; vertical-align:top;<{if $day.isSelected}> background-color:#B6CDE4;<{/if}>">
+                    <{if $day.isEmpty}>&nbsp;<{else}><a
+                    href="<{$xoops_url}>/modules/extcal/day.php?year=<{$day.year}>&amp;month=<{$day.month}>&amp;day=<{$day.dayNumber}>"><{$day.dayNumber}></a><{/if}><br/>
+                    <{foreach item=event from=$day.events}>
+                        <{if $event}>
+                            <div style="font-size:0.8em; margin-top:5px;"><img
+                                        src="images/icons/event-<{$event.status}>.gif"/> <a
+                                        href="<{$xoops_url}>/modules/extcal/event.php?event=<{$event.event_id}>"
+                                        class="extcalTips"
+                                        title="<{$event.event_title}> :: <{$lang.start}> <{$event.formated_event_start}> <{$lang.end}> <{$event.formated_event_end}>"><{$event.event_title}></a>
+                            </div>
+                            <div style="background-color:#<{$event.cat.cat_color}>; height:2px; font-size:2px;">
+                                &nbsp;
+                            </div>
+                        <{/if}>
+                    <{/foreach}>
+                </td>
+            <{/foreach}>
         </tr>
         <tr>
             <th colspan="7">
@@ -66,9 +69,10 @@
                 <{/foreach}>
             </th>
         </tr>
-        </tbody>
     </table>
 </div>
 
-<div style="text-align:right;"><a href="<{$xoops_url}>/modules/extcal/rss.php?cat=<{$selectedCat}>"><img src="images/icons/rss.gif" alt="RSS Feed"></a></div>
+<div style="text-align:right;"><a
+            href="<{$xoops_url}>/modules/extcal/rss.php?cat=<{$selectedCat}>"><img
+                src="images/icons/rss.gif" alt="RSS Feed"/></a></div>
 <{include file='db:system_notification_select.tpl'}>

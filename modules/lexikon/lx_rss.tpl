@@ -6,7 +6,7 @@
         <title><{$channel_title}>
         </title>
         <link><{$channel_link}>
-        
+
         <description><{$channel_desc}>
         </description>
         <lastbuilddate><{$channel_lastbuild}>
@@ -29,19 +29,19 @@
                 <url><{$image_url}>
                 </url>
                 <link><{$channel_link}>
-                
+
                 <width><{$image_width}>
                 </width>
                 <height><{$image_height}>
                 </height>
-            
+
         <{/if}>
         <{foreach item=item from=$items}>
             <item>
                 <title><{$item.title}>
                 </title>
                 <link><{$item.link}>
-                
+
                 <description><{$item.description}>
                 </description>
                 <pubdate><{$item.pubdate}>
