@@ -79,7 +79,7 @@
                 <p><a href="javascript:;" class="btn btn-md btn-success"><{$smarty.const.THEME_LEARNINGMORE}></a></p>
             </div>
 
-            <{if $xoops_banner != ""}>
+            <{if $xoops_banner|default:'' != ''}>
                 <div class="col-md-6">
                     <div class="xoops-banner">
                         <{$xoops_banner}>

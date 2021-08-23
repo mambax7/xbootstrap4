@@ -1,19 +1,19 @@
 <div class="xoopstube ">
-    <{if $catarray.imageheader != ""}>
+    <{if $catarray.imageheader|default:'' != ''}>
         <div class="xoopstube-header text-center">
             <{$catarray.imageheader}>
         </div>
         <!-- .xoopstube-header -->
     <{/if}>
 
-    <{if $catarray.indexheading != ""}>
+    <{if $catarray.indexheading|default:'' != ''}>
         <div class="text-center xoopstube-header-text">
             <h1><{$catarray.indexheading}></h1>
         </div>
         <!-- .xoopstube-header-text -->
     <{/if}>
 
-    <{if $catarray.indexheader != ""}>
+    <{if $catarray.indexheader|default:'' != ''}>
         <div class="xoopstube-description text-center">
             <{$catarray.indexheader}>
         </div>

@@ -14,7 +14,7 @@
 
                 <!-- Category Description -->
                 <div class="aligncenter">
-                    <{if $category.description_main != ""}>
+                    <{if $category.description_main|default:'' != ''}>
                         <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#tdmDesc-<{$category.id}>">+</button>
                     <{else}>
                         <button class="btn btn-xs disabled btn-default" data-toggle="modal">+</button>
@@ -39,7 +39,7 @@
                 </div>
                 <!-- End Category Description -->
 
-                <{if $category.subcategories != ""}>
+                <{if $category.subcategories|default:'' != ''}>
                     <{$smarty.const._MD_TDMDOWNLOADS_INDEX_SCAT}>
                     <ul><{$category.subcategories}></ul>
                 <{/if}>
@@ -57,7 +57,7 @@
     <div class="tdm-downloads-info row">
         <{if $bl_affichage==1}>
             <div class="col-md-12"><h3><{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLNAME}>:</h3></div>
-            <{if $bl_date != ""}>
+            <{if $bl_date|default:'' != ''}>
                 <div class="col-sm-4 col-md-4">
                     <h3 class="tdm-title"><span class="fa fa-calendar"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLDATE}></h3>
                     <ul class="list-unstyled">
@@ -71,7 +71,7 @@
                 </div>
             <{/if}>
 
-            <{if $bl_pop != ""}>
+            <{if $bl_pop|default:'' != ''}>
                 <div class="col-sm-4 col-md-4">
                     <h3 class="tdm-title"><span class="fa fa-star"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLPOP}></h3>
                     <ul class="list-unstyled">
@@ -85,7 +85,7 @@
                 </div>
             <{/if}>
 
-            <{if $bl_rating != ""}>
+            <{if $bl_rating|default:'' != ''}>
                 <div class="col-sm-4 col-md-4">
                     <h3 class="tdm-title"><span class="fa fa-thumbs-up"></span> <{$smarty.const._MD_TDMDOWNLOADS_INDEX_BLRATING}></h3>
                     <ul class="list-unstyled">
@@ -111,7 +111,7 @@
 
     <{if $show_latest_files}>
         <div class="row">
-            <{if $file != ""}>
+            <{if $file|default:'' != ''}>
                 <div class="col-md-12">
                     <h1><{$smarty.const._MD_TDMDOWNLOADS_INDEX_LATESTLIST}>:</h1>
                 </div>

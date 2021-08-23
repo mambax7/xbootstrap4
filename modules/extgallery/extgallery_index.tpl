@@ -61,7 +61,7 @@
             <{$child.cat_desc}>
         <{/if}>
 
-        <{if $child.cat_nb_album != 0}>
+        <{if $child.cat_nb_album|default:0 != 0}>
             <{$child.cat_nb_album}>
         <{/if}>
 

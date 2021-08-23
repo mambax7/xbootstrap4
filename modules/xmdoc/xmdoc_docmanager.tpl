@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="<{xoAppUrl modules/system/css/imagemanager.css}>">
 	<link rel="stylesheet" type="text/css" media="screen" href="<{xoAppUrl modules/system/css/admin.css}>">
     <link rel="stylesheet" type="text/css" media="screen" href="<{xoAppUrl media/font-awesome/css/font-awesome.min.css}>">
-	<{if $bootstrap_css != ''}>
+	<{if $bootstrap_css|default:'' != ''}>
 	<link rel="stylesheet" type="text/css" media="screen" href="<{$bootstrap_css}>">
 	<{/if}>
 </head>
@@ -73,12 +73,12 @@
 						</a>
 					</div>
 				</div>
-					<{if $error_message != ''}>
+					<{if $error_message|default:'' != ''}>
 						<div class="errorMsg text-left mt-2">
 							<{$error_message}>
 						</div>
 					<{/if}>
-					<{if $document != ""}>
+					<{if $document|default:'' != ''}>
 						<div class="">
 							<form name="formsel" id="formsel" action="docmanager.php" method="post">
 								

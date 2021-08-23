@@ -27,7 +27,7 @@
 							<div class="row align-items-center text-right">
 								<div class="col">
 									<span class="badge badge-secondary fa-lg text-primary ml-1"><span class="fa fa-download" aria-hidden="true"></span><small> <{$counter}></small></span>
-									<{if $size != ''}>
+									<{if $size|default:'' != ''}>
 										<span class="badge badge-secondary fa-lg text-primary ml-1 mt-1 mt-lg-0"><span class="fa fa-archive" aria-hidden="true"></span><small> <{$size}></small></span>
 									<{/if}>	
 								</div>	
@@ -56,7 +56,7 @@
 						</figure>
 
 <!--
-						<{if $size != ''}>
+						<{if $size|default:'' != ''}>
 						<figure class="figure text-muted my-1 pr-2 text-center border-right border-secondary">
 							  <span class="fa fa-archive fa-fw" aria-hidden="true"></span> <{$smarty.const._MA_XMDOC_FORMDOC_SIZE}>
 							  <figcaption class="figure-caption text-center"><{$size}></figcaption>

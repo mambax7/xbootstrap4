@@ -1,12 +1,12 @@
-<{if $bookmarks != 0}>
+<{if $bookmarks|default:0 != 0}>
 <{include file="db:system_bookmarks.tpl"}>
 <{/if}>
 
-<{if $fbcomments != 0}>
+<{if $fbcomments|default:0 != 0}>
 <{include file="db:system_fbcomments.tpl"}>
 <{/if}>
 <div class="pull-right"><{$copyright}></div>
-<{if $pagenav != ''}>
+<{if $pagenav|default:'' != ''}>
     <div class="pull-right"><{$pagenav}></div>
 <{/if}>
 <br>

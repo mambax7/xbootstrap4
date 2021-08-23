@@ -16,7 +16,7 @@
 					<div class="card-body text-center">
 						<div class="row" >
 							<div class="col-12" style="height: 150px;">
-								<{if $blocknews.logo != ''}>
+								<{if $blocknews.logo|default:'' != ''}>
 								<a title="<{$blocknews.title}>" href="<{$xoops_url}>/modules/xmnews/article.php?news_id=<{$blocknews.id}>">
 									<img class="rounded img-fluid mh-100" src="<{$blocknews.logo}>" alt="<{$blocknews.title}>">
 								</a>
@@ -118,7 +118,7 @@
 						</div>
 					<{/if}>
 					<div class="d-block d-md-none pt-2 px-4">
-						<{if $blocknews.logo != ''}>
+						<{if $blocknews.logo|default:'' != ''}>
 							<{if $CAT == true}><a href="index.php?news_cid=<{$category_id}>"><{/if}><img class="card-img-top rounded img-fluid" src="<{$blocknews.logo}>" alt="<{$blocknews.title}>"><{if $CAT == true}></a><{/if}>
 						<{/if}>
 					</div>
@@ -129,7 +129,7 @@
 							<p class="card-text mb-auto">
 								<div class="row">
 									<div class="col">
-										<{if $blocknews.logo != ''}>
+										<{if $blocknews.logo|default:'' != ''}>
 										<{if $CAT == true}>
 										<a href="index.php?news_cid=<{$category_id}>">
 										<{/if}>

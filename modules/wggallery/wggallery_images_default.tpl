@@ -136,7 +136,11 @@
 		</div>
 
         <{$commentsnav}> <{$lang_notice}>
-        <{*<{if $comment_mode == "flat"}> <{include file="db:system_comments_flat.tpl"}> <{elseif $comment_mode == "thread"}> <{include file="db:system_comments_thread.tpl"}> <{elseif $comment_mode == "nest"}> <{include file="db:system_comments_nest.tpl"}> <{/if}>*}>
+        <{*    <{if $comment_mode|default:'' == "flat"}>
+        <{include file="db:system_comments_flat.tpl"}>
+    <{elseif $comment_mode|default:'' == "thread"}>
+        <{include file="db:system_comments_thread.tpl"}>
+    <{elseif $comment_mode|default:'' == "nest"}><{include file="db:system_comments_nest.tpl"}> <{/if}>*}>
 
 
     <{/if}>

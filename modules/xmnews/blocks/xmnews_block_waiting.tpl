@@ -1,9 +1,9 @@
-<{if $block.news != ''}>
+<{if $block.news|default:'' != ''}>
 	<table class="table table-striped table-hover table-sm">
 		<thead class="bg-warning">
 			<tr>
 				<th class="text-center" scope="col"><{$smarty.const._MA_XMNEWS_NEWS_TITLE}></th>
-				<{if $block.desclenght != 0}>
+				<{if $block.desclenght|default:0 != 0}>
 				<th class="text-center d-none d-md-table-cell" scope="col"><{$smarty.const._MA_XMNEWS_NEWS_DESC}></th>
 				<{/if}>
 				<th class="text-center" scope="col"><{$smarty.const._MA_XMNEWS_NEWS_USERID}></th>

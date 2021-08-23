@@ -25,14 +25,14 @@
 
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <ul class="pull-right list-unstyled">
-                    <{if $prevId != 0}>
+                    <{if $prevId|default:0 != 0}>
                         <li class="nav-btn"><a href="<{xoAppUrl modules/extgallery/}>public-photo.php?photoId=<{$prevId}>"><span class="fa fa-circle-arrow-left"></span></a><{else}>
                         </li>
                     <{/if}>
                     <li class="small"><{$currentPhoto}></li>
                     <li class="small"><{$lang.of}></li>
                     <li class="small"><{$totalPhoto}></li>
-                    <{if $nextId != 0}>
+                    <{if $nextId|default:0 != 0}>
                         <li class="nav-btn"><a href="<{xoAppUrl modules/extgallery/}>public-photo.php?photoId=<{$nextId}>"><span class="fa fa-circle-arrow-right"></span></a><{else}>
                         </li>
                     <{/if}>
@@ -165,11 +165,11 @@
 
 <{$lang_notice}>
 
-<{if $comment_mode == "flat"}>
-    <{include file="db:system_comments_flat.tpl"}>
-<{elseif $comment_mode == "thread"}>
-    <{include file="db:system_comments_thread.tpl"}>
-<{elseif $comment_mode == "nest"}>
+    <{if $comment_mode|default:'' == "flat"}>
+        <{include file="db:system_comments_flat.tpl"}>
+    <{elseif $comment_mode|default:'' == "thread"}>
+        <{include file="db:system_comments_thread.tpl"}>
+    <{elseif $comment_mode|default:'' == "nest"}>
     <{include file="db:system_comments_nest.tpl"}>
 <{/if}>
 

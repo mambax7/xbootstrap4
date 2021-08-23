@@ -15,7 +15,7 @@
     <{/if}>
 <{/if}>
 
-<{if $title_and_welcome|default:0 && $lang_mainintro != ''}>
+<{if $title_and_welcome|default:0 && $lang_mainintro|default:'' != ''}>
     <div class="card">
         <{$lang_mainintro}>
     </div>

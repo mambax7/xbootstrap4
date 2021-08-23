@@ -22,7 +22,7 @@
         </webmaster>
         <language><{$channel_language}>
         </language>
-        <{if $image_url != ""}>
+        <{if $image_url|default:'' != ''}>
             <img>
                 <title><{$channel_title}>
                 </title>

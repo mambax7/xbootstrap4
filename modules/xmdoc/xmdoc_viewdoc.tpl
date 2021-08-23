@@ -16,7 +16,7 @@
 			<div class="card-body text-center">
 				<div class="row d-flex justify-content-center" >
 					<div class="col-12" style="height: 150px;">
-						<{if $viewdocument.logo != ''}>
+						<{if $viewdocument.logo|default:'' != ''}>
 						<a title="<{$viewdocument.name}>" href="<{$xoops_url}>/modules/xmdoc/download.php?cat_id=<{$viewdocument.categoryid}>&amp;doc_id=<{$viewdocument.id}>" target="_blank">
 							<img class="rounded img-fluid mh-100" src="<{$viewdocument.logo}>" alt="<{$viewdocument.name}>">
 						</a>
@@ -55,7 +55,7 @@
 						<div class="col">
 							<{if $viewdocument.showinfo == 1}>
 								<span class="badge badge-secondary fa-lg text-primary ml-1"><span class="fa fa-download" aria-hidden="true"></span><small> <{$viewdocument.counter}></small></span>
-								<{if $viewdocument.size != ''}>
+								<{if $viewdocument.size|default:'' != ''}>
 									<span class="badge badge-secondary fa-lg text-primary ml-1 mt-1 mt-lg-0"><span class="fa fa-archive" aria-hidden="true"></span><small> <{$viewdocument.size}></small></span>
 								<{/if}>	
 							<{/if}>

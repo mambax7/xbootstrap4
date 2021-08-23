@@ -1,5 +1,5 @@
 <div class="xoopstube">
-    <{if $catarray.imageheader != ""}>
+    <{if $catarray.imageheader|default:'' != ''}>
         <div class="xoopstube-header text-center">
             <{$catarray.imageheader}>
         </div>

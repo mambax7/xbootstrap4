@@ -1,5 +1,5 @@
 <div class="news-home">
-    <{if $topic_rssfeed_link != ""}>
+    <{if $topic_rssfeed_link|default:'' != ''}>
         <{$topic_rssfeed_link}>
     <{/if}>
 
@@ -11,7 +11,7 @@
         </div>
     <{/if}>
 
-    <{if $topic_description != ""}>
+    <{if $topic_description|default:'' != ''}>
         <{$topic_description}>
     <{/if}>
 
@@ -19,7 +19,7 @@
         <{section name=i loop=$columns}>
             <{foreach item=story from=$columns[i]}>
                 <div class="col-xs-12 col-md-6 home-news-loop">
-                    <{if $story.picture != ""}>
+                    <{if $story.picture|default:'' != ''}>
                         <div class="home-thumbnails">
                             <img src="<{$story.picture}>" alt="<{$story.pictureinfo}>" class="img-fluid">
                         </div>

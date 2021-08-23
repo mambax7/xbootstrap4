@@ -34,14 +34,14 @@
 						<div class="card-body h-md-550 text-center">
 							<div class="row" style="height: 150px;">
 								<div class="col-12 h-75">
-									<{if $category.logo != ''}>
+									<{if $category.logo|default:'' != ''}>
 									<a title="<{$category.name}>" href="action.php?op=loadnews&category_id=<{$category.id}>">
 										<img class="rounded img-fluid mh-100" src="<{$category.logo}>" alt="<{$category.name}>">
 									</a>
 									<{/if}>
 								</div>
 								<div class="col-12 pt-2">	
-									<{if $category.description != ""}>
+									<{if $category.description|default:'' != ''}>
 										<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#xmDesc-<{$category.id}>">+</button>
 									<{else}>
 										<button class="btn btn-primary btn-sm" data-toggle="modal" disabled>+</button>

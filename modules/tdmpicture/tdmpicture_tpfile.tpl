@@ -2,7 +2,7 @@
     <tbody>
     <tr>
         <td>
-            <{if $numfile != 0}>
+            <{if $numfile|default:0 != 0}>
                 <ul id="display" class="<{$smarty.const.TDMPICTURE_DISPLAY}>">
                     <{foreach item=file from=$file}>
                         <li>

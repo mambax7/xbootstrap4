@@ -45,7 +45,7 @@
                 </li>
 
                 <{if $video.useradminvideo}>
-                    <li><i class="fa fa-pencil-square-o"></i><{$video.usermodify}></li>
+                    <li><i class="fa fa-pencil-square-o"></i><{$video.usermodify|default:false}></li>
                 <{/if}>
 
                 <li><i class="fa fa-share-alt"></i>
@@ -69,7 +69,7 @@
                     </li>
                 <{/if}>
 
-                <{if $tagbar}>
+                <{if $tagbar|default:false}>
                     <li><{include file="db:tag_bar.tpl"}></li>
                 <{/if}>
 
@@ -92,7 +92,7 @@
             <{/if}>
         </div>
 
-        <div class="col-md-12 text-center xoopstube-credits"><em><{$lang_copyright}></em></div>
+        <div class="col-md-12 text-center xoopstube-credits"><em><{$lang_copyright|default:''}></em></div>
 
         <div class="col-md-12">
             <{if $video.showsbookmarx > 0}>
@@ -104,11 +104,11 @@
 
 <{$commentsnav}> <{$lang_notice}>
 
-<{if $comment_mode == "flat"}>
-    <{include file="db:system_comments_flat.tpl"}>
-<{elseif $comment_mode == "thread"}>
-    <{include file="db:system_comments_thread.tpl"}>
-<{elseif $comment_mode == "nest"}>
+    <{if $comment_mode|default:'' == "flat"}>
+        <{include file="db:system_comments_flat.tpl"}>
+    <{elseif $comment_mode|default:'' == "thread"}>
+        <{include file="db:system_comments_thread.tpl"}>
+    <{elseif $comment_mode|default:'' == "nest"}>
     <{include file="db:system_comments_nest.tpl"}>
 <{/if}>
 

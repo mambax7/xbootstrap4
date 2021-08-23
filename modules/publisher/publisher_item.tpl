@@ -121,7 +121,7 @@
                         <img src="<{$publisher_url}>/assets/images/links/delete.png" title="<{$smarty.const._CO_PUBLISHER_DELETEFILE}>" alt="<{$smarty.const._CO_PUBLISHER_DELETEFILE}>"></a>
                 <{/if}>
                 <a href="<{$publisher_url}>/visit.php?fileid=<{$file.fileid}>" target="_blank">
-                    <img src="<{$publisher_url}>/assets/images/links/file.gif" title="<{$lang_download_file}>" alt="<{$smarty.const._MD_PUBLISHER_DOWNLOAD_FILE}>">&nbsp;<strong><{$file.name}></strong>
+                    <img src="<{$publisher_url}>/assets/images/links/file.gif" title="<{$lang_download_file|default:''}>" alt="<{$smarty.const._MD_PUBLISHER_DOWNLOAD_FILE}>">&nbsp;<strong><{$file.name}></strong>
                 </a>
 
                 <div style="font-size:12px;"><{$file.description}></div>
@@ -136,7 +136,7 @@
 <!-- End Attached Files -->
 
 <!-- Items by same Author -->
-<{if $perm_author_items && $item.uid != 0}>
+<{if $perm_author_items && $item.uid|default:0 != 0}>
     <div class="pub_article_extras">
         <div class="btn btn-primary btn-lg btn-block">
             <a href="<{$publisher_url}>/author_items.php?uid=<{$item.uid}>">
@@ -206,7 +206,7 @@
 <{/if}>
 <!-- END Other articles in the category -->
 
-<{if $tagbar}>
+<{if $tagbar|default:false}>
     <p><{include file="db:tag_bar.tpl"}></p>
 <{/if}>
 

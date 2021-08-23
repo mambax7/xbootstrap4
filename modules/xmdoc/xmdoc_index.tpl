@@ -37,7 +37,7 @@
 					<div class="card-body h-md-550 text-center">
 						<div class="row" style="height: 90px;">
 							<div class="col-12 h-75">
-								<{if $categories.logo != ''}>								
+								<{if $categories.logo|default:'' != ''}>
 									<img class="rounded img-fluid mh-100" src="<{$categories.logo}>" alt="<{$categories.name}>">
 								<{/if}>
 							</div>							
@@ -72,7 +72,7 @@
 		</div>
 	</div>
 <{/if}>
-<{if $document_count != 0}>
+<{if $document_count|default:0 != 0}>
 	<hr />
 	<div class="row">
 		<{foreach item=document from=$documents}>
@@ -91,7 +91,7 @@
 					<div class="card-body text-center">
 						<div class="row d-flex justify-content-center">
 							<div class="col-12" style="height: 150px;">
-								<{if $document.logo != ''}>
+								<{if $document.logo|default:'' != ''}>
 									<a title="<{$document.name}>" href="<{$xoops_url}>/modules/xmdoc/download.php?cat_id=<{$document.categoryid}>&amp;doc_id=<{$document.id}>" target="_blank">
 										<img class="rounded img-fluid mh-100" src="<{$document.logo}>" alt="<{$document.name}>">
 									</a>
@@ -126,11 +126,11 @@
 					<div class="modal-content">
 						<div class="modal-header d-flex justify-content-between">
 							<h5 class="modal-title"><{$document.name}></h5>
-							<div class="row text-right">
+							<div class="row w-100">
 								<div class="col">
 									<{if $document.showinfo == 1}>
 										<span class="badge badge-secondary fa-lg text-primary ml-1"><span class="fa fa-download" aria-hidden="true"></span><small> <{$document.counter}></small></span>
-										<{if $document.size != ''}>
+										<{if $document.size|default:'' != ''}>
 											<span class="badge badge-secondary fa-lg text-primary ml-1 mt-1 mt-lg-0"><span class="fa fa-archive" aria-hidden="true"></span><small> <{$document.size}></small></span>
 										<{/if}>	
 									<{/if}>

@@ -37,7 +37,7 @@
 		</div>
 		<br>
 	<{/if}>
-	<{if $news_count != 0}>
+	<{if $news_count|default:0 != 0}>
 		<div class="row">
 			<{foreach item=news from=$news}>
 				<div class="col-md-12 mb-3">
@@ -96,7 +96,7 @@
 								</div>
 							<{/if}>
 							<div class="d-block d-md-none pt-2 px-4">
-								<{if $news.logo != ''}>
+								<{if $news.logo|default:'' != ''}>
 									<{if $CAT == true}><a href="index.php?news_cid=<{$category_id}>"><{/if}><img class="card-img-top rounded img-fluid" src="<{$news.logo}>" alt="<{$news.title}>"><{if $CAT == true}></a><{/if}>
 								<{/if}>
 							</div>
@@ -107,7 +107,7 @@
 									<p class="card-text mb-auto">
 										<div class="row">
 											<div class="col">
-												<{if $news.logo != ''}>
+												<{if $news.logo|default:'' != ''}>
 												<{if $CAT == true}>
 												<a href="index.php?news_cid=<{$category_id}>">
 												<{/if}>

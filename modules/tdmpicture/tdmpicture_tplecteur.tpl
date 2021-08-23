@@ -80,12 +80,12 @@
         <ul>
             <li><a id="tbs0" href="#TDMSoundDirect"><span><{$lecteur_tabs}></span></a></li>
 
-            <li <{if="" !$perm_playlist}=""> style="display:none;" <{/if}> ><a id="tbs1" href="#TDMPlaylist" onclick="funct_PlayList();"><span><{$smarty.const._MD_TDMSOUND_FILEPLAYLIST}></span></a>
+            <li <{if $perm_playlist}> style="display:none;" <{/if}> ><a id="tbs1" href="#TDMPlaylist" onclick="funct_PlayList();"><span><{$smarty.const._MD_TDMSOUND_FILEPLAYLIST}></span></a>
             </li>
 
             <li><a id="tbs2" href="#TDMSound2"><span><{$smarty.const._MD_TDMSOUND_FILEECOUTE}></span></a></li>
 
-            <li <{if="" !$comment_view}=""> style="display:none;" <{/if}> ><a id="tbs3" href="#TDMComment"><span><{$smarty.const._MD_TDMSOUND_FILECOMMENT}></span></a>
+            <li <{if !$comment_view}> style="display:none;" <{/if}> ><a id="tbs3" href="#TDMComment"><span><{$smarty.const._MD_TDMSOUND_FILECOMMENT}></span></a>
             </li>
 
         </ul>
@@ -119,11 +119,11 @@
                 </div>
                 <!-- start comments loop -->
                 <div style="margin: 3px; padding: 3px;">
-                    <{if $comment_mode == "flat"}>
-                        <{include file="db:system_comments_flat.tpl"}>
-                    <{elseif $comment_mode == "thread"}>
-                        <{include file="db:system_comments_thread.tpl"}>
-                    <{elseif $comment_mode == "nest"}>
+    <{if $comment_mode|default:'' == "flat"}>
+        <{include file="db:system_comments_flat.tpl"}>
+    <{elseif $comment_mode|default:'' == "thread"}>
+        <{include file="db:system_comments_thread.tpl"}>
+    <{elseif $comment_mode|default:'' == "nest"}>
                         <{include file="db:system_comments_nest.tpl"}>
                     <{/if}>
                 </div>

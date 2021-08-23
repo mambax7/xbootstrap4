@@ -26,7 +26,7 @@
                     <li><span class="label label-info"><{$smarty.const._MD_POSTS}>: <{$sforum.forum_posts}></span></li>
 
                     <!-- If subforum description -->
-                    <{if $sforum.forum_desc != ""}>
+                    <{if $sforum.forum_desc|default:'' != ''}>
                         <li>
                             <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#subforum-<{$sforum.forum_id}>">
                                 <span class="fa fa-info-sign"></span>

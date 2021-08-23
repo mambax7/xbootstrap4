@@ -76,7 +76,7 @@
 						</div>
 					<{/if}>
 					<div class="d-block d-md-none pt-2 px-4">
-						<{if $logo != ''}>
+						<{if $logo|default:'' != ''}>
 							<{if $CAT == true}><a href="index.php?news_cid=<{$category_id}>"><{/if}><img class="card-img-top rounded img-fluid" src="<{$logo}>" alt="<{$title}>"><{if $CAT == true}></a><{/if}>
 						<{/if}>
 					</div>
@@ -86,7 +86,7 @@
 							<p class="card-text mb-auto">
 								<div class="row">
 									<div class="col">
-										<{if $logo != ''}>
+										<{if $logo|default:'' != ''}>
 										<{if $CAT == true}>
 										<a href="index.php?news_cid=<{$category_id}>">
 										<{/if}>
@@ -145,11 +145,11 @@
         <{$lang_notice}>
     </div>
     <div style="margin:3px; padding: 3px;">
-        <{if $comment_mode == "flat"}>
+    <{if $comment_mode|default:'' == "flat"}>
         <{include file="db:system_comments_flat.tpl"}>
-        <{elseif $comment_mode == "thread"}>
+    <{elseif $comment_mode|default:'' == "thread"}>
         <{include file="db:system_comments_thread.tpl"}>
-        <{elseif $comment_mode == "nest"}>
+    <{elseif $comment_mode|default:'' == "nest"}>
         <{include file="db:system_comments_nest.tpl"}>
         <{/if}>
     </div>

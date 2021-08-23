@@ -7,10 +7,10 @@
 		</div>
 	<{/if}>
 
-	<{if $index_content != 0}>
+	<{if $index_content|default:0 != 0}>
 		<{include file="db:xmcontent_viewcontent.tpl"}>
 	<{else}>
-		<{if $content_count != 0}>
+		<{if $content_count|default:0 != 0}>
 			<div class="row">
 				<{foreach item=content from=$content}>
 					<{if $index_columncontent == 1}>

@@ -62,7 +62,7 @@
     </div>
     <br>
 
-    <{if $pagenav != ''}>
+    <{if $pagenav|default:'' != ''}>
         <br>
         <div align="center"><{$pagenav}></div>
     <{/if}>

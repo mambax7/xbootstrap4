@@ -54,7 +54,7 @@
     <{/if}>
 </div>
 
-<{if $event.event_desc != ''}>
+<{if $event.event_desc|default:'' != ''}>
 <div id="desc" class="mb-3">
     <h5><{$smarty.const._MD_EXTCAL_LOCATION_DESCRIPTION}></h5>
 
@@ -63,7 +63,7 @@
 </div>
 <{/if}>
 
-<{if $event.event_address != ''}>
+<{if $event.event_address|default:'' != ''}>
 <div class="mb-3">
     <h5><{$smarty.const._MD_EXTCAL_LOCATION_ADRESSE}></h5>
     <{$event_address}>
@@ -72,7 +72,7 @@
 </div>
 <{/if}>
 
-<{if $location.id.value != 0}>
+<{if $location.id.value|default:0 != 0}>
 <div class="mb-3">
     <h5><{$smarty.const._MD_EXTCAL_LOCATION}></h5>
     <a class="btn btn-primary mb-3" href="./location.php?location_id=<{$event.event_location}>">
@@ -230,11 +230,11 @@
 
 <div style="margin-top: 10px;">
     <!-- start comments loop -->
-    <{if $comment_mode == "flat"}>
+    <{if $comment_mode|default:'' == "flat"}>
         <{include file="db:system_comments_flat.tpl"}>
-    <{elseif $comment_mode == "thread"}>
+    <{elseif $comment_mode|default:'' == "thread"}>
         <{include file="db:system_comments_thread.tpl"}>
-    <{elseif $comment_mode == "nest"}>
+    <{elseif $comment_mode|default:'' == "nest"}>
         <{include file="db:system_comments_nest.tpl"}>
     <{/if}>
     <!-- end comments loop -->

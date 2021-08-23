@@ -62,7 +62,7 @@
 			</div>
 		<{/if}>
 	<{/if}>
-	<{if $category_count != 0}>
+	<{if $category_count|default:0 != 0}>
 	<div class="row">
 		<{foreach item=category from=$category}>
 		<{if $info_columncat == 1}>

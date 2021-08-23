@@ -1,4 +1,4 @@
-<{if $block.category && $block.category.image_path != ''}>
+<{if $block.category && $block.category.image_path|default:'' != ''}>
     <div align="center">
         <a href="<{$block.category.categoryurl}>" title="<{$block.category.name}>">
             <img src="<{$block.category.image_path}>" width="185" height="80" alt="<{$block.category.name}>">
@@ -14,7 +14,7 @@
 
 <{else}>
     <{foreach item=item from=$block.items name=spotlight}>
-        <{if $item.summary != ''}>
+        <{if $item.summary|default:'' != ''}>
             <div class="spot_publisher_items_list">
                 <div class="article_wf_title">
                     <h3><{$item.titlelink}></h3>

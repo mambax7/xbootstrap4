@@ -103,12 +103,12 @@
             <{else}>
                 <span class="fa fa-envelope btn btn-xs btn-warning" title="<{$smarty.const._PM_NOTREAD}>"></span>
             <{/if}>
-            <{if $message.msg_image != ""}>
+            <{if $message.msg_image|default:'' != ''}>
                 <img src="<{$xoops_url}>/images/subject/<{$message.msg_image}>" alt="">
             <{/if}>
         </div>
         <div class="col-xs-2 col-md-2">
-            <{if $message.postername != ""}>
+            <{if $message.postername|default:'' != ''}>
                 <a href="<{$xoops_url}>/userinfo.php?uid=<{$message.posteruid}>" title=""><{$message.postername}></a>
             <{else}>
                 <{$anonymous}>
