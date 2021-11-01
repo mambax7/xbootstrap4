@@ -1,30 +1,34 @@
-4.60 RC 1 2021-01-26
+4.6.1 RC 1 2021-10-31
+-------------------
+- updated to Bootstrap 4.6.1 (mamba)
+
+4.6.0 RC 1 2021-01-26
 -------------------
 - updated to Bootstrap 4.6 (mamba)
 
-4.53 RC 1 2020-12-04
+4.5.3 RC 1 2020-12-04
 -------------------
 - updated to Bootstrap 4.5.3 (mamba)
 - add XoopsFormRendererBootstrap4.php (DejaDingo)
 
-4.50 RC 1 2020-05-22
+4.5.0 RC 1 2020-05-22
 -------------------
 - updated to Bootstrap 4.5 (mamba)
 
-4.00 RC 2 2019-11-28
+4.4.1 RC 1 2019-11-28
 -------------------
 - updated to Bootstrap 4.4.1 (mamba)
 
-4.00 RC 2 2019-04-25
+4.3.1 RC 1 2019-04-25
 -------------------
 - updated to Bootstrap 4.3.1 (mamba)
 
-4.00 RC 1 2018-08-05
+4.1.3 RC 1 2018-08-05
 -------------------
 - updated to Bootstrap 4.1.3 (mamba)
 - updated Owl to 2.3.4
 
-4.00 Beta 3 NOT RELEASED
+4.0.0 Beta 3 NOT RELEASED
 -------------------
 - Bootstrap 4.0 Stable (mamba)
 - Font Awesome 5.0.4 (mamba)
