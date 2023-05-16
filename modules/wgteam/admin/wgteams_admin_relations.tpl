@@ -54,8 +54,8 @@
             <td class="center"><{$relation.submitter}></td>
             <td class="center"><{$relation.date_create}></td>
             <td class="center  width5">
-            <a href="relations.php?op=edit&amp;rel_id=<{$relation.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="relations"></a>
-            <a href="relations.php?op=delete&amp;rel_id=<{$relation.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 delete.png}>" alt="relations"></a>
+            <a href="relations.php?op=edit&amp;rel_id=<{$relation.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 'edit.png'}>" alt="relations"></a>
+            <a href="relations.php?op=delete&amp;rel_id=<{$relation.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 'delete.png'}>" alt="relations"></a>
             </td>
         </tr>
         <{/foreach}>

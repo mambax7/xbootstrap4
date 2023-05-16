@@ -245,7 +245,7 @@
     <{include file="db:newbb_online.tpl"}>
 <{/if}>
 
-<a title="NewBB" href="http://www.simple-xoops.de" class="btn btn-xs btn-success">NewBB Version  <{$version/100}></a>
+<a title="NewBB" href="https://www.simple-xoops.de" class="btn btn-xs btn-success">NewBB Version  <{$version}></a>
 <{if $rss_button}>
     <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?f=<{$forum_id}>" target="_blank" title="RSS FEED">
         <{$rss_button}>

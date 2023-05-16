@@ -15,8 +15,8 @@
 <td class="center"><{$infofield.field_submitter}></td>
 <td class="center"><{$infofield.field_date_created}></td>
 <td class="center  width5">
-<a href="infofields.php?op=edit&amp;infofield_id=<{$infofield.field_id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="infofields"></a>
-<a href="infofields.php?op=delete&amp;infofield_id=<{$infofield.field_id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 delete.png}>" alt="infofields"></a>
+<a href="infofields.php?op=edit&amp;infofield_id=<{$infofield.field_id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 'edit.png'}>" alt="infofields"></a>
+<a href="infofields.php?op=delete&amp;infofield_id=<{$infofield.field_id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 'delete.png'}>" alt="infofields"></a>
 </td>
 </tr>
 

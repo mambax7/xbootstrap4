@@ -1,13 +1,12 @@
 <{if $tagbar|default:false}>
-    <div class="row">
-        <div class="col-md-12 xoops-tag-bar">
-            <ul class="list-unstyled">
-                <li class="tag-title"><{$tagbar.title}>:</li>
-                <{foreach item=tag from=$tagbar.tags}>
-                    <li><span class="fa fa-tag"></span> <{$tag}></li>
-                <{/foreach}>
-            </ul>
-        </div><!-- .xoops-tags -->
-    </div>
-    <!-- .row -->
+    <ul class="list-inline mb-0">
+        <li class="list-inline-item"><{$tagbar.title}>:</li>
+        <{foreach item=tag from=$tagbar.tags}>
+             <{if $tag|strip_tags|lower|trim == $tag_title|strip_tags|lower}>
+                <li class="list-inline-item"><{$tag|replace:"'>":"' class=\"text-warning\" > <span class=\"fa fa-tag\"></span> "}></li>
+            <{else}>
+                <li class="list-inline-item"><{$tag|replace:"'>":"' > <span class=\"fa fa-tag\"></span> "}></li>
+            <{/if}>
+        <{/foreach}>
+    </ul>
 <{/if}>

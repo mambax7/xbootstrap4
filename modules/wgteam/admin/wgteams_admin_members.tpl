@@ -32,9 +32,9 @@
                     <td class="center"><{$member.submitter}></td>
                     <td class="center"><{$member.date_create}></td>
                     <td class="center  width5">
-                    <a href="members.php?op=edit&amp;member_id=<{$member.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="<{$smarty.const._EDIT}>"></a>
+                    <a href="members.php?op=edit&amp;member_id=<{$member.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 'edit.png'}>" alt="<{$smarty.const._EDIT}>"></a>
 					<a href="image_editor.php?op=edit_member&amp;member_id=<{$member.id}>" title="<{$smarty.const._AM_WGTEAMS_IMG_EDITOR}>"><img src="<{$pathModIcon16}>/image_editor.png" alt="<{$smarty.const._AM_WGTEAMS_IMG_EDITOR}>"></a>
-                    <a href="members.php?op=delete&amp;member_id=<{$member.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 delete.png}>" alt="<{$smarty.const._DELETE}>"></a>
+                    <a href="members.php?op=delete&amp;member_id=<{$member.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 'delete.png'}>" alt="<{$smarty.const._DELETE}>"></a>
                     </td>
                 </tr>
             <{/foreach}>

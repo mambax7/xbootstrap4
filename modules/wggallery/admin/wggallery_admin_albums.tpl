@@ -76,10 +76,10 @@
                                 </a>
                             <{/if}>
                             <a href='albums.php?op=edit&amp;alb_id=<{$album.id}>' title='<{$smarty.const._EDIT}>'>
-								<img src='<{xoModuleIcons16 edit.png}>' alt='<{$smarty.const._EDIT}>'>
+								<img src='<{xoModuleIcons16"edit.png"}>' alt='<{$smarty.const._EDIT}>'>
 							</a>
 							<a href='albums.php?op=delete&amp;alb_id=<{$album.id}>' title='<{$smarty.const._DELETE}>'>
-								<img src='<{xoModuleIcons16 delete.png}>' alt='<{$smarty.const._DELETE}>'>
+								<img src='<{xoModuleIcons16"delete.png"}>' alt='<{$smarty.const._DELETE}>'>
 							</a>
                             <{if $album.nb_images > 0}>
                                 <a href='images.php?op=list&amp;alb_id=<{$album.id}>' title='<{$smarty.const._CO_WGGALLERY_IMAGES}>'>

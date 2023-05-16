@@ -5,7 +5,7 @@
         <link><{$channel_link}>
         <description><{$channel_desc}></description>
         <lastbuilddate><{$channel_lastbuild}></lastbuilddate>
-        <docs>http://backend.userland.com/rss/</docs>
+        <docs>https://backend.userland.com/rss/</docs>
         <generator><{$channel_generator}></generator>
         <category><{$channel_category}></category>
         <managingeditor><{$channel_editor}></managingeditor>

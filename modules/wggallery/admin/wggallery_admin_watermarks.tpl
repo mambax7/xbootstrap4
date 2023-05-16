@@ -47,10 +47,10 @@
                         <td class="center"><{$watermark.submitter}></td>
                         <td class="center  width5">
                             <a href="watermarks.php?op=edit&amp;wm_id=<{$watermark.id}>" title="<{$smarty.const._EDIT}>">
-                                <img src="<{xoModuleIcons16 edit.png}>" alt="watermarks">
+                                <img src="<{xoModuleIcons16 'edit.png'}>" alt="watermarks">
                             </a>
                             <a href="watermarks.php?op=delete&amp;wm_id=<{$watermark.id}>" title="<{$smarty.const._DELETE}>">
-                                <img src="<{xoModuleIcons16 delete.png}>" alt="watermarks">
+                                <img src="<{xoModuleIcons16 'delete.png'}>" alt="watermarks">
                             </a>
                         </td>
                     </tr>

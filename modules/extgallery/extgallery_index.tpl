@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12"><a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><h4><{$extgalleryName}></h4></a></div>
+    <div class="col-md-12"><a title="<{$extgalleryName}>" href="<{xoAppUrl'modules/extgallery/'}>"><h4><{$extgalleryName}></h4></a></div>
     <div class="col-xs-4 col-sm-4 col-md-4"><{$lang.categoriesAlbums}></div>
     <!-- <div class="col-xs-4 col-sm-4 col-md-4"><{$lang.nbAlbums}></div> -->
     <!-- <div class="col-xs-4 col-sm-4 col-md-4"><{$lang.nbPhotos}></div> -->
@@ -73,8 +73,8 @@
 <{if $show_rss}>
     <div class="row">
         <div class="col-md-12">
-            <a href="<{xoAppUrl modules/extgallery/public-rss.php}>" title="<{$smarty.const._MD_EXTGALLERY_RSS}>">
-                <img src="<{xoAppUrl modules/extgallery/assets/images/feed.png}>" alt="<{$smarty.const._MD_EXTGALLERY_RSS}>">
+            <a href="<{xoAppUrl'modules/extgallery/public-rss.php'}>" title="<{$smarty.const._MD_EXTGALLERY_RSS}>">
+                <img src="<{xoAppUrl 'modules/extgallery/assets/images/feed.png'}>" alt="<{$smarty.const._MD_EXTGALLERY_RSS}>">
             </a>
         </div>
     </div>

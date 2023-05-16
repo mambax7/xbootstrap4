@@ -1,7 +1,7 @@
 <div class="row extGalleryAlbum">
     <div class="col-md-12">
         <ul class="breadcrumb">
-            <li><a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a></li>
+            <li><a title="<{$extgalleryName}>" href="<{xoAppUrl'modules/extgallery/'}>"><{$extgalleryName}></a></li>
 
             <{foreach item=node from=$catPath name=breadcrumb}>
             <li>
@@ -153,8 +153,8 @@
 
     <{if $show_rss}>
         <div id="rss">
-            <a href="<{xoAppUrl modules/extgallery/public-rss.php}>" title="<{$smarty.const._MD_EXTGALLERY_RSS}>">
-                <img src="<{xoAppUrl modules/extgallery/assets/images/feed.png}>" alt="<{$smarty.const._MD_EXTGALLERY_RSS}>">
+            <a href="<{xoAppUrl'modules/extgallery/public-rss.php'}>" title="<{$smarty.const._MD_EXTGALLERY_RSS}>">
+                <img src="<{xoAppUrl 'modules/extgallery/assets/images/feed.png'}>" alt="<{$smarty.const._MD_EXTGALLERY_RSS}>">
             </a>
         </div>
     <{/if}>

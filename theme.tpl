@@ -49,12 +49,12 @@
     <script src="<{xoImgUrl}>js/imagesloaded.pkgd.min.js"></script>
 
     <!--[if lt IE 9]>
-<script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <script src="<{xoImgUrl}>js/selectivizr-min.js"></script>
 <![endif]-->
     <script src="<{xoImgUrl}>js/js.js"></script>
-    <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>">
+    <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl 'backend.php'}>">
 
     <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
 

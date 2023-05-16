@@ -64,10 +64,10 @@
                                     </a>
                                 <{/if}>
                                 <a href='<{$wggallery_url}>/admin/images.php?op=edit&amp;img_id=<{$image.id}>&amp;alb_id=<{$image.albid}>' title='<{$smarty.const._EDIT}>'>
-                                    <img src='<{xoModuleIcons16 edit.png}>' alt='images'>
+                                    <img src='<{xoModuleIcons16"edit.png"}>' alt='images'>
                                 </a>
                                 <a href='<{$wggallery_url}>/admin/images.php?op=delete&amp;img_id=<{$image.id}>&amp;alb_id=<{$image.albid}>' title='<{$smarty.const._DELETE}>'>
-                                    <img src='<{xoModuleIcons16 delete.png}>' alt='images'>
+                                    <img src='<{xoModuleIcons16"delete.png"}>' alt='images'>
                                 </a>
                             </td>
                         </tr>
@@ -154,10 +154,10 @@
                                     </a>
                                 <{/if}>
                                 <a href='<{$wggallery_url}>/admin/images.php?op=edit&amp;img_id=<{$image.id}>&amp;alb_id=<{$image.albid}>' title='<{$smarty.const._EDIT}>'>
-                                    <img src='<{xoModuleIcons16 edit.png}>' alt='images'>
+                                    <img src='<{xoModuleIcons16"edit.png"}>' alt='images'>
                                 </a>
                                 <a href='<{$wggallery_url}>/admin/images.php?op=delete&amp;img_id=<{$image.id}>&amp;alb_id=<{$image.albid}>' title='<{$smarty.const._DELETE}>'>
-                                    <img src='<{xoModuleIcons16 delete.png}>' alt='images'>
+                                    <img src='<{xoModuleIcons16"delete.png"}>' alt='images'>
                                 </a>
                             </td>
                         </tr>
