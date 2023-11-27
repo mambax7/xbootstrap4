@@ -1,3 +1,8 @@
+4.6.2 RC 2 2023-11-26
+-------------------
+- added examples for Bootstrap 4.6.2 (mamba)
+- updated .htaccess (mamba)
+
 4.6.2 RC 1 2023-05-15
 -------------------
 - updated to Bootstrap 4.6.2 (mamba)
