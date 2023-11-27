@@ -4,7 +4,7 @@
 </div>
 
 <!--Enter ReCaptcha code https://www.google.com/recaptcha/-->
-<!--<{php}>$GLOBALS['xoopsTpl']->assign('recaptchakey', 'Key ReCaptcha');<{/php}>-->
+<{*<{php}>$GLOBALS['xoopsTpl']->assign('recaptchakey', 'Key ReCaptcha');<{/php}>*}>
 <!--Opening the block-->
 <script type="text/javascript">
     window.onload = function () {

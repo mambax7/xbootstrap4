@@ -29,7 +29,7 @@
             <!-- *************** Tab for select image of albums ***************-->
 			<div class='tab-pane' id='2'>
                 <div class='col-xs-12 col-sm-6'>
-                    <{foreach item=image from=$images}>
+                    <{foreach item=image from=$images|default:null}>
                         <{if $image.alb_name}><div class='selimages col-xs-12 col-sm-12'><h5 class='modal-title' style='width:100%'><{$image.alb_name}></h5></div><{/if}>
                         <div class='selimages col-xs-12 col-sm-4'>
                         <input id='<{$image.id}>' class='imgSelect1 img-fluid wgg-album-img <{if $image.selected}>wgg-modal-selected<{/if}>' type='image' src='<{$image.thumb}>' alt='<{$image.title}>' style='padding:3px;' value='<{$image.name}>'>
@@ -237,7 +237,7 @@
 <div class='clear'>&nbsp;</div>
  
 <!-- Create Modals -->
-<{foreach item=m from=$nbModals}>
+<{foreach item=m from=$nbModals|default:null}>
     <div class='modal fade' id='myModalImagePicker<{$m}>' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
         <div class='modal-dialog wgg-modal-dialog' role='document'>
             <div class='modal-content'>
@@ -248,7 +248,7 @@
                     <h4 class='modal-title' id='myModalLabel'><{$smarty.const._CO_WGGALLERY_IMAGES_TITLE}></h4>
                 </div>
                 <div class='modal-body'>
-                    <{foreach item=image from=$images}>
+                    <{foreach item=image from=$images|default:null}>
                         <{if $image.alb_name}><h4 class='modal-title'><{$image.alb_name}></h4><{/if}>
                         <input class='imgGrid<{$m}>' type='image' src='<{$image.thumb}>' alt='<{$image.title}>'
                                style='padding:3px;max-height:150px;max-width:200px' value='<{$image.name}>' onclick='selectGridImage(this, <{$m}>)'>

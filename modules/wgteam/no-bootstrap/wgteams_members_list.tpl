@@ -1,7 +1,7 @@
     <table class="table <{$members[0].rel_tablestyle}>">
         <tbody>
             <tr>
-                <{foreach item=member from=$members}>
+                <{foreach item=member from=$members|default:null}>
                     <{if $member.rel_nb_cols == 2}>
                         <td class="width50">
                     <{elseif $member.rel_nb_cols == 3}>

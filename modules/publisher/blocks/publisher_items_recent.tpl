@@ -1,4 +1,4 @@
-<{foreach item=item from=$block.items}>
+<{foreach item=item from=$block.items|default:null}>
 
 <{/foreach}>
 <table class="table table-striped table-condensed">

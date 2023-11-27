@@ -1,6 +1,6 @@
 <!-- Header -->
 <{include file='db:wggallery_admin_header.tpl'}>
-<{if $albumtypes_list}>
+<{if isset($albumtypes_list)}>
 	<h3 class=""><{$smarty.const._AM_WGGALLERY_OPTION_AT_SETINFO}></h2>
 	<table class='table table-bordered'>
 		<thead>
@@ -15,9 +15,9 @@
 				<th class="center width5"><{$smarty.const._CO_WGGALLERY_FORM_ACTION}></th>
 			</tr>
 		</thead>
-		<{if $albumtypes_count}>
+		<{if isset($albumtypes_count)}>
 			<tbody>
-				<{foreach item=albumtype from=$albumtypes_list}>
+				<{foreach item=albumtype from=$albumtypes_list|default:null}>
 					<tr class="<{cycle values='odd, even'}>">
 						<td class='center'><{$albumtype.id}></td>
 						<td class="center"><{$albumtype.name}></td>
@@ -56,10 +56,10 @@
 		<div class="clear spacer"></div>
 	<{/if}>
 <{/if}>
-<{if $form}>
+<{if isset($form)}>
 	<{$form}>
 <{/if}>
-<{if $error}>
+<{if isset($error)}>
 	<div class="errorMsg"><strong><{$error}></strong>
 </div>
 

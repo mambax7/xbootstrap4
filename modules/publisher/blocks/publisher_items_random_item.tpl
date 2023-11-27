@@ -1,4 +1,4 @@
-<{foreach item=item from=$block.items}>
+<{foreach item=item from=$block.items|default:null}>
     <{if $item.display_item_image|default:false === '1'}>
         <a href="<{$item.url}>"><img class="img-fluid" src="<{$item.image_path}>" alt="<{$item.alt}>" title="<{$item.alt}>" ></a>
     <{/if}>

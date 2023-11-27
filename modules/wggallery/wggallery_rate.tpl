@@ -23,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-        <{foreach item=list from=$images}>
+        <{foreach item=list from=$images|default:null}>
             <tr class="<{cycle values='odd, even'}>">
                 <td class="center"><{$list.id}></td>
                 <td class="center"><{$list.title}></td>

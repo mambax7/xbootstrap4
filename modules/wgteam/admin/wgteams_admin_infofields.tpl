@@ -1,6 +1,6 @@
 <!-- Header -->
 <{include file='db:wgteams_admin_header.tpl'}>
-<{if $infofields_list}>
+<{if isset($infofields_list)}>
     <table class="table table-bordered  table-striped"><thead><tr class="head"><th class="center"><{$smarty.const._AM_WGTEAMS_INFOFIELD_ID}></th>
 <th class="center"><{$smarty.const._AM_WGTEAMS_INFOFIELD_NAME}></th>
 <th class="center"><{$smarty.const._AM_WGTEAMS_SUBMITTER}></th>
@@ -8,8 +8,8 @@
 <th class="center width5"><{$smarty.const._AM_WGTEAMS_FORM_ACTION}></th>
 </tr>
 </thead>
-<{if $infofields_count}>
-    <tbody><{foreach item=infofield from=$infofields_list}>
+<{if isset($infofields_count)}>
+    <tbody><{foreach item=infofield from=$infofields_list|default:null}>
         <tr class="<{cycle values='odd, even'}>"><td class="center"><{$infofield.field_id}></td>
 <td class="center"><{$infofield.field_name}></td>
 <td class="center"><{$infofield.field_submitter}></td>
@@ -32,10 +32,10 @@
 <{/if}>
 
 <{/if}>
-<{if $form}>
+<{if isset($form)}>
     <{$form}>
 <{/if}>
-<{if $error}>
+<{if isset($error)}>
     <div class="errorMsg"><strong><{$error}></strong>
 </div>
 

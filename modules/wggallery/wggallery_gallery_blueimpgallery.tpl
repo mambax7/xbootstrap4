@@ -17,7 +17,7 @@
 <{if $slideshowtype == 'lightbox'}>
     <{if $images_nb > 0}>
         <div id="links">
-            <{foreach item=image from=$images}>
+            <{foreach item=image from=$images|default:null}>
                 <a href="<{if $source == 'large'}><{$image.large}><{else}><{$image.medium}><{/if}>" title="<{$image.title}>" data-description="<{$image.desc}>">
                     <img src="<{if $source_preview == 'medium'}><{$image.medium}><{else}><{$image.thumb}><{/if}>" alt="<{$image.title}>">
                 </a>
@@ -95,7 +95,7 @@
     
     <{if $images_nb > 0}>
         <div id="links" class='hidden'>
-            <{foreach item=image from=$images}>
+            <{foreach item=image from=$images|default:null}>
                 <a href="<{if $source == 'large'}><{$image.large}><{else}><{$image.medium}><{/if}>" title="<{$image.title}>"></a>
             <{/foreach}>
         </div>
@@ -123,7 +123,7 @@
 	
 <div class="clear spacer"></div>
 
-<{if $error}>
+<{if isset($error)}>
 	<div class="errorMsg"><strong><{$error}></strong></div>
 <{/if}> 
 

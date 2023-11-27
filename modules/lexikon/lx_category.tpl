@@ -18,7 +18,7 @@
 
         <ul class="pagination pagination-sm">
             <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
-            <{foreach item=letterlinks from=$alpha.initial}>
+            <{foreach item=letterlinks from=$alpha.initial|default:null}>
                 <{if $letterlinks.total > 0}>
                     <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
                             <{$letterlinks.linktext}>
@@ -54,7 +54,7 @@
                             <h3> <{$smarty.const._MD_LEXIKON_BROWSECAT}> </h3>
                         </div>
                     </div>
-                    <{foreach item=catlinks from=$block0.categories}>
+                    <{foreach item=catlinks from=$block0.categories|default:null}>
 
                         <{if $catlinks.count is div by 4}>
 
@@ -100,7 +100,7 @@
                             <h3> <{$smarty.const._MD_LEXIKON_BROWSECAT}> </h3>
                         </div>
                     </div>
-                    <{foreach item=catlinks from=$block0.categories}>
+                    <{foreach item=catlinks from=$block0.categories|default:null}>
 
                         <{if $catlinks.count is div by 4}>
 
@@ -149,7 +149,7 @@
     <div class="col-md-12">
         <{if $pagetype == '0'}>
             <h3><{$smarty.const._MD_LEXIKON_ALLCATS}></h3>
-            <{foreach item=eachcat from=$catsarray.single}>
+            <{foreach item=eachcat from=$catsarray.single|default:null}>
                 <table class="table table-responsive">
                     <thead>
                     <tr>
@@ -195,7 +195,7 @@
             <{$smarty.const._MD_LEXIKON_WEHAVE}> <{$singlecat.total}> <{$smarty.const._MD_LEXIKON_ENTRIESINCAT}>
         </span>
             <hr>
-            <{foreach item=eachentry from=$entriesarray.single}>
+            <{foreach item=eachentry from=$entriesarray.single|default:null}>
                 <span style="display:block; margin-bottom: 15px;">
             <h4>
                 <a href="<{$xoops_url}>/modules/<{$eachentry.dir}>/entry.php?entryID=<{$eachentry.id}>"><{$eachentry.term}></a>

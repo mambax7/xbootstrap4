@@ -41,7 +41,7 @@
 <{if $images_nb > 0}>
     <div id="gallery">
         <ul class="pictures">
-            <{foreach item=image from=$images}>
+            <{foreach item=image from=$images|default:null}>
                 <li><img data-original="<{if $source == 'large'}><{$image.large}><{else}><{$image.medium}><{/if}>" src="<{if $source_preview == 'medium'}><{$image.medium}><{else}><{$image.thumb}><{/if}>" alt="<{$image.title}>"></li>
             <{/foreach}>
         </ul>
@@ -61,7 +61,7 @@
             title: <{$viewerjs_title}>,
             fullscreen: <{$fullscreen}>,
             zoomable: <{$zoomable}>,
-            <{if $toolbar}>toolbar: {
+            <{if isset($toolbar)}>toolbar: {
                 oneToOne: true,
                 zoomIn: true,
                 zoomOut: true,
@@ -72,7 +72,7 @@
                 next: function() {
                     viewer.next(true);
                 },
-                <{if $download}>
+                <{if isset($download)}>
                     download: function() {
                     $.ajax({
                         data: 'op=viewerjs&src=' + viewer.image.src,
@@ -95,9 +95,9 @@
                 toolbar: false,
             <{/if}>
         });
-        <{if $open}>
+        <{if isset($open)}>
             viewer.show(<{$slideshowAuto}>);
-            <{if $slideshowAuto}>
+            <{if isset($slideshowAuto)}>
                 viewer.play(true);
             <{/if}>
             gallery.addEventListener('hidden', function () {
@@ -109,7 +109,7 @@
 
 <div class="clear spacer"></div>
 
-<{if $error}>
+<{if isset($error)}>
 	<div class="errorMsg"><strong><{$error}></strong></div>
 <{/if}>
 

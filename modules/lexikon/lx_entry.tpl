@@ -16,7 +16,7 @@
     -->
 </style>
 <{* needed for baloon tips*}>
-<{if $balloontips}>
+<{if isset($balloontips)}>
     <div id="bubble_tooltip">
         <div class="bubble_top"><span></span></div>
         <div class="bubble_middle">
@@ -40,7 +40,7 @@
 
         <ul class="pagination pagination-sm">
             <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php" title="[ <{$publishedwords}> ]"><{$smarty.const._MD_LEXIKON_ALL}></a></li>
-            <{foreach item=letterlinks from=$alpha.initial}>
+            <{foreach item=letterlinks from=$alpha.initial|default:null}>
                 <{if $letterlinks.total > 0}>
                     <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$lang_moduledirname}>/letter.php?init=<{$letterlinks.id}>" title="[ <{$letterlinks.total}> ]">
                             <{$letterlinks.linktext}>

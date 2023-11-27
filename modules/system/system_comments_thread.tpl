@@ -25,7 +25,7 @@
                     <strong><{$lang_posted}></strong>
                 </div>
             </div>
-            <{foreach item=reply from=$comments[i].replies}>
+            <{foreach item=reply from=$comments[i].replies|default:null}>
                 <div class="row">
                     <div class="col-md-4">
                         <{$reply.prefix}> <a href="<{$comment_url}>&com_id=<{$reply.id}>&com_rootid=<{$reply.root_id}>" title=""><{$reply.title}></a>
@@ -44,7 +44,7 @@
         <{/if}>
     <{/section}>
 
-    <{if $commentform}>
+    <{if isset($commentform)}>
         <div class="aligncenter">
             <button class="btn-comment btn btn-primary btn-md" data-toggle="modal" data-target="#comments-form">
                 <span class="fa fa-comment"></span> Add Comment

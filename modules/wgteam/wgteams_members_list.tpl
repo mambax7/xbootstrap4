@@ -1,5 +1,5 @@
 <div class="member_list row">
-    <{foreach item=member from=$members name=fe_members}>
+    <{foreach item=member from=$members|default:null name=fe_members}>
 
         <{if $member.rel_nb_cols == 2}>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">

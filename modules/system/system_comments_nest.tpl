@@ -6,14 +6,14 @@
         </div>
         <{include file="db:system_comment.tpl" comment=$comments[i]}>
         <!-- start comment replies -->
-        <{foreach item=reply from=$comments[i].replies}>
-            <{assign var="indent" value="`$reply.prefix/25`"}>
+        <{foreach item=reply from=$comments[i].replies|default:null}>
+            <{assign var="indent" value=$reply.prefix/25}>
             <{assign var="fullcolwidth" value="12"}>
 
             <{if $indent>3}>
                 <{assign var="indent" value="3"}>
             <{/if}>
-            <{assign var="replyspace" value="`$fullcolwidth-$indent`"}>
+            <{assign var="replyspace" value=$fullcolwidth-$indent}>
             <div class="row">
                 <div class="col-md-offset-<{$indent}> col-md-<{$replyspace}> col-xs-offset-<{$indent}> col-xs-<{$replyspace}>">
                     <{include file="db:system_comment.tpl" comment=$reply}>
@@ -21,7 +21,7 @@
             </div>
         <{/foreach}>
     <{/section}>
-    <{if $commentform}>
+    <{if isset($commentform)}>
         <div class="aligncenter">
             <button class="btn-comment btn btn-primary btn-md" data-toggle="modal" data-target="#comments-form">
                 <span class="fa fa-comment"></span> Add Comment

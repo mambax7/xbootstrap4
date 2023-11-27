@@ -15,15 +15,15 @@
 
 <{if $error_exist }>
 	<div style='font-size:120%;margin-bottom:20px'><p style='color:#ff0000'><{$error_exist}>:</p>
-        <{if $error_albexist}><p style='color:#ff0000'><{$error_albexist}></p><{/if}>
-        <{if $error_imgexist}><p style='color:#ff0000'><{$error_imgexist}></p><{/if}>
+        <{if isset($error_albexist)}><p style='color:#ff0000'><{$error_albexist}></p><{/if}>
+        <{if isset($error_imgexist)}><p style='color:#ff0000'><{$error_imgexist}></p><{/if}>
     </div>
 <{/if}>
-<{if $search_result}>
+<{if isset($search_result)}>
 	<div style='font-size:120%;margin-bottom:20px'><{$smarty.const._AM_WGGALLERY_IMPORT_READ}>: <{$im_name}></div>
 <{/if}>
 
-<{if $import_modules}>
+<{if isset($import_modules)}>
     <table class='table table-bordered'>
         <thead>
             <tr class='head'>
@@ -33,7 +33,7 @@
             </tr>
         </thead>
         <tbody>
-            <{foreach item=module from=$import_modules}>
+            <{foreach item=module from=$import_modules|default:null}>
                 <tr class="<{cycle values='odd, even'}>">
                     <td class='left'><{$module.name}></td>
                     <td class='left'>
@@ -52,10 +52,10 @@
     </table>
 <{/if}>
 
-<{if $form}>
+<{if isset($form)}>
 	<{$form}>
 <{/if}>
-<{if $error}>
+<{if isset($error)}>
 	<div class='errorMsg'><strong><{$error}></strong></div>
 <{/if}>
 <br>

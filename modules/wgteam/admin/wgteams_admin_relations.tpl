@@ -1,6 +1,6 @@
 <!-- Header -->
 <{include file='db:wgteams_admin_header.tpl'}>
-<{if $relations_list}>
+<{if isset($relations_list)}>
 <table class="table table-bordered  table-striped" id="sortable">
     <thead>
         <tr class="head">
@@ -22,8 +22,8 @@
             <th class="center width5"><{$smarty.const._AM_WGTEAMS_FORM_ACTION}></th>
         </tr>
     </thead>
-<{if $relations_count}>
-    <{foreach item=relation from=$relations_list}>
+<{if isset($relations_count)}>
+    <{foreach item=relation from=$relations_list|default:null}>
     <{if $relation.new_team > 0}>
     <tbody>
         <tr class="odd">
@@ -74,10 +74,10 @@
 <{/if}>
 
 <{/if}>
-<{if $form}>
+<{if isset($form)}>
     <{$form}>
 <{/if}>
-<{if $error}>
+<{if isset($error)}>
     <div class="errorMsg"><strong><{$error}></strong>
 </div>
 

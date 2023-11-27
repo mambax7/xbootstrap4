@@ -2,6 +2,7 @@
 -------------------
 - added examples for Bootstrap 4.6.2 (mamba)
 - updated .htaccess (mamba)
+- updated templates for Smarty 3
 
 4.6.2 RC 1 2023-05-15
 -------------------

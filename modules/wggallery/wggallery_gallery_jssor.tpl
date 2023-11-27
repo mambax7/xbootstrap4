@@ -23,7 +23,7 @@
                 $Transitions: jssor_<{$uniqid}>_SlideshowTransitions,
                 $TransitionsOrder: <{$jssor_transitionorder}>
               },
-            <{if $jssor_arrows}>
+            <{if isset($jssor_arrows)}>
                 $ArrowNavigatorOptions: {                   //[Optional] Options to specify and enable arrow navigator or not
                     $Class: $JssorArrowNavigator$,          //[Requried] Class to create arrow navigator instance
                     $ChanceToShow: 2,                       //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -31,7 +31,7 @@
                     $Steps: 1                               //[Optional] Steps to go for each navigation request, default value is 1
                 },
             <{/if}>
-            <{if $jssor_bullets}>
+            <{if isset($jssor_bullets)}>
                 $BulletNavigatorOptions: {                  //[Optional] Options to specify and enable navigator or not
                     $Class: $JssorBulletNavigator$,         //[Required] Class to create navigator instance
                     $ChanceToShow: 2,                       //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -43,7 +43,7 @@
                     $Orientation: 1                         //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
                 },
             <{/if}>
-            <{if $jssor_thumbnails}>
+            <{if isset($jssor_thumbnails)}>
                 $ThumbnailNavigatorOptions: {               //[Optional] Options to specify and enable thumbnail navigator or not
                     $Class: $JssorThumbnailNavigator$,      //[Required] Class to create thumbnail navigator instance
                     $ChanceToShow: 2,                       //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -90,10 +90,10 @@
 		<!-- Slides -->
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:<{$jssor_maxwidth}>px;height:<{$jssor_maxheight}>px;overflow:hidden;">
 			<{if $images_nb > 0}>
-				<{foreach item=image from=$images}>                
+				<{foreach item=image from=$images|default:null}>
 					<div>
 						<img data-u="image" src="<{if $source == 'large'}><{$image.large}><{else}><{$image.medium}><{/if}>">
-						<{if $jssor_thumbnails}>
+						<{if isset($jssor_thumbnails)}>
 							<{if $jssor_thumbnails == 'thumbnail-091' || $jssor_thumbnails == 'thumbnail-092'}>
 								<div u="thumb"><{$image.desc}></div>
 							<{elseif $jssor_thumbnails == 'thumbnail-111'}>

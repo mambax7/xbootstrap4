@@ -32,7 +32,7 @@
         <{if $location.divers|default:false}><{$location.divers}><br><{/if}>
         </div>
     </div>
-    <{if $xoops_isadmin}>
+    <{if isset($xoops_isadmin)}>
     <div class="float-right">
         <a title="<{$smarty.const._MD_EXTCAL_LOCATION_EDIT}>" href="<{$xoops_url}>/modules/extcal/admin/location.php?op=edit_location&location_id=<{$location.id}>">
             <span class="fa fa-fw fa-2x fa-pencil-square-o"></span>

@@ -11,7 +11,7 @@
     <option value="<{$digest_link}>"><{$smarty.const._MD_VIEW}>&nbsp;<{$smarty.const._MD_DIGEST}></option>
     <option value="<{$unreplied_link}>"><{$smarty.const._MD_VIEW}>&nbsp;<{$smarty.const._MD_UNREPLIED}></option>
     <option value="<{$unread_link}>"><{$smarty.const._MD_VIEW}>&nbsp;<{$smarty.const._MD_UNREAD}></option>
-    <{if $forum_index_cpanel}>
+    <{if isset($forum_index_cpanel)}>
         <option value="">--------</option>
         <option value="<{$forum_index_cpanel.link}>"><{$forum_index_cpanel.name}></option>
     <{/if}>

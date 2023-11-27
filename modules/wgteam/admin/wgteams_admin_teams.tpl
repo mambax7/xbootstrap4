@@ -1,6 +1,6 @@
 <!-- Header -->
 <{include file='db:wgteams_admin_header.tpl'}>
-<{if $teams_list}>
+<{if isset($teams_list)}>
     <table class="table table-bordered table-striped" id="sortable">
         <thead>
             <tr class="head">
@@ -19,9 +19,9 @@
                 <th class="center width5"><{$smarty.const._AM_WGTEAMS_FORM_ACTION}></th>
             </tr>
         </thead>
-<{if $teams_count}>
+<{if isset($teams_count)}>
     <tbody id="teams-list">
-    <{foreach item=team from=$teams_list}>
+    <{foreach item=team from=$teams_list|default:null}>
         <tr class="even" id="torder_<{$team.id}>" >
             <td class="center"><img src="<{$wgteams_icons_url}>/16/up_down.png" alt="drag&drop" class="icon-sortable"></td>
             <td class="center"><{$team.id}></td>
@@ -68,10 +68,10 @@
 <{/if}>
 
 <{/if}>
-<{if $form}>
+<{if isset($form)}>
     <{$form}>
 <{/if}>
-<{if $error}>
+<{if isset($error)}>
     <div class="errorMsg"><strong><{$error}></strong>
 </div>
 

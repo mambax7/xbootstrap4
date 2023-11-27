@@ -52,15 +52,15 @@
 	<div class='clear'></div>
 	<!-- Images used to open the lightbox -->
 	<div>
-		<{foreach item=image from=$images name=images}>
+		<{foreach item=image from=$images|default:null name=images}>
 			<a class="lightbox-image-link" href="<{if $source == 'large'}><{$image.large}><{else}><{$image.medium}><{/if}>" data-lightbox="lightbox2-set" 
-			<{if $showDescr}> data-title="<{$image.desc}>"<{/if}> >
+			<{if isset($showDescr)}> data-title="<{$image.desc}>"<{/if}> >
 				<{if $indexImage == 'simpleContainer'}>
 					<div class="simpleContainer">
 						<img class="img-fluid" src="<{if $source_preview == 'medium'}><{$image.medium}><{else}><{$image.thumb}><{/if}>" alt="<{$image.title}>" title="<{$image.title}>">
 						<div class="simpleContent">
-							<{if $showTitle}><p><{$image.title}></p><{/if}>
-							<{if $showDescr}><p><{$image.desc}></p><{/if}>
+							<{if isset($showTitle)}><p><{$image.title}></p><{/if}>
+							<{if isset($showDescr)}><p><{$image.desc}></p><{/if}>
 						</div>
 					</div>
 				<{else}> 
@@ -73,7 +73,7 @@
 
 <div class="clear spacer"></div>
 
-<{if $error}>
+<{if isset($error)}>
 	<div class="errorMsg"><strong><{$error}></strong></div>
 <{/if}> 
 

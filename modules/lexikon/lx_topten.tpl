@@ -16,11 +16,11 @@
 <br><br>
 
 <!-- Start ranking loop -->
-<{foreach item=ranking from=$rankings}>
+<{foreach item=ranking from=$rankings|default:null}>
 
     <{**}>
 
-    <{foreach item=terms from=$ranking.terms}>
+    <{foreach item=terms from=$ranking.terms|default:null}>
         <{*">*}>
 
         <{**}>

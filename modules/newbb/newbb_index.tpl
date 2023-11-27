@@ -19,11 +19,11 @@
                         </a>
 
                         <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=pending#admin" title="<{$smarty.const._MD_NEWBB_TYPE_PENDING}>" class="btn btn-xs btn-primary">
-                            <{if $wait_new_topic}><span class="badge"><{$wait_new_topic}></span><{/if}> <{$smarty.const._MD_NEWBB_TYPE_PENDING}>
+                            <{if isset($wait_new_topic)}><span class="badge"><{$wait_new_topic}></span><{/if}> <{$smarty.const._MD_NEWBB_TYPE_PENDING}>
                         </a>
 
                         <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=deleted#admin" title="<{$smarty.const._MD_NEWBB_TYPE_DELETED}>" class="btn btn-xs btn-danger">
-                            <{if $delete_topic}><span class="badge"><{$delete_topic}></span><{/if}> <{$smarty.const._MD_NEWBB_TYPE_DELETED}>
+                            <{if isset($delete_topic)}><span class="badge"><{$delete_topic}></span><{/if}> <{$smarty.const._MD_NEWBB_TYPE_DELETED}>
                         </a>
                     </div>
                 <{/if}>
@@ -38,14 +38,14 @@
                         </a>
 
                         <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=pending#admin" title="<{$smarty.const._MD_NEWBB_TYPE_PENDING}>" class="btn btn-xs btn-primary">
-                            <{if $wait_new_post}>(<span style="color:red;"><{$wait_new_post}></span>)<{/if}> <{$smarty.const._MD_NEWBB_TYPE_PENDING}>
+                            <{if isset($wait_new_post)}>(<span style="color:red;"><{$wait_new_post}></span>)<{/if}> <{$smarty.const._MD_NEWBB_TYPE_PENDING}>
                         </a>
 
                         <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=deleted#admin" title="<{$smarty.const._MD_NEWBB_TYPE_DELETED}>" class="btn btn-xs btn-primary">
-                            <{if $delete_post}>(<span style="color:red;"><{$delete_post}></span>)<{/if}> <{$smarty.const._MD_NEWBB_TYPE_DELETED}>
+                            <{if isset($delete_post)}>(<span style="color:red;"><{$delete_post}></span>)<{/if}> <{$smarty.const._MD_NEWBB_TYPE_DELETED}>
                         </a>
 
-                        <{if $report_post}>
+                        <{if isset($report_post)}>
                             <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/admin_report.php" title="<{$report_post}>" class="btn btn-xs btn-primary">
                                 <{$report_post}>
                             </a>
@@ -67,7 +67,7 @@
     </div>
 
         <div class="panel-group newbb-category-list" id="accordion">
-            <{foreach item=category from=$categories}><!-- Forum categories -->
+            <{foreach item=category from=$categories|default:null}><!-- Forum categories -->
             <div class="panel panel-default mb10">
                 <div class="panel-heading">
                     <h4 class="panel-title newbb-forum-title">
@@ -137,7 +137,7 @@
                                 <div class="col-sm-4 col-md-4"><strong><{$smarty.const._MD_NEWBB_LASTPOST}></strong></div>
                             </div>
                         <{/if}>
-                        <{foreach item=forum from=$category.forums}>
+                        <{foreach item=forum from=$category.forums|default:null}>
                         <div class="row newbb-list-foruns mb10">
                             <div class="col-sm-6 col-md-6">
                                 <{if $forum.subforum}>
@@ -154,7 +154,7 @@
                                     <{$forum.forum_name}>
                                 </a>
 
-                                <{if $rss_enable}>
+                                <{if isset($rss_enable)}>
                                     <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?f=<{$forum.forum_id}>" target="_blank" title="RSS feed"
                                        class="pull-right btn btn-xs btn-warning">
                                         RSS
@@ -223,7 +223,7 @@
 
                                 <{if $forum.subforum}>
                                     <{$smarty.const._MD_NEWBB_SUBFORUMS}><{$img_subforum}>
-                                    <{foreach item=subforum from=$forum.subforum}>
+                                    <{foreach item=subforum from=$forum.subforum|default:null}>
                                     [
                                     <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$subforum.forum_id}>"><{$subforum.forum_name}></a>
                                     ]
@@ -264,7 +264,7 @@
             </div>
         </div>
 
-        <{if $currenttime}>
+        <{if isset($currenttime)}>
             <div class="row">
                 <div class="col-lg-12"><h3 class="nompl"><{$online.statistik}> <{$smarty.const._MD_NEWBB_STATS}></h3></div>
                 <div class="col-sm-6 col-md-6">
@@ -297,7 +297,7 @@
 
                 <div class="col-sm-6 col-md-6">
                     <ul class="list-unstyled lw30">
-                        <{if $userstats}>
+                        <{if isset($userstats)}>
                             <li><{*$userstats.lastvisit*}>
                                 <{$userstats.lastpost}>
                             </li>
@@ -306,7 +306,7 @@
                         <li><{$smarty.const._MD_NEWBB_TODAYTOPICSC}> <{$stats[0].topic.day|default:0}></li>
                         <li><{$smarty.const._MD_NEWBB_TODAYPOSTSC}> <{$stats[0].post.day|default:0}></li>
 
-                        <{if $userstats}>
+                        <{if isset($userstats)}>
                             <li><{$userstats.topics}> | <{$userstats.posts}></li>
                             <{if $userstats.digests}>
                                 <li><{$userstats.digests}></li>
@@ -318,12 +318,12 @@
             </div>
         <{/if}>
 
-        <{if $online}>
+        <{if isset($online)}>
             <{include file="db:newbb_online.tpl"}>
         <{/if}>
 
         <a title="NewBB" href="https://www.simple-xoops.de" class="btn btn-xs btn-success">NewBB Version <{$version}></a>
-        <{if $rss_button}>
+        <{if isset($rss_button)}>
             <div class="text-right">
                 <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?c=<{$viewcat}>" target="_blank" title="RSS FEED">
                     <{$rss_button}>

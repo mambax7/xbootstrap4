@@ -17,7 +17,7 @@
                 <em><strong><{$lang_postedby}>: </strong><{$story.poster}><{/if}><{$lang_on}> <{$story.posttime}></em>
             <strong class="pull-right hit-counter"><{$story.hits}> <{$lang_reads}></strong>
         <{/if}>
-        <{if $story.files_attached}>
+        <{if $story.files_attached|default:''}>
             <{$story.attached_link}>
         <{/if}>
         <{$story.text}>

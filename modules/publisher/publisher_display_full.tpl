@@ -16,10 +16,10 @@
     <!-- End of if !$category || $category.subcats || ($category && $display_category_summary) //-->
 <{/if}>
 
-<{if $items}>
+<{if isset($items)}>
     <h4 class="pub_last_articles_full"><span class="fa fa-chevron-right"></span>&nbsp;<{$lang_items_title}></h4>
     <!-- Start item loop -->
-    <{foreach item=item from=$items}>
+    <{foreach item=item from=$items|default:null}>
         <div class="article_full">
             <div class="article_full_category">
                 <{$item.category}>
@@ -34,7 +34,7 @@
             <{/if}>
             <div style="padding: 10px;">
                 <h4><{$item.titlelink}></h4>
-                <{if $display_whowhen_link}>
+                <{if isset($display_whowhen_link)}>
                     <small><{$item.who_when}> (<{$item.counter}> <{$lang_reads}>)</small>
                 <{/if}>
                 <div style="margin-top:10px;">

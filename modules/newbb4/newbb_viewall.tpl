@@ -1,12 +1,12 @@
 <ol class="breadcrumb">
     <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMHOME}></a></li>
-    <{if $parent_forum}>
+    <{if isset($parent_forum)}>
         <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$parent_forum}>"><{$parent_name}></a></li>
         <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
     <{elseif $forum_name}>
         <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
     <{/if}>
-    <{if $current}>
+    <{if isset($current)}>
         <li class="nav-item"><a class="nav-link" href="<{$current.link}>"><{$current.title}></a></li>
     <{/if}>
 </ol>
@@ -77,11 +77,11 @@
                                 &nbsp;<{$smarty.const._MD_NEWPOSTS}></option>
                             <!-- irmtfan add a separator -->
                             <option value="">--------</option>
-                            <{foreach item=filter from=$filters}>
+                            <{foreach item=filter from=$filters|default:null}>
                                 <option value="<{$filter.link}>"><{$filter.title}></option>
                             <{/foreach}>
                             <option value="">--------</option>
-                            <{foreach item=filter from=$types}>
+                            <{foreach item=filter from=$types|default:null}>
                                 <option value="<{$filter.link}>"><{$filter.title}></option>
                             <{/foreach}>
                         </select>
@@ -226,7 +226,7 @@
                     <{$selection.sort}>&nbsp;
                     <{$selection.order}>&nbsp;
                     <{$selection.since}>&nbsp;
-                    <{foreach item=hidval key=hidvar from=$selection.vars}>
+                    <{foreach item=hidval from=$selection.vars|default:null key=hidvar }>
                         <{if $hidval && $hidvar neq "sort" && $hidvar neq "order" && $hidvar neq "since"}>
                             <!-- irmtfan correct name="$hidvar" -->
                             <input type="hidden" name="<{$hidvar}>" value="<{$hidval}>"/>
@@ -263,7 +263,7 @@
     <div class="icon_right">
         <form action="<{$xoops_url}>/modules/<{$xoops_dirname}>/search.php" method="get">
             <input name="term" id="term" type="text" size="15"/>
-            <{foreach item=hidval key=hidvar from=$search}>
+            <{foreach item=hidval from=$search|default:null key=hidvar }>
                 <{if $hidval }>
                     <!-- irmtfan correct name="$hidvar" -->
                     <input type="hidden" name="<{$hidvar}>" value="<{$hidval}>"/>
@@ -277,7 +277,7 @@
         <{if $forum_jumpbox }>
             <form method="get" action="<{$selection.action}>">
                 <{$selection.forum}>&nbsp;
-                <{foreach item=hidval key=hidvar from=$selection.vars}>
+                <{foreach item=hidval from=$selection.vars|default:null key=hidvar }>
                     <{if $hidval && $hidvar neq "forum"}>
                         <input type="hidden" name="<{$hidvar}>" value="<{$hidval}>"/>
                     <{/if}>
@@ -293,6 +293,6 @@
 <div class="clear"></div>
 <br>
 
-<{if $online}><{include file="db:newbb_online.tpl"}><{/if}>
+<{if isset($online)}><{include file="db:newbb_online.tpl"}><{/if}>
 <{include file='db:newbb_notification_select.tpl'}>
 <!-- end module contents -->

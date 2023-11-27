@@ -10,6 +10,6 @@
     <div class="pull-right"><{$pagenav}></div>
 <{/if}>
 <br>
-<{if $xoops_isadmin}>
+<{if isset($xoops_isadmin)}>
    <div class="text-center bold"><a href="<{$admin}>"><{$smarty.const._MA_WGTEAMS_ADMIN}></a></div><br>
 <{/if}>

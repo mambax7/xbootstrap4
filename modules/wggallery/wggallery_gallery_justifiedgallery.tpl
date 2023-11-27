@@ -5,7 +5,7 @@
 
 <{if $images_nb > 0}>
 	<div id="mygallery" >
-		<{foreach item=image from=$images}>
+		<{foreach item=image from=$images|default:null}>
 			<a href='<{if $source == 'large'}><{$image.large}><{else}><{$image.medium}><{/if}>' rel='gallery1'>
 				<img alt='<{$image.title}>' src='<{if $source_preview == 'medium'}><{$image.medium}><{else}><{$image.thumb}><{/if}>'>
 			</a>
@@ -49,7 +49,7 @@
 
 <div class="clear spacer"></div>
 
-<{if $error}>
+<{if isset($error)}>
 	<div class="errorMsg"><strong><{$error}></strong></div>
 <{/if}> 
 

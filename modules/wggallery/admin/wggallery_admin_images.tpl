@@ -1,13 +1,13 @@
 <!-- Header -->
 <{include file='db:wggallery_admin_header.tpl'}>
-<{if $form}>
+<{if isset($form)}>
 	<{$form}>
 <{/if}>
-<{if $error}>
+<{if isset($error)}>
 	<div class='errorMsg'><strong><{$error}></strong></div>
 <{/if}>
-<{if $images_list}>
-    <{if $images_approve}>
+<{if isset($images_list)}>
+    <{if isset($images_approve)}>
         <table class='table table-bordered'>
             <thead>
                 <tr class='head'>
@@ -27,9 +27,9 @@
                     <th class='center width5'><{$smarty.const._CO_WGGALLERY_FORM_ACTION}></th>
                 </tr>
             </thead>
-            <{if $images_count}>
+            <{if isset($images_count)}>
                 <tbody>
-                    <{foreach item=image from=$images_list}>
+                    <{foreach item=image from=$images_list|default:null}>
                         <tr class="<{cycle values='odd, even'}>">
                             <td class='center'><{$image.alb_name}></td>
                             <td class='center'><{$image.id}></td>
@@ -95,15 +95,15 @@
                     <th class='center'><{$smarty.const._CO_WGGALLERY_IMAGE_WEIGHT}></th>
                     <th class='center'><{$smarty.const._CO_WGGALLERY_IMAGE_STATE}></th>
                     <th class='center'><{$smarty.const._CO_WGGALLERY_IMAGE_IP}></th>
-                    <{if $show_exif}><th class='center'><{$smarty.const._CO_WGGALLERY_IMAGE_EXIF}></th><{/if}>
+                    <{if isset($show_exif)}><th class='center'><{$smarty.const._CO_WGGALLERY_IMAGE_EXIF}></th><{/if}>
                     <th class='center'><{$smarty.const._CO_WGGALLERY_DATE}></th>
                     <th class='center'><{$smarty.const._CO_WGGALLERY_SUBMITTER}></th>
                     <th class='center width5'><{$smarty.const._CO_WGGALLERY_FORM_ACTION}></th>
                 </tr>
             </thead>
-            <{if $images_count}>
+            <{if isset($images_count)}>
                 <tbody>
-                    <{foreach item=image from=$images_list}>
+                    <{foreach item=image from=$images_list|default:null}>
                         <tr class="<{cycle values='odd, even'}>">
                             <td class='center'><{$image.id}></td>
                             <td class='center'><img src='<{$image.thumb}>' style='max-height:50px' alt='<{$image.name}>'></td>
@@ -131,7 +131,7 @@
                                 <{/if}>
                             </td>
                             <td class='center'><{$image.ip}></td>
-                            <{if $show_exif}><td class='left'><{$image.exif_short}></td><{/if}>
+                            <{if isset($show_exif)}><td class='left'><{$image.exif_short}></td><{/if}>
                             <td class='center'><{$image.date}></td>
                             <td class='center'><{$image.submitter}></td>
                             <td class='center  width10'>

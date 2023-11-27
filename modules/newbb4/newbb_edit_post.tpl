@@ -6,8 +6,8 @@
         <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMINDEX}></a>
         <span class="delimiter">&raquo;</span>
         <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.id}>"><{$category.title}></a>
-        <{if $parentforum}>
-            <{foreach item=forum from=$parentforum}>
+        <{if isset($parentforum)}>
+            <{foreach item=forum from=$parentforum|default:null}>
             <span class="delimiter">&raquo;</span>
             &nbsp;
             <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum.forum_id}>"><{$forum.forum_name}></a>
@@ -22,19 +22,19 @@
 <div class="clear"></div>
 <br>
 
-<{if $disclaimer}>
+<{if isset($disclaimer)}>
     <div class="confirmMsg"><{$disclaimer}></div>
     <div class="clear"></div>
     <br>
 <{/if}>
 
-<{if $error_message}>
+<{if isset($error_message)}>
     <div class="errorMsg"><{$error_message}></div>
     <div class="clear"></div>
     <br>
 <{/if}>
 
-<{if $post_preview}>
+<{if isset($post_preview)}>
     <table width='100%' class='outer' cellspacing='1'>
         <tr valign="top">
             <td class="head"><{$post_preview.subject}></td>
@@ -52,7 +52,7 @@
 <form name="<{$form_post.name}>" id="<{$form_post.name}>" action="<{$form_post.action}>"
       method="<{$form_post.method}>" <{$form_post.extra}> >
     <table width='100%' class='outer' cellspacing='1'>
-        <{foreach item=element from=$form_post.elements}>
+        <{foreach item=element from=$form_post.elements|default:null}>
         <{if $element.hidden != true}>
             <tr valign="top">
                 <td class="head">
@@ -68,7 +68,7 @@
         <{/if}>
         <{/foreach}>
     </table>
-    <{foreach item=element from=$form_post.elements}>
+    <{foreach item=element from=$form_post.elements|default:null}>
     <{if $element.hidden == true}>
         <{$element.body}>
     <{/if}>
@@ -78,9 +78,9 @@
 <div class="clear"></div>
 <br>
 
-<{if $posts_context}>
+<{if isset($posts_context)}>
     <table width='100%' class='outer' cellspacing='1'>
-        <{foreach item=post from=$posts_context}>
+        <{foreach item=post from=$posts_context|default:null}>
         <tr valign="top">
             <td class="head"><{$post.subject}></td>
         </tr>

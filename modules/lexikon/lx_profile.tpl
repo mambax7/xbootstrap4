@@ -39,7 +39,7 @@
 <div class="clearer">
 
     <{if $nothing==false}>
-        <{foreach item=d from=$entries}>
+        <{foreach item=d from=$entries|default:null}>
             ">
 
         <{/foreach}>

@@ -5,13 +5,13 @@
         <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMHOME}></a></li>
 
         <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.id}>"><{$category.title}></a></li>
-        <{if $parentforum}>
-            <{foreach item=forum from=$parentforum}>
+        <{if isset($parentforum)}>
+            <{foreach item=forum from=$parentforum|default:null}>
             <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum.forum_id}>"><{$forum.forum_name}></a></li>
         <{/foreach}>
         <{/if}>
         <li class="nav-item"><a class="nav-link" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum_id}>"><{$forum_name}></a></li>
-        <li class="active"><{$topic_title|strip_tags}> <{if $topicstatus}><{$topicstatus}><{/if}></li>
+        <li class="active"><{$topic_title|strip_tags}> <{if isset($topicstatus)}><{$topicstatus}><{/if}></li>
     </ol>
 
     <{if $tagbar|default:false}>
@@ -21,11 +21,11 @@
         <!-- .newbb-tagbar -->
     <{/if}>
 
-    <{if $online}>
+    <{if isset($online)}>
         <div class="newbb-online-users row mb10">
             <div class="col-md-12">
                 <strong><{$smarty.const._MD_BROWSING}> </strong>
-                <{foreach item=user from=$online.users}>
+                <{foreach item=user from=$online.users|default:null}>
                 <a href="<{$user.link}>">
                     <{if $user.level eq 2}><!-- If is admin -->
                     <label class="label label-success"><{$user.uname}></label>
@@ -76,8 +76,8 @@
     </div>
 
     <{if $mode lte 1}>
-        <{if $topic_poll}>
-            <{if $topic_pollresult}>
+        <{if isset($topic_poll)}>
+            <{if isset($topic_pollresult)}>
                 <{include file="db:newbb_poll_results.tpl" poll=$poll}>
             <{else}>
                 <{include file="db:newbb_poll_view.tpl" poll=$poll}>
@@ -137,18 +137,18 @@
     </div>
 
     <div class="row mb10">
-        <div class="<{if $rating_enable}>col-sm-4 col-md-4<{else}>col-sm-8 col-md-8<{/if}>">
+        <div class="<{if isset($rating_enable)}>col-sm-4 col-md-4<{else}>col-sm-8 col-md-8<{/if}>">
             <select class="form-control" name="topicoption" id="topicoption" onchange="if(this.options[this.selectedIndex].value.length >0 ) { window.document.location=this.options[this.selectedIndex].value;}">
                 <option value=""><{$smarty.const._MD_TOPICOPTION}></option>
                 <{if $viewer_level gt 1}>
-                    <{foreach item=act from=$admin_actions}>
+                    <{foreach item=act from=$admin_actions|default:null}>
                     <option value="<{$act.link}>"><{$act.name}></option>
                 <{/foreach}>
                 <{/if}>
                 <{if $adminpoll_actions|is_array && count($adminpoll_actions) > 0 }>
                     <option value="">--------</option>
                     <option value=""><{$smarty.const._MD_POLLOPTIONADMIN}></option>
-                    <{foreach item=actpoll from=$adminpoll_actions}>
+                    <{foreach item=actpoll from=$adminpoll_actions|default:null}>
                     <option value="<{$actpoll.link}>"><{$actpoll.name}></option>
                 <{/foreach}>
                 <{/if}>
@@ -171,7 +171,7 @@
         <div class="col-sm-4 col-md-4">
             <select class="form-control" name="viewmode" id="viewmode" onchange="if(this.options[this.selectedIndex].value.length >0 ) { window.location=this.options[this.selectedIndex].value;}">
                 <option value=""><{$smarty.const._MD_VIEWMODE}></option>
-                <{foreach item=act from=$viewmode_options}>
+                <{foreach item=act from=$viewmode_options|default:null}>
                 <option value="<{$act.link}>"><{$act.title}></option>
                 <{/foreach}>
             </select>
@@ -182,7 +182,7 @@
         <{$smarty.const._MD_TOPICLOCK}>
     <{/if}>
 
-    <{foreach item=topic_post from=$topic_posts}>
+    <{foreach item=topic_post from=$topic_posts|default:null}>
     <{include file="db:newbb_thread.tpl" topic_post=$topic_post mode=$mode}>
     <{foreachelse}>
     <{$smarty.const._MD_ERRORPOST}>

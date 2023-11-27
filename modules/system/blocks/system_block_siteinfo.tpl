@@ -3,12 +3,12 @@
     <{if $block.showgroups == true}>
 
         <!-- start group loop -->
-        <{foreach item=group from=$block.groups}>
+        <{foreach item=group from=$block.groups|default:null}>
             <tr>
                 <th colspan="2"><{$group.name}></th>
             </tr>
             <!-- start group member loop -->
-            <{foreach item=user from=$group.users}>
+            <{foreach item=user from=$group.users|default:null}>
                 <tr>
                     <td class="even txtcenter alignmiddle">
                         <img style="width:48px;" src="<{$user.avatar}>" alt="<{$user.name}>"/><br>

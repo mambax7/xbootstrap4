@@ -134,7 +134,7 @@
         </tr>
         </thead>
         <tbody>
-        <{foreach item=eventFile from=$event_attachement}>
+        <{foreach item=eventFile from=$event_attachement|default:null}>
         <tr>
             <td><a href="download_attachement.php?file=<{$eventFile.file_id}>"><{$eventFile.file_nicename}></a></td>
             <td><{$eventFile.formated_file_size}></td>
@@ -145,7 +145,7 @@
 </div>
 <{/if}>
 
-<{if $whosGoing}>
+<{if isset($whosGoing)}>
 <div class="mt-3 mb-3">
     <h5><{$smarty.const._MD_EXTCAL_WHOS_GOING}> <span class="badge badge-secondary"><{$eventmember.member.nbUser}></span></h5>
     <{foreach name=eventMemberList from=$eventmember.member.userList item=member}><{if $smarty.foreach.eventMemberList.first != 1}>, <{/if}>
@@ -162,7 +162,7 @@
 </div>
 <{/if}>
 
-<{if $whosNotGoing}>
+<{if isset($whosNotGoing)}>
 <div class="mt-3 mb-3">
     <h5><{$smarty.const._MD_EXTCAL_WHOSNOT_GOING}> <span class="badge badge-secondary"><{$eventmember.notmember.nbUser}></span></h5>
     <{foreach name=eventMemberList from=$eventmember.notmember.userList item=member}><{if $smarty.foreach.eventMemberList.first != 1}>, <{/if}>
@@ -196,7 +196,7 @@
             <span class="fa fa-fw fa-2x fa-clone"></span>
         </a>
         <{/if}>
-        <{if $isAdmin}>
+        <{if isset($isAdmin)}>
         <a href="admin/event.php?op=delete&event_id=<{$event.event_id}>"
            title="<{$smarty.const._MD_EXTCAL_ICONE_DELETE}>">
             <span class="fa fa-fw fa-2x fa-trash-o"></span>
@@ -213,7 +213,7 @@
     </div>
 </table>
 <p style="text-align:right;">
-    <{foreach item=eventFile from=$event_attachement}>
+    <{foreach item=eventFile from=$event_attachement|default:null}>
         <a href="download_attachement.php?file=<{$eventFile.file_id}>"><{$eventFile.file_nicename}>
             (<i><{$eventFile.file_mimetype}></i>) <{$eventFile.formated_file_size}></a>
         <br>

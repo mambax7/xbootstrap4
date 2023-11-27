@@ -45,14 +45,14 @@
     <{/if}>
 </div><!-- .message-current-tab -->
 
-<{if $msg}>
+<{if isset($msg)}>
     <div class="alert alert-info alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <strong><{$msg}></strong>
     </div>
 <{/if}>
 
-<{if $errormsg}>
+<{if isset($errormsg)}>
     <div class="alert alert-danger alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <strong><{$errormsg}></strong>
@@ -93,7 +93,7 @@
 <{/if}>
 </div><!-- .xoops-message-list -->
 
-<{foreach item=message from=$messages}>
+<{foreach item=message from=$messages|default:null}>
     <div class="row xoops-message-list xoops-message-loop">
         <div class="col-xs-3 col-md-2">
             <input type="checkbox" id="msg_id_<{$message.msg_id}>" name="msg_id[]" value="<{$message.msg_id}>">
@@ -129,13 +129,13 @@
 <{/foreach}>
 
 <{$pmform.elements.send.body}>
-<{if $display}>
+<{if isset($display)}>
     <{$pmform.elements.move_messages.body}>
     <{$pmform.elements.delete_messages.body}>
     <{$pmform.elements.empty_messages.body}>
 <{/if}>
 
-<{foreach item=element from=$pmform.elements}>
+<{foreach item=element from=$pmform.elements|default:null}>
     <{if $element.hidden == 1}>
         <{$element.body}>
     <{/if}>

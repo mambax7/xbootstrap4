@@ -1,6 +1,6 @@
 <!-- Header -->
 <{include file='db:wgteams_admin_header.tpl'}>
-<{if $members_list}>
+<{if isset($members_list)}>
     <table class="table table-bordered  table-striped">
         <thead>
             <tr class="head">
@@ -17,9 +17,9 @@
                 <th class="center width5"><{$smarty.const._AM_WGTEAMS_FORM_ACTION}></th>
             </tr>
         </thead>
-        <{if $members_count}>
+        <{if isset($members_count)}>
             <tbody>
-            <{foreach item=member from=$members_list}>
+            <{foreach item=member from=$members_list|default:null}>
                 <tr class="<{cycle values='odd, even'}>">
                     <td class="center"><{$member.id}></td>
                     <td class="center"><{$member.firstname}></td>
@@ -47,10 +47,10 @@
     <{/if}>
 
 <{/if}>
-<{if $form}>
+<{if isset($form)}>
     <{$form}>
 <{/if}>
-<{if $error}>
+<{if isset($error)}>
     <div class="errorMsg"><strong><{$error}></strong>
 </div>
 

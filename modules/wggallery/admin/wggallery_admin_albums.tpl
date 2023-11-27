@@ -1,7 +1,7 @@
 <!-- Header -->
 <{include file='db:wggallery_admin_header.tpl'}>
 
-<{if $albums_list}>
+<{if isset($albums_list)}>
 	<table class='table table-bordered'>
 		<thead>
 			<tr class='head'>
@@ -20,9 +20,9 @@
 				<th class='center width5'><{$smarty.const._CO_WGGALLERY_FORM_ACTION}></th>
 			</tr>
 		</thead>
-		<{if $albums_count}>
+		<{if isset($albums_count)}>
 			<tbody>
-				<{foreach item=album from=$albums_list}>
+				<{foreach item=album from=$albums_list|default:null}>
 					<tr class="<{cycle values='odd, even'}>">
 						<td class='center'><{$album.id}></td>
 						<td class='center'><{$album.pid}></td>
@@ -98,7 +98,7 @@
 		<div class='clear spacer'></div>
 	<{/if}>
 <{/if}>
-<{if $form}>
+<{if isset($form)}>
 	<{$form}>
     <!-- Modal for selection album image -->
     <div class="modal fade" id="myModalImagePicker" tabindex="-1" role="dialog"
@@ -112,7 +112,7 @@
                     <h4 class="modal-title" id="myModalLabel">Image Gallery</h4>
                 </div>
                 <div class="modal-body">
-                    <{foreach item=image from=$images}>
+                    <{foreach item=image from=$images|default:null}>
                         <input class="img <{if $image.selected}>wgg-modal-selected<{/if}>" type="image" src="<{$image.thumb}>" alt="<{$image.title}>"
                                height="100" width="130" value="<{$image.name}>"
                                style="padding:3px;">
@@ -193,7 +193,7 @@
     <!-- End of modal for selection album image -->
 <{/if}>
 
-<{if $error}>
+<{if isset($error)}>
 	<div class='errorMsg'><strong><{$error}></strong></div>
 <{/if}>
 <br>

@@ -33,7 +33,7 @@
 
                             <{if $topic_post.poster.groups}>
                                 <li><{$smarty.const._MD_GROUP}>
-                                    <{foreach item=group from=$topic_post.poster.groups}>
+                                    <{foreach item=group from=$topic_post.poster.groups|default:null}>
                                     <{$group}>
                                     <{/foreach}></li>
                             <{/if}>
@@ -120,7 +120,7 @@
 <div class="clearfix newbb-links mb10">
     <div class="col-md-6 nompl hidden-xs">
         <{if $topic_post.thread_action}>
-            <{foreach item=btn from=$topic_post.thread_action}>
+            <{foreach item=btn from=$topic_post.thread_action|default:null}>
             <a href="<{$btn.link}>&post_id=<{$topic_post.post_id}>" title="<{$btn.name}>" <{if $btn.target}>target="<{$btn.target}>"<{/if}>>
                 <{$btn.image}>
             </a>
@@ -143,7 +143,7 @@
         <{else}>
             <{if $topic_post.thread_buttons}>
 
-                <{foreach item=btn from=$topic_post.thread_buttons}>
+                <{foreach item=btn from=$topic_post.thread_buttons|default:null}>
                 <a class="btn btn-primary btn-xs" href="<{$btn.link}>&post_id=<{$topic_post.post_id}>" title="<{$btn.name}>"><{$btn.image}></a>
             <{/foreach}>
             <{/if}>

@@ -70,7 +70,7 @@
                         <li class="nav-item"><a href="<{$xoops_url}>/modules/newbb" class="nav-link"><{$smarty.const.THEME_MODULE3}></a></li>
                         <li class="nav-item"><a href="<{$xoops_url}>/modules/contact" class="nav-link"><{$smarty.const.THEME_MODULE4}></a></li>
 
-                        <li class="nav-item"><{$xoops_menu_1531793538}></li>
+<{*                        <li class="nav-item"><{$xoops_menu_1531793538}></li>*}>
 
                     </ul>
 

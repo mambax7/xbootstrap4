@@ -4,7 +4,7 @@
         <!-- irmtfan hardcode removed align="left" -->
         <hr class="align_left" width="50%" size="1"/>
         <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php"><{$smarty.const._MD_FORUMHOME}></a>
-        <{if $parent_forum}>
+        <{if isset($parent_forum)}>
             <span class="delimiter">&raquo;</span>
             <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$parent_forum}>"><{$parent_name}></a>
             <span class="delimiter">&raquo;</span>
@@ -83,7 +83,7 @@
                 onchange="if(this.options[this.selectedIndex].value.length >0 )    { window.document.location=this.options[this.selectedIndex].value;}"
         >
             <option value=""><{$smarty.const._MD_VIEWMODE}></option>
-            <{foreach item=act from=$viewmode_options}>
+            <{foreach item=act from=$viewmode_options|default:null}>
             <option value="<{$act.link}>"><{$act.title}></option>
             <{/foreach}>
         </select>
@@ -98,7 +98,7 @@
 <br>
 <br>
 
-<{foreach item=post from=$posts}>
+<{foreach item=post from=$posts|default:null}>
 <{include file="db:newbb_thread.tpl" topic_post=$post}>
 <!-- irmtfan hardcode removed style="padding: 5px;float: right; text-align:right;" -->
 <div class="pagenav">
@@ -153,7 +153,7 @@
 </div>
 <div class="clear"></div>
 <br>
-<{if $online}>
+<{if isset($online)}>
     <br>
     <{include file="db:newbb_online.tpl"}>
 <{/if}>
