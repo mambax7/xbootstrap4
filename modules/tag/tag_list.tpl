@@ -1,4 +1,4 @@
-<!-- phppp (D.J.): http://xoopsforge.com; https://xoops.org.cn -->
+<!-- phppp (D.J.): https://xoopsforge.com; https://xoops.org.cn -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><span class="fa fa-tags text-secondary fa-lg fa-fw mr-2 mt-1"></span><a href="index.php"><{$module_name}></a></li>

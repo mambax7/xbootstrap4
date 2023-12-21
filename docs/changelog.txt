@@ -98,7 +98,7 @@
 1.04 2015-09-8 Beta 2
 -------------------
 - Update Bootstrap (3.3.5)
-- ADD new system_block_user.html (thanks slider84 - http://www.frxoops.org/userinfo.php?uid=14931)
+- ADD new system_block_user.html (thanks slider84 - https://www.frxoops.org/userinfo.php?uid=14931)
 - Fix extgallery background arrows
 - Other minors adjusts
 
@@ -114,7 +114,7 @@
 - Update pm and profile extension template files (Angelo Rocha)
 - Fix grid layout (Angelo Rocha)
 - Other minors Adjusts (Angelo Rocha)
-- Add Masonry Cascading grid layout library - http://masonry.desandro.com/ (Angelo Rocha)
+- Add Masonry Cascading grid layout library - https://masonry.desandro.com/ (Angelo Rocha)
 - New news module grid (Angelo Rocha)
 - Add grid function in js.js (Angelo Rocha)
 - Fix bug in tdmdownloads, div unclosed (Angelo Rocha)

@@ -1,4 +1,4 @@
-<!-- phppp (D.J.): http://xoopsforge.com; https://xoops.org.cn -->
+<!-- phppp (D.J.): https://xoopsforge.com; https://xoops.org.cn -->
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb" >

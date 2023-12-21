@@ -11,7 +11,7 @@
     }
 </style>
 
-<{if $obituaries_users|is_array && count($obituaries_users) > 0}>
+<{if is_array($obituaries_users) && count($obituaries_users) > 0}>
     <ol class="breadcrumb">
         <li class="nav-item"><a class="nav-link" href="index.php"><{$breadcrumb}></a></li>
     </ol>

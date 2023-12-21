@@ -230,13 +230,16 @@
 
 <div style="margin-top: 10px;">
     <!-- start comments loop -->
-    <{if $comment_mode|default:'' == "flat"}>
+
+<{if isset($comment_mode)}>
+    <{if $comment_mode == "flat"}>
         <{include file="db:system_comments_flat.tpl"}>
-    <{elseif $comment_mode|default:'' == "thread"}>
+    <{elseif $comment_mode == "thread"}>
         <{include file="db:system_comments_thread.tpl"}>
-    <{elseif $comment_mode|default:'' == "nest"}>
+    <{elseif $comment_mode == "nest"}>
         <{include file="db:system_comments_nest.tpl"}>
     <{/if}>
+<{/if}>
     <!-- end comments loop -->
 </div>
 <{include file='db:system_notification_select.tpl'}>
